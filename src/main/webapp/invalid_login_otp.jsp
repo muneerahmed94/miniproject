@@ -104,7 +104,7 @@
 						else
 						{
 					%>
-							<form action="http://miniproject-jntuhceh.rhcloud.com/process_login_otp" method="POST">
+							<form action="http://miniproject-jntuhceh.rhcloud.com/process_login_otp.jsp" method="POST">
 								<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 									<tr>
 										<td colspan="2" style="background-color:#ccecff;font-weight:bold;">Customer Login</td>
