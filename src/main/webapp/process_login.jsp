@@ -54,7 +54,7 @@
 			{
 				session.setAttribute("email",null);
 				session.setAttribute("otp_required",null);
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/employee_login_mismatch.html");
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_mismatch.html");
 			}
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/login_otp.jsp");
         }
