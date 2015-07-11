@@ -110,7 +110,7 @@
 										<td colspan="2" style="background-color:#ccecff;font-weight:bold;">Customer Login</td>
 									</tr>
 									<tr>
-										<td colspan="2" align="center" style="color:green;">OTP sent to your registered email</td>
+										<td colspan="2" align="center" style="color:red;">Invalid OTP...Please try again</td>
 									</tr>
 									<tr>
 										<td style="font-weight:bold;">Enter the OTP: </td>
@@ -125,7 +125,7 @@
 									</tr>
 									<tr>
 										<td colspan="2" align="center">
-											<b>Haven't received OTP? </b><a href=#ClickHere>Click Here</a>
+											<b>Haven't received OTP? </b><a href="http://miniproject-jntuhceh.rhcloud.com/forgot_customer.html">Click Here</a>
 										</td>
 									</tr>
 								</table>
