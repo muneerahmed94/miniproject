@@ -19,7 +19,6 @@
 			Connection conn = null;
 			PreparedStatement pst = null;
 			ResultSet rs = null;
-			String userId = session.getAttribute("userId"); 
 			
 			String sql = "select * from Users where UserID=?"; 
 			String MYSQL_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
@@ -111,9 +110,9 @@
 						{
 					%>
 							<ul>
-								<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/open_account.html">Accounts</a></li>
-								<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_registration.html">Fund Transfer</a></li>
-								<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_login.html">Profile</a></li>
+								<li><a class="linkh" href="#Accounts">Accounts</a></li>
+								<li><a class="linkh" href="#Fund Transfer"">Fund Transfer</a></li>
+								<li><a class="linkh" href="#Profile">Profile</a></li>
 								<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print("name"); %></li>
 							</ul>
 					<%
