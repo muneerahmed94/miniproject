@@ -91,7 +91,9 @@
 								if(rs.next())
 								{
 									name = name.concat(rs.getString("FirstName"));
+									name = name.concat(" ");
 									name = name.concat(rs.getString("MiddleName"));
+									name = name.concat(" ");
 									name = name.concat(rs.getString("LastName"));
 								}
 									
