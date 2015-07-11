@@ -68,6 +68,7 @@
 						String otp_required = (String)session.getAttribute("otp_required");
 						if(otp_required == null)
 						{
+					%>
 							<form action="http://miniproject-jntuhceh.rhcloud.com/process_login.jsp" method="POST">
 								<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 									<tr>
@@ -98,6 +99,7 @@
 									</tr>
 								</table>
 							</form>
+					<%	
 						}
 						else
 						{
