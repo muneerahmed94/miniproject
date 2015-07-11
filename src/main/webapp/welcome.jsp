@@ -57,7 +57,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Employee Login</title>
+		<title>Welcome</title>
 		<style>
 			ul 
 			{
@@ -111,8 +111,9 @@
 					%>
 							<ul>
 								<li><a class="linkh" href="#Accounts">Accounts</a></li>
-								<li><a class="linkh" href="#Fund Transfer"">Fund Transfer</a></li>
+								<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
 								<li><a class="linkh" href="#Profile">Profile</a></li>
+								
 								<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print("name"); %></li>
 							</ul>
 					<%
