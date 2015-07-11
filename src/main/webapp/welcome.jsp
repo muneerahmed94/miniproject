@@ -107,7 +107,9 @@
 						}	
 						if(valid_user == 1)
 						{
+							response.sendRedirect("www.google.com");
 					%>
+							
 							<ul>
 								<li><a class="linkh" href="#Accounts">Accounts</a></li>
 								<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
