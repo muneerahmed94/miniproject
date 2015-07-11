@@ -116,7 +116,7 @@
 								<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
 								<li><a class="linkh" href="#Profile">Profile</a></li>
 								
-								<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(name); %></li>
+								<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + name); %></li>
 							</ul>
 					<%
 						}
