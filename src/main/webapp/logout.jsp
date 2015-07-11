@@ -61,7 +61,7 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td bgcolor="white">
 					<%
-						String email = (String)session.getAttribute("user_id");
+						String user_id = (String)session.getAttribute("user_id");
 						String otp_correct = (String)session.getAttribute("otp_correct");
 						if(user_id == null || otp_correct == null)
 						{
