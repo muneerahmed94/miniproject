@@ -117,7 +117,7 @@
 								<li><a class="linkh" href="#Profile">Profile</a></li>
 								
 								<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + name); %></li>
-								<li><a class="linkh" style="float:right" href="http://miniproject-jntuhceh.rhcloud.com/logout.jsp">Logout</a></li>
+								<li style="float:right"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/logout.jsp">Logout</a></li>
 							</ul>
 					<%
 						}

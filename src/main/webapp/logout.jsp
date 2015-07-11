@@ -59,7 +59,7 @@
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
-				<td bgcolor="white">
+				<td bgcolor="white" valign="top">
 					<%
 						String user_id = (String)session.getAttribute("user_id");
 						String otp_correct = (String)session.getAttribute("otp_correct");
