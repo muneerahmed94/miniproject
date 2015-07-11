@@ -85,7 +85,7 @@ public class SendOtpBean
          message.setSubject(this.subject);
 
          // Now set the actual message
-         message.setText("Your " + this.subject + "OTP is: " + this.otp);
+         message.setText("Your " + this.subject + " is: " + this.otp);
 
          // Send message
          Transport.send(message);
