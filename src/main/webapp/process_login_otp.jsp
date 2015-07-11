@@ -6,6 +6,7 @@
 	{
 		if(otp_entered.equals(otp_generated))
 		{
+			session.setAttribute("otp_correct", "yes");
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/welcome.jsp");
 		}
 		else

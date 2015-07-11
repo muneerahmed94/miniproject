@@ -55,7 +55,7 @@
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">
 					<%
-						String userId = (String)session.getAttribute("email");
+						String userId = (String)session.getAttribute("userId");
 						String otp_correct = (String)session.getAttribute("otp_correct");
 						String name = "";
 						int valid_user = 1; 
