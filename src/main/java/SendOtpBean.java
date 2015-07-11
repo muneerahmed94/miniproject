@@ -21,14 +21,14 @@ public class SendOtpBean
 
     private String otp;
 	private String email;
-	private String subject;
 	private int status;
+	private String sub;
 	
 	public SendOtpBean() 
 	{
 		otp = "";
 		email = "";
-		subject = "";
+		sub = "";
 		status = 0;
 	}
    
@@ -78,10 +78,10 @@ public class SendOtpBean
          InternetAddress.parse(to));
 
          // Set Subject: header field
-         message.setSubject(this.subject);
+         message.setSubject(this.sub);
 
          // Now set the actual message
-         message.setText("Your " + this.subject + "OTP is: " + this.otp);
+         message.setText("Your " + this.sub + "OTP is: " + this.otp);
 
          // Send message
          Transport.send(message);
