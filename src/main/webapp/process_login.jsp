@@ -56,7 +56,7 @@
 				session.setAttribute("otp_required",null);
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/employee_login_mismatch.html");
 			}
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/otp.jsp");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/login_otp.jsp");
         }
         catch(Exception e)
         {
