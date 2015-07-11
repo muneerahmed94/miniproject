@@ -45,7 +45,7 @@
 				<jsp:useBean id="sendOtpBean" class="action.SendOtpBean">
 					<jsp:setProperty name="sendOtpBean" property="otp" value="<%= otp %>"/>
 					<jsp:setProperty name="sendOtpBean" property="email" value="<%= email %>"/>
-					<jsp:setProperty name="sendOtpBean" property="sub" value="Login OTP"/>
+					<jsp:setProperty name="sendOtpBean" property="subject" value="Login OTP"/>
 				</jsp:useBean>
 <%
 				sendOtpBean.sendOtp();
