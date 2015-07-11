@@ -125,7 +125,7 @@
 									</tr>
 									<tr>
 										<td colspan="2" align="center">
-											<b>Haven't received OTP? </b><a href="http://miniproject-jntuhceh.rhcloud.com/forgot_customer.html">Click Here</a>
+											<b>Haven't received OTP? </b><a href=#ClickHere>Click Here</a>
 										</td>
 									</tr>
 								</table>
