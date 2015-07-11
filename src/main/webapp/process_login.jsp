@@ -11,7 +11,7 @@
 	PreparedStatement pst = null;
 	ResultSet rs = null;
 	
-	String sql = "select * from Users where UserID=? and LoginPassword=?"; 
+	String sql = "select email from Users where UserID=? and LoginPassword=?"; 
         try
         {
 		
@@ -33,6 +33,7 @@
             rs = pst.executeQuery();
             if(rs.next())
             {
+				String email = rs.getString("Email");
 %>
 				<jsp:useBean id="otpBean" class="action.OtpBean"/>
 <%
