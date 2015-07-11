@@ -64,6 +64,7 @@
 						{	
 							if(userId == null || otp_correct == null)
 							{
+								response.sendRedirect("google.com");
 								valid_user = 0;
 							}
 							else
