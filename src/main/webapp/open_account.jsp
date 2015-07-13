@@ -115,8 +115,8 @@
 											<td colspan="2" style="text-align:center;background-color:#ccecff;color:green;font-weight:bold;">Account Opened Successfully</td>
 										</tr>
 										<tr>
-											<td style="font-weight:bold;">Account Number: </td>
-											<td><% out.print(accountNumber); %></td>
+											<td style="font-weight:bold;text-align:center">Account Number: </td>
+											<td style="text-align:center"><% out.print(accountNumber); %></td>
 										</tr>
 										<tr>
 											<td colspan="2" style="text-align:center">
