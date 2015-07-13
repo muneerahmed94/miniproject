@@ -121,7 +121,7 @@
 										</tr>
 										<tr>
 											<td style="font-weight:bold;">Transaction Password: </td>
-											<td><% out.print(trasactionPassword); %></td>
+											<td><% out.print(transactionPassword); %></td>
 										</tr>
 										<tr>
 											<td style="font-weight:bold;">Account Number: </td>

@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0057)http://miniproject-jntuhceh.rhcloud.com/open_account.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Open Account</title>
+		<script>
+			function validateForm()
+			{
+				fname = validateFName();
+				father_fname = validateFatherFName();
+				if(!(fname && father_fname))
+				{
+					return false;
+				}
+			}
+			function validateFName()
+			{
+				var txtBox = document.getElementById("fname");
+				var regExp = /\b[a-zA-Z]+$\b/;
+				var val = txtBox.value;
+				return validate(txtBox, regExp, val);
+			}
+			function validateFatherFName()
+			{
+				var txtBox = document.getElementById("father_fname");
+				var regExp = /\b[a-zA-Z]+$\b/;
+				var val = txtBox.value;
+				return validate(txtBox, regExp, val);
+			}
+			function validate(txtBox, regExp, val)
+			{
+				
+				if(val)
+				{
+					if(val.search(regExp) == 0)
+					{
+						txtBox.style.backgroundColor = "green";
+						txtBox.style.color = "white";
+						return true;
+					}
+					
+					else
+					{
+						txtBox.style.color = "white";
+						txtBox.style.backgroundColor = "red";
+						return false;
+					}
+				}
+				else
+				{
+					txtBox.style.color = "white";
+					txtBox.style.backgroundColor = "red";
+					return false;
+					
+				}
+			}
+		</script>
+		<style>
+			ul.unliv 
+			{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			a.linkv:link, a.linkv:visited 
+			{
+				display: block;
+				width: 196px;
+				color: black;
+				font-size: 15px;
+				background-color: #f3f3f3;
+				text-align: left;
+				padding: 4px;
+				padding-left:20px;
+				text-decoration: none;
+			}
+			a.linkv:hover, a.lielv:active 
+			{
+				background-color: #cccccc;
+				font-size: 17px;
+				font-weight: bold;
+			}
+			td, tr
+			{
+				border-color:#E0E0E0;
+			}
+		</style>
+	</head>
+	<body style="margin:0px;padding:0px;">
+		<table width="100%" height="100%" cellspacing="2">
+			<!-- ============ HEADER SECTION ============== -->
+			<tbody><tr style="height:80px">
+				<td width="220px">
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="./Open Account_files/jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
+				</td>
+				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
+					JNTU Bank Internet Banking
+				</td>
+			</tr>
+			<!-- ============ NAVIGATION BAR SECTION ============== -->
+			<tr height="28px">
+				<td colspan="2" bgcolor="#0072c6">
+				
+				</td>
+			</tr>
+			<tr>
+				<!-- ============ LEFT COLUMN (MENU) ============== -->
+				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
+					<ul class="unliv">
+						<li class="lielv"><a class="linkv" href="./Open Account_files/Open Account.html">Open an Account</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_registration.html">Internet Banking-Register</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_login.html">Internet Banking-Login</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/employee_login.html">Employee Login</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/admin_login.html">Administrator Login</a></li>
+					</ul>
+				</td>
+				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
+				<td style="background-color:white;vertical-align:top">
+					<form action="https://www.google.co.in/" onsubmit="return validateForm()" accept="image/gif, image/jpeg" method="POST">
+						<table border="1" cellpadding="4" style="border-collapse:collapse;">
+							<tbody><tr>
+								<td colspan="4" style="font-weight:bold;font-size:20px;background-color:#ccecff">Personal Details</td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Applicant's Name: </td>
+								<td><input type="text" name="fname" id="fname" placeholder="First Name" onkeyup="validateFName()" style="text-transform:uppercase"></td>
+								<td><input type="text" name="mname" id="mname" placeholder="Middle Name" style="text-transform:uppercase"></td>
+								<td><input type="text" name="lname" id="lname" placeholder="Last Name" style="text-transform:uppercase"></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">
+									Name of : 
+									<select name="fghtype">
+										  <option value="Father">Father</option>
+										  <option value="Guardian">Guardian</option>
+										  <option value="Husband">Husband</option>
+									</select>
+								</td>
+								<td><input type="text" name="father_fname" id="father_fname" placeholder="First Name" onkeyup="validateFatherFName()" style="text-transform:uppercase"></td>
+								<td><input type="text" name="fghlname" placeholder="Middle Name" style="text-transform:uppercase"></td>
+								<td><input type="text" name="fghlname" placeholder="Last Name" style="text-transform:uppercase"></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Date of Birth: </td>
+								<td><input type="date" name="dob"></td>
+								<td>
+									<b>Gender:</b> 
+									<input type="radio" name="gender" value="male">Male
+									<input type="radio" name="gender" value="female">Female
+								</td>
+								<td style="font-weight:bold;">
+									Marrital Status: 
+									<select name="mstatus">
+									  <option value="Single">Single</option>
+									  <option value="Married">Married</option>
+									  <option value="Other">Other</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">
+									Mother's Maiden Name: 
+								</td>					
+								<td colspan="3">
+									<input type="text" name="mothername">
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-weight:bold;">
+									Applicant's Passport Size Photograph:
+									<input type="file" name="pass_pic" id="pass_pic">
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-weight:bold;">Applicant's Proof of Identity
+									<select name="proof_type">
+									  <option value="Aadhaar">Aadhaar</option>
+									  <option value="Voter ID">Voter ID</option>
+									  <option value="PAN Card">PAN Card</option>
+									  <option value="Driving License">Driving License</option>
+									</select>
+									<input type="file" name="proof_pic" id="proof_pic">
+								</td>
+		
+							</tr>
+							<tr>
+								<td colspan="4" style="font-weight:bold;font-size:20px;background-color:#ccecff">Correspondence Address</td>
+							</tr>
+							<tr>
+								<td><input type="text" name="dno" placeholder="Door/Flat No;Building/Society" size="35" style="text-transform:uppercase"></td>
+								<td><input type="text" name="dno" placeholder="Street/Road Name" size="35" style="text-transform:uppercase"></td>
+								<td><input type="text" name="dno" placeholder="Locality/Village" size="35" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;"><input name="landmark" placeholder="Landmark" type="text" style="text-transform:uppercase"></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">City: <input type="text" name="dno" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">District: <input type="text" name="dno" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">
+									State:
+									<select name="slist">
+									<option value="Select">Select</option>
+									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Goa">Goa</option>
+									<option value="Gujarat">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="Himachal Pradesh">Himachal Pradesh</option>
+									<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+									<option value="Jharkhand">Jharkhand</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="Lakshadweep">Lakshadweep</option>
+									<option value="Madhya Pradesh">Madhya Pradesh</option>
+									<option value="Maharashtra">Maharashtra</option>
+									<option value="Manipur">Manipur</option>
+									<option value="Meghalaya">Meghalaya</option>
+									<option value="Mizoram">Mizoram</option>
+									<option value="Nagaland">Nagaland</option>
+									<option value="Orissa">Orissa</option>
+									<option value="Pondicherry">Pondicherry</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Tamil Nadu">Telangana</option>
+									<option value="Tripura">Tripura</option>
+									<option value="Uttaranchal">Uttaranchal</option>
+									<option value="Uttar Pradesh">Uttar Pradesh</option>
+									<option value="West Bengal">West Bengal</option>
+									</select>
+								</td>
+								<td style="font-weight:bold;">Pin: <input type="text" name="dno" style="text-transform:uppercase"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="font-weight:bold;background-color:white">
+									Mobile Number:
+									<input type="text" size="3" maxlength="3" value="+91" disabled="">
+									<input type="text" name="mobile_number">
+								</td>
+								<td colspan="2" style="font-weight:bold;background-color:white">
+									Re-Enter Mobile Number:
+									<input type="text" size="3" maxlength="3" value="+91" disabled="">
+									<input type="text" name="mobile_number2">
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="font-weight:bold;">Email: <input type="text" name="email" size="40"></td>
+								<td colspan="2" style="font-weight:bold;">Re-Enter Email: <input type="text" name="email" size="40"></td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-weight:bold;font-size:20px;background-color:#ccecff">Permanent Address</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="font-weight:bold;">
+									Same as Correspondence Address: 
+									<select name="capa">
+										  <option value="No">No</option>
+										  <option value="Yes">Yes</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="text" name="dno" placeholder="Door/Flat No;Building/Society" size="35" style="text-transform:uppercase"></td>
+								<td><input type="text" name="dno" placeholder="Street/Road Name" size="35" style="text-transform:uppercase"></td>
+								<td><input type="text" name="dno" placeholder="Locality/Village" size="35" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;"><input name="landmark" placeholder="Landmark" type="text" style="text-transform:uppercase"></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">City: <input type="text" name="dno" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">District: <input type="text" name="dno" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">
+									State:
+									<select name="slist">
+									<option value="Select">Select</option>
+									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Goa">Goa</option>
+									<option value="Gujarat">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="Himachal Pradesh">Himachal Pradesh</option>
+									<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+									<option value="Jharkhand">Jharkhand</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="Lakshadweep">Lakshadweep</option>
+									<option value="Madhya Pradesh">Madhya Pradesh</option>
+									<option value="Maharashtra">Maharashtra</option>
+									<option value="Manipur">Manipur</option>
+									<option value="Meghalaya">Meghalaya</option>
+									<option value="Mizoram">Mizoram</option>
+									<option value="Nagaland">Nagaland</option>
+									<option value="Orissa">Orissa</option>
+									<option value="Pondicherry">Pondicherry</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Tamil Nadu">Telangana</option>
+									<option value="Tripura">Tripura</option>
+									<option value="Uttaranchal">Uttaranchal</option>
+									<option value="Uttar Pradesh">Uttar Pradesh</option>
+									<option value="West Bengal">West Bengal</option>
+									</select>
+								</td>
+								<td style="font-weight:bold;">Pin: <input type="text" name="dno" style="text-transform:uppercase"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="font-weight:bold;background-color:white">
+									Mobile Number:
+									<input type="text" size="3" maxlength="3" value="+91" disabled="">
+									<input type="text" name="mobile_number">
+								</td>
+								<td colspan="2" style="font-weight:bold;background-color:white">
+									Re-Enter Mobile Number:
+									<input type="text" size="3" maxlength="3" value="+91" disabled="">
+									<input type="text" name="mobile_number2">
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="font-weight:bold;">Email: <input type="text" name="email" size="40"></td>
+								<td colspan="2" style="font-weight:bold;">Re-Enter Email: <input type="text" name="email" size="40"></td>
+							</tr>
+							<tr>
+								<td align="center" colspan="4"><input type="checkbox" value="agreed" name="tos">I agree to the JNTU Bank <a href="http://miniproject-jntuhceh.rhcloud.com/open_account.html#Terms of Service">Terms of Service</a> and <a href="http://miniproject-jntuhceh.rhcloud.com/open_account.html#Privacy Policy">Privacy Policy</a></td>
+							</tr>
+							<tr>
+								<td colspan="4" align="center">
+									<input type="submit" value="Open Account">
+									&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+									<input type="reset" value="Reset">
+								</td>
+							</tr>
+						</tbody></table>
+					</form>
+				</td>
+			</tr>
+			<!-- ============ FOOTER SECTION ============== -->
+			<tr>
+				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
+					© JNTUHCEH Internet Banking Mini Project
+				</td>
+			</tr>
+		</tbody></table>
+	
+</body></html>
