@@ -33,7 +33,6 @@
 					}
 					
 					email = myForm.email.value;
-					
 					if(email == null || email == "")
 					{
 						alert("Please enter Email");
@@ -122,20 +121,19 @@
 									<input type="text" name="mobile_number">
 								</td>
 								<td colspan="2" style="font-weight:bold;background-color:white">
-									Re-Enter Mobile Number:
+									Confirm Mobile Number:
 									<input type="text" size="3" maxlength="3" value="+91" disabled>
 									<input type="text" name="mobile_number2">
 								</td>
 							</tr>
 							<tr>
 								<td colspan="2" style="font-weight:bold;">Email: <input type="text" name="email" size="40"></td>
-								<td colspan="2" style="font-weight:bold;">Re-Enter Email: <input type="text" name="email" size="40"></td>
+								<td colspan="2" style="font-weight:bold;">Confirm Email: <input type="text" name="email2" size="40"></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Account Number(s): </td>
-								<td><input type="text" name="cfname" placeholder="#Account Number1" size="35" style="text-transform:uppercase"></td>
-								<td><input type="text" name="cmname" placeholder="#Account Number2" size="35" style="text-transform:uppercase"></td>
-								<td><input type="text" name="clname" placeholder="#Account Number3" size="35" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">Account Number: </td>
+								<td colspan="2"><input type="text" name="account_numer" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
+								<td colspan="2">Confirm Account Number: <input type="text" name="account_number2" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td align="center" colspan="4"><input type="checkbox" value="agreed" name="tos">I agree to the JNTU Bank Internet Banking <a href="#Terms of Service">Terms of Service</a> and <a href="#Privacy Policy">Privacy Policy</a></td>
