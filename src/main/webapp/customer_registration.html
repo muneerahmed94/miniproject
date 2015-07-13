@@ -73,6 +73,11 @@
 						return false;
 					}
 					
+					if(!myForm.tos.checked)
+					{
+						alert("Please accept the terms of service")
+					}
+					
 		
 				}
 		</script>
@@ -167,7 +172,7 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Number: </td>
-								<td colspan="2"><input type="text" name="account_numer" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
+								<td colspan="2"><input type="text" name="account_number" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
 								<td colspan="2">Confirm Account Number: <input type="text" name="account_number2" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
