@@ -119,7 +119,7 @@
 											<td><% out.print(accountNumber); %></td>
 										</tr>
 										<tr>
-											<td>
+											<td colspan="2" style="text-align:center">
 												You can now register for Internet Banking Using this Account Number
 											</td>
 										</tr>
