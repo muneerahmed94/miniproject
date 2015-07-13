@@ -109,7 +109,7 @@
 						%>
 									<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 										<tr>
-											<td colspan="2" style="background-color:#ccecff;color:green;font-weight:bold;">Registration Successful</td>
+											<td colspan="2" style="text-align:center;background-color:#ccecff;color:green;font-weight:bold;">Registration Successful</td>
 										</tr>
 										<tr>
 											<td style="font-weight:bold;">Customer ID: </td>
@@ -156,7 +156,7 @@
 						%>
 							<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 									<tr>
-										<td colspan="2" style="background-color:#ccecff;color:red;font-weight:bold;">Registration Failed!</td>
+										<td colspan="2" style="text-align:center;background-color:#ccecff;color:red;font-weight:bold;">Registration Failed!</td>
 									</tr>
 									<td>
 						<%
