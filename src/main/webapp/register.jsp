@@ -59,7 +59,7 @@
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
-				<td bgcolor="white">
+				<td bgcolor="white" valign="top">
 					<%@ page import="java.sql.*" %>
 					<%
 						String firstName = request.getParameter("first_name");
