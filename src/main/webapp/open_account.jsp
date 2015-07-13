@@ -119,6 +119,11 @@
 											<td style="font-weight:bold;">Account Number: </td>
 											<td><% out.print(accountNumber); %></td>
 										</tr>
+										<tr>
+											<td>
+												You can now register for Internet Banking Using this Account Number
+											</td>
+										</tr>
 									</table>
 								
 						<%
