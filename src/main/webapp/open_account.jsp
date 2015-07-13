@@ -99,7 +99,7 @@
 							int x = st.executeUpdate(sql);
 							if(x == 1)
 							{
-								sql = "SELECT * FROM Customers WHERE FirstName=? AND FatherFirstName=? AND MotherName=?";
+								sql = "SELECT * FROM Customers WHERE FirstName=? AND GuardianFirstName=? AND MotherName=?";
 								pst = conn.prepareStatement(sql);
 								pst.setString(1, firstName);
 								pst.setString(2, fatherFirstName);
