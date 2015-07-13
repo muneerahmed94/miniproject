@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Internet Banking Registration</title>
+		<title>Customer Registration</title>
 		<style>
 			<script>
 				function validateForm()
@@ -29,7 +29,8 @@
 					
 					if(mobile_number != mobile_number2)
 					{
-						alert("please enter same mobile number twice");
+						alert("please enter same Mobile Number twice");
+						return false;
 					}
 					
 					email = myForm.email.value;
@@ -39,9 +40,23 @@
 						return false;
 					}
 					
+					email2 = myForm.email2.value;
+					if(email2 == null || email2 == "")
+					{
+						alert("Please enter Email");
+						return false;
+					}
+					
+					if(email != email2)
+					{
+						alert("Please enter same Email twice");
+						return false;
+					}
+					
 					
 				}
-			</script>
+		</script>
+		<style>
 			ul.unliv 
 			{
 				list-style-type: none;
@@ -101,7 +116,7 @@
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
-				<td style="background-color:white;vertical-align:top">
+				<td style="background-color:white;vertical-align:top;">
 					<form action="http://miniproject-jntuhceh.rhcloud.com/customer_registration.jsp" onsubmit="return validateForm()" method="POST">
 						<form action="" accept="image/gif, image/jpeg" method="POST">
 						<table border="1" cellpadding="4" style="border-collapse:collapse;">
@@ -148,11 +163,11 @@
 						</table>
 					</form>
 				</td>
-			</tr>
+			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
 				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					© JNTUHCEH Internet Banking Mini Project
+					JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>
