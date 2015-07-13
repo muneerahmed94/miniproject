@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<title>Customer Registration</title>
-		<style>
 			<script>
 				function validateForm()
 				{
+					alert("inn");
 					first_name = myForm.first_name.value;
 					if(first_name == null || first_name == "")
 					{
@@ -43,7 +43,7 @@
 					email2 = myForm.email2.value;
 					if(email2 == null || email2 == "")
 					{
-						alert("Please enter Email");
+						alert("Please enter Confirm Email");
 						return false;
 					}
 					
@@ -53,7 +53,27 @@
 						return false;
 					}
 					
+					account_number = myForm.account_number.value;
+					if(account_number == null || account_number == "")
+					{
+						alert("Please enter Account Number");
+						return false;
+					}
 					
+					account_number2 = myForm.account_number2.value;
+					if(account_number2 == null || account_number2 == "")
+					{
+						alert("Please enter Confirm Account Number");
+						return false;
+					}
+					
+					if(account_number != account_number2)
+					{
+						alert("Please enter same Account Number twice");
+						return false;
+					}
+					
+		
 				}
 		</script>
 		<style>
@@ -117,7 +137,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					<form action="http://miniproject-jntuhceh.rhcloud.com/customer_registration.jsp" onsubmit="return validateForm()" method="POST">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_registration.jsp" onsubmit="return validateForm()" method="POST">
 						<form action="" accept="image/gif, image/jpeg" method="POST">
 						<table border="1" cellpadding="4" style="border-collapse:collapse;">
 							<tr>
