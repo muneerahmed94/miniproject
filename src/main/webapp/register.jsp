@@ -68,11 +68,16 @@
 						String phoneNumber = request.getParameter("phone_number");
 						String email = request.getParameter("email");
 						String accountNumber = request.getParameter("account_number");
+						String userId = "";
+						String loginPassword = "";
+						String transactionPassword = "";
+						String name = "";
 						
 						try
 						{
 							Connection conn = null;
 							Statement st = null;
+							PreparedStatement pst = null;
 							ResultSet rs = null;
 							
 							String MYSQL_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
@@ -90,14 +95,78 @@
 							st = conn.createStatement();
 							int x = st.executeUpdate(sql);
 							if(x == 1)
-								out.print("Registration Successful");
+							{
+								sql = "SELECT * FROM Users WHERE AccountNumber=?";
+								pst = conn.prepareStatement(sql);
+								pst.setString(1, accountNumber);
+								rs = pst.executeQuery();
+								if(rs.next())
+								{
+									userId = rs.getString("UserID");
+									loginPassword = "12345abcde";
+									transactionPassword = "abcde12345";
+									
+						%>
+									<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+										<tr>
+											<td colspan="2" style="background-color:#ccecff;color:green;font-weight:bold;">Registration Successful</td>
+										</tr>
+										<tr>
+											<td style="font-weight:bold;">Customer ID: </td>
+											<td><% out.print(userId); %></td>
+										</tr>
+										<tr>
+											<td style="font-weight:bold;">Login Password: </td>
+											<td><% out.print(loginPassword); %></td>
+										</tr>
+										<tr>
+											<td style="font-weight:bold;">Transaction Password: </td>
+											<td><% out.print(trasactionPassword); %></td>
+										</tr>
+										<tr>
+											<td style="font-weight:bold;">Account Number: </td>
+											<td><% out.print(accountNumber); %></td>
+										</tr>
+										<tr>
+											<td style="font-weight:bold;">Mobile: </td>
+											<td><% out.print(phoneNumber); %></td>
+										</tr>
+										<tr>
+											<td style="font-weight:bold;">Email: </td>
+											<td><% out.print(email); %></td>
+										</tr>
+									</table>
+								
+						<%
+								}
+							}
 							else
-								out.print("Registration Failed");
+							{
+						%>
+								<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+									<tr>
+										<td colspan="2" style="background-color:#ccecff;color:red;font-weight:bold;">Registration Failed!</td>
+									</tr>
+								</table>
+						<%
+							}
 						}
 						catch(Exception e)
 						{
-							e.printStackTrace();
-							out.print(e);
+						%>
+							<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+									<tr>
+										<td colspan="2" style="background-color:#ccecff;color:red;font-weight:bold;">Registration Failed!</td>
+									</tr>
+									<td>
+						<%
+										e.printStackTrace();
+										out.print(e);
+						%>
+									</td>
+							</table>
+						<%
+							
 						}
 					%>
 				</td>
