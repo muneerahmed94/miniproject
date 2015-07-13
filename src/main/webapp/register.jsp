@@ -65,7 +65,7 @@
 						String firstName = request.getParameter("first_name");
 						String middleName = request.getParameter("middle_name");
 						String lastName = request.getParameter("last_name");
-						String phoneNumber = request.getParameter("phone_number");
+						String phoneNumber = request.getParameter("mobile_number");
 						String email = request.getParameter("email");
 						String accountNumber = request.getParameter("account_number");
 						String userId = "";
