@@ -92,7 +92,7 @@
 
 							String url = "jdbc:mysql://" + MYSQL_DATABASE_HOST + ":" + MYSQL_DATABASE_PORT + "/" + MYSQL_DATABASE_NAME;
 							
-							String sql = "INSERT INTO Customers(FirstName, MiddleName, LastName, GuardianType, GuardianFirstName, GaurdianMiddleName, GuardianLastName, Gender, MarritalStatus, MotherName) VALUES('"+firstName+"', '"+middleName+"', '"+lastName+"', '"+fghType+"', '"+fatherFirstName+"', '"+fatherMiddleName+"', '"+fatherlastName+"', '"+gender+"', '"+marritalStatus+"', '"+motherName+"')";
+							String sql = "INSERT INTO Customers(FirstName, MiddleName, LastName, GuardianType, GuardianFirstName, GuardianMiddleName, GuardianLastName, Gender, MarritalStatus, MotherName) VALUES('"+firstName+"', '"+middleName+"', '"+lastName+"', '"+fghType+"', '"+fatherFirstName+"', '"+fatherMiddleName+"', '"+fatherlastName+"', '"+gender+"', '"+marritalStatus+"', '"+motherName+"')";
 							
 							Class.forName("com.mysql.jdbc.Driver");
 							conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
