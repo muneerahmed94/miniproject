@@ -151,7 +151,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					<marquee><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
+					<marquee  onmouseover="this.parentNode.stop()" onmouseout="this.parentNode.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
 							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
