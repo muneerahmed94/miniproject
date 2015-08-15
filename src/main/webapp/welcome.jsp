@@ -151,19 +151,20 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					<table border="1" cellpadding="4" style="align-center;border-collapse:collapse;">
-							<tr>
-								<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
-								<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Customer Name</td>
-								<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balnce</td>
-							</tr>
-							<tr>
-									<td style="text-align:center;"><% out.print(accountNumber); %></td>
-									<td style="text-align:center;"><% out.print(accountName); %></td>
-									<td style="text-align:center;"><% out.print(accountBalance); %></td>
-							</tr>
+					<marquee><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
+					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
+						<tr>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Customer Name</td>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balnce</td>
+						</tr>
+						<tr>
+								<td style="text-align:center;"><% out.print(accountNumber); %></td>
+								<td style="text-align:center;"><% out.print(accountName); %></td>
+								<td style="text-align:center;"><% out.print(accountBalance); %></td>
+						</tr>
 							
-						</table>
+					</table>
 				</td>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
