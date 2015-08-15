@@ -104,7 +104,7 @@
 								
 								sql = "select * from Customers where AccountNumber=?";
 								pst = conn.prepareStatement(sql);
-								pst.setString(1, accountNumber);
+								pst.setInt(1, accountNumber);
 								rs = pst.executeQuery();
 								
 								if(rs.next())
