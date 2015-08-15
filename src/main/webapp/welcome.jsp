@@ -151,16 +151,16 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					<table border="1" cellpadding="4" style="border-collapse:collapse;">
+					<table border="1" cellpadding="4" style="align-center;border-collapse:collapse;">
 							<tr>
-								<td style="font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
-								<td style="font-weight:bold;font-size:20px;background-color:#ccecff">Customer Name</td>
-								<td style="font-weight:bold;font-size:20px;background-color:#ccecff">Account Balnce</td>
+								<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
+								<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Customer Name</td>
+								<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balnce</td>
 							</tr>
 							<tr>
-									<td><% out.print(accountNumber); %></td>
-									<td><% out.print(accountName); %></td>
-									<td><% out.print(accountBalance); %></td>
+									<td style="text-align:center;"><% out.print(accountNumber); %></td>
+									<td style="text-align:center;"><% out.print(accountName); %></td>
+									<td style="text-align:center;"><% out.print(accountBalance); %></td>
 							</tr>
 							
 						</table>
