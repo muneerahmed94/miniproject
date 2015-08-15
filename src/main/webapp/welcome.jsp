@@ -102,7 +102,7 @@
 									name = name.concat(rs.getString("LastName"));
 								}
 								
-								String sql = "select * from Customers where AccountNumber=?";
+								sql = "select * from Customers where AccountNumber=?";
 								pst = conn.prepareStatement(sql);
 								pst.setString(1, accountNumber);
 								rs = pst.executeQuery();
