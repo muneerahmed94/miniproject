@@ -58,7 +58,11 @@
 						String userId = (String)session.getAttribute("user_id");
 						String otp_correct = (String)session.getAttribute("otp_correct");
 						String name = "";
+						String accountName = "";
+						int accountNumber = 0;
+						int accountBalance = 0;
 						int valid_user = 1; 
+						
 						
 						try
 						{	
@@ -90,11 +94,28 @@
 								rs = pst.executeQuery();
 								if(rs.next())
 								{
+									accountNumber = rs.getInt("AccountNumber");
 									name = name.concat(rs.getString("FirstName"));
 									name = name.concat(" ");
 									name = name.concat(rs.getString("MiddleName"));
 									name = name.concat(" ");
 									name = name.concat(rs.getString("LastName"));
+								}
+								
+								String sql = "select * from Customers where AccountNumber=?";
+								pst = conn.prepareStatement(sql);
+								pst.setString(1, accountNumber);
+								rs = pst.executeQuery();
+								
+								if(rs.next())
+								{
+									accountName = accountName.concat(rs.getString("FirstName"));
+									accountName = accountName.concat(" ");
+									accountName = accountName.concat(rs.getString("MiddleName"));
+									accountName = accountName.concat(" ");
+									accountName = accountName.concat(rs.getString("LastName"));
+									
+									accountBalance = rs.getInt("AccountBalance");
 								}
 									
 							}
@@ -130,7 +151,19 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					
+					<table border="1" cellpadding="4" style="border-collapse:collapse;">
+							<tr>
+								<td style="font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
+								<td style="font-weight:bold;font-size:20px;background-color:#ccecff">Customer Name</td>
+								<td style="font-weight:bold;font-size:20px;background-color:#ccecff">Account Balnce</td>
+							</tr>
+							<tr>
+									<td><% out.print(accountNumber); %></td>
+									<td><% out.print(accountName); %></td>
+									<td><% out.print(accountBalance); %></td>
+							</tr>
+							
+						</table>
 				</td>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
