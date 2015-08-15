@@ -10,7 +10,7 @@ public class OtpBean implements java.io.Serializable
 	{
 		otp = "";
 		Random randomGenerator = new Random();
-		for (int idx = 1; idx <= 8; idx++)
+		for (int idx = 1; idx <= 6; idx++)
 		{
 			int randomInt = randomGenerator.nextInt(100)%10;
 			String temp = String.valueOf(randomInt);
