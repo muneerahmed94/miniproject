@@ -161,7 +161,7 @@
 						<tr>
 								<td style="text-align:center;"><% out.print(accountNumber); %></td>
 								<td style="text-align:center;"><% out.print(accountName); %></td>
-								<td style="text-align:center;"><% out.print("\u20B9" + accountBalance); %></td>
+								<td style="text-align:center;"><% out.print("\u20B9" + " "+  accountBalance); %></td>
 						</tr>
 							
 					</table>
