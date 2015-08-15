@@ -156,12 +156,12 @@
 						<tr>
 							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
 							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Customer Name</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balnce</td>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balance</td>
 						</tr>
 						<tr>
 								<td style="text-align:center;"><% out.print(accountNumber); %></td>
 								<td style="text-align:center;"><% out.print(accountName); %></td>
-								<td style="text-align:center;"><% out.print(accountBalance); %></td>
+								<td style="text-align:center;"><% out.print("₹" + accountBalance); %></td>
 						</tr>
 							
 					</table>
