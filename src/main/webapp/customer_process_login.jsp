@@ -38,7 +38,7 @@
 				<jsp:useBean id="otpBean" class="action.OtpBean"/>
 <%
 				String otp = otpBean.getOtp();
-				session.setAttribute("customer_id",userId);
+				session.setAttribute("customer_id",customerId);
 				session.setAttribute("otp_required", "yes");
 				session.setAttribute("otp", otp);
 %>
