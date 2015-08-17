@@ -1,3 +1,12 @@
+<%
+	String otp_required = (String)session.getAttribute("otp_required");
+	String customer_id = (String)session.getAttribute("customer_id");
+	
+	if(customer_id == null || otp_required == null)
+	{
+		response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+	}
+%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
@@ -64,75 +73,32 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					<%
-						String otp_required = (String)session.getAttribute("otp_required");
-						if(otp_required == null)
-						{
-					%>
-							<form action="http://miniproject-jntuhceh.rhcloud.com/process_login.jsp" method="POST">
-								<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
-									<tr>
-										<td colspan="2" style="background-color:#ccecff;font-weight:bold;">Customer Login</td>
-									</tr>
-									<tr>
-										<td colspan="2" align="center" style="color:red;">You must Login first...</td>
-									</tr>
-									<tr>
-										<td style="font-weight:bold;">Customer ID: </td>
-										<td><input type="text" size="25" name="user_id"></td>
-									</tr>
-									<tr>
-										<td style="font-weight:bold;">Password: </td>
-										<td><input type="password" size="25" name="password"> </td>
-									</tr>
-									<tr>
-										<td colspan="2" align="center">
-											<input type="submit" value="Login">
-											&nbsp &nbsp &nbsp &nbsp &nbsp 
-											<input type="reset" value="Reset">
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2" align="center">
-											<b>Forgot Password? </b><a href="http://miniproject-jntuhceh.rhcloud.com/forgot_customer.html">Click Here</a>
-										</td>
-									</tr>
-								</table>
-							</form>
-					<%	
-						}
-						else
-						{
-					%>
-							<form action="http://miniproject-jntuhceh.rhcloud.com/process_login_otp.jsp" method="POST">
-								<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
-									<tr>
-										<td colspan="2" style="background-color:#ccecff;font-weight:bold;">Customer Login</td>
-									</tr>
-									<tr>
-										<td colspan="2" align="center" style="color:red;">Invalid OTP...Please try again</td>
-									</tr>
-									<tr>
-										<td style="font-weight:bold;">Enter the OTP: </td>
-										<td><input type="text" size="25" name="otp"></td>
-									</tr>
-									<tr>
-										<td colspan="2" align="center">
-											<input type="submit" value="Submit">
-											&nbsp &nbsp &nbsp &nbsp &nbsp 
-											<input type="reset" value="Reset">
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2" align="center">
-											<b>Haven't received OTP? </b><a href=#ClickHere>Click Here</a>
-										</td>
-									</tr>
-								</table>
-							</form>
-					<%	
-						}
-					%>
+					<form action="http://miniproject-jntuhceh.rhcloud.com/customer_process_login_otp.jsp" method="POST">
+						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+							<tr>
+								<td colspan="2" style="background-color:#ccecff;font-weight:bold;">Customer Login</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center" style="color:green;">OTP sent to your registered email</td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Enter the OTP: </td>
+								<td><input type="text" size="25" name="otp"></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center">
+									<input type="submit" value="Submit">
+									&nbsp &nbsp &nbsp &nbsp &nbsp 
+									<input type="reset" value="Reset">
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center">
+									<b>Haven't received OTP? </b><a href=#ClickHere>Click Here</a>
+								</td>
+							</tr>
+						</table>
+					</form>
 				</td>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->

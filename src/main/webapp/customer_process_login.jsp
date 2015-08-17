@@ -4,7 +4,7 @@
 <%@ page import="java.io.PrintWriter" %>
 
 <%
-	String userId = request.getParameter("user_id");
+	String customerId = request.getParameter("customer_id");
 	String password = request.getParameter("password");
 	
 	Connection conn = null;
@@ -27,7 +27,7 @@
 			conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 			
 			pst = conn.prepareStatement(sql);
-            pst.setString(1, userId);
+            pst.setString(1, customerId);
             pst.setString(2, password);
             
             rs = pst.executeQuery();
@@ -38,7 +38,7 @@
 				<jsp:useBean id="otpBean" class="action.OtpBean"/>
 <%
 				String otp = otpBean.getOtp();
-				session.setAttribute("user_id",userId);
+				session.setAttribute("customer_id",userId);
 				session.setAttribute("otp_required", "yes");
 				session.setAttribute("otp", otp);
 %>
@@ -49,14 +49,14 @@
 				</jsp:useBean>
 <%
 				sendOtpBean.sendOtp();
-            }
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_otp.jsp");
+			}
 			else
 			{
-				session.setAttribute("email",null);
+				session.setAttribute("customer_id",null);
 				session.setAttribute("otp_required",null);
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_mismatch.html");
 			}
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/login_otp.jsp");
         }
         catch(Exception e)
         {

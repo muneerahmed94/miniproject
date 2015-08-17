@@ -16,6 +16,10 @@
 		{
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
+		else if(otp_correct == null)
+		{
+			
+		}
 		else
 		{
 			Connection conn = null;
