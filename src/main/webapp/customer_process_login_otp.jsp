@@ -5,7 +5,7 @@
 	out.print(customer_id + " " + otp_required);
 	//if(customer_id == null || otp_required == null)
 	//{
-		response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		//response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 	//}
 	
 	String otpEntered = request.getParameter("otp");
