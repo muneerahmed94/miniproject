@@ -39,7 +39,6 @@
 <%
 				String otp = otpBean.getOtp();
 				session.setAttribute("customer_id",customerId);
-				session.setAttribute("otp_required", "yes");
 				session.setAttribute("otp", otp);
 %>
 				<jsp:useBean id="sendOtpBean" class="action.SendOtpBean">
@@ -53,8 +52,6 @@
 			}
 			else
 			{
-				session.setAttribute("customer_id",null);
-				session.setAttribute("otp_required",null);
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_mismatch.html");
 			}
         }
