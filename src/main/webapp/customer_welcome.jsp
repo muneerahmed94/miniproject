@@ -48,6 +48,7 @@
 		if(rs.next())
 		{
 			accountNumber = rs.getInt("AccountNumber");
+			
 			name = name.concat(rs.getString("FirstName"));
 			name = name.concat(" ");
 			name = name.concat(rs.getString("MiddleName"));
