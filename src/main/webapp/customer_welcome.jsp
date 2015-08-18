@@ -39,7 +39,7 @@
 		conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 		
 		pst = conn.prepareStatement(sql);
-		pst.setString(1, userId);
+		pst.setString(1, customer_id);
 		
 		rs = pst.executeQuery();
 		if(rs.next())
