@@ -3,25 +3,25 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 <%
-	String customer_id = (String)session.getAttribute("customer_id");
-	if(customer_id == null)
-	{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-	}
-	
-	String otp_correct = (String)session.getAttribute("otp_correct");
-	if(otp_correct == null)
-	{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-	}
-	
-	String name = "";
-	String accountName = "";
-	int accountNumber = 0;
-	int accountBalance = 0;
-	
 	try
 	{	
+		String customer_id = (String)session.getAttribute("customer_id");
+		if(customer_id == null)
+		{
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		}
+
+		String otp_correct = (String)session.getAttribute("otp_correct");
+		if(otp_correct == null)
+		{
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		}
+
+		String name = "";
+		String accountName = "";
+		int accountNumber = 0;
+		int accountBalance = 0;
+		
 		Connection conn = null;
 		PreparedStatement pst = null;
 		ResultSet rs = null;
