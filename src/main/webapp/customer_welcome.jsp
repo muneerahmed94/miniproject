@@ -2,6 +2,14 @@
 <%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
+
+<%!
+		String name = "";
+		String accountName = "";
+		int accountNumber = 0;
+		int accountBalance = 0;
+%>
+
 <%
 	try
 	{	
@@ -16,11 +24,6 @@
 		{
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
-
-		String name = "";
-		String accountName = "";
-		int accountNumber = 0;
-		int accountBalance = 0;
 		
 		Connection conn = null;
 		PreparedStatement pst = null;
