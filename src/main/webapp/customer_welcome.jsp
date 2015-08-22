@@ -4,7 +4,7 @@
 <%@ page import="java.io.PrintWriter" %>
 
 <%!
-		String name = "";
+		String loginName = "";
 		String accountName = "";
 		int accountNumber = 0;
 		int accountBalance = 0;
@@ -49,11 +49,12 @@
 		{
 			accountNumber = rs.getInt("AccountNumber");
 			
-			name = name.concat(rs.getString("FirstName"));
-			name = name.concat(" ");
-			name = name.concat(rs.getString("MiddleName"));
-			name = name.concat(" ");
-			name = name.concat(rs.getString("LastName"));
+			loginName = "";
+			loginName = loginName.concat(rs.getString("FirstName"));
+			loginName = loginName.concat(" ");
+			loginName = loginName.concat(rs.getString("MiddleName"));
+			loginName = loginName.concat(" ");
+			loginName = loginName.concat(rs.getString("LastName"));
 		}
 		
 		sql = "select * from Customers where AccountNumber=?";
@@ -63,6 +64,7 @@
 		
 		if(rs.next())
 		{
+			accountName = "";
 			accountName = accountName.concat(rs.getString("FirstName"));
 			accountName = accountName.concat(" ");
 			accountName = accountName.concat(rs.getString("MiddleName"));
@@ -143,7 +145,7 @@
 						<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
 						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
 						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
-						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + name); %></li>
+						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
 			</tr>
