@@ -51,6 +51,7 @@
 		{
 			accountNumber = String.valueOf(rs.getInt("AccountNumber"));
 			
+			loginName=  "";
 			loginName = loginName.concat(rs.getString("FirstName"));
 			loginName = loginName.concat(" ");
 			loginName = loginName.concat(rs.getString("MiddleName"));
@@ -68,6 +69,7 @@
 		
 		if(rs.next())
 		{	
+			accountName = "";
 			accountName = accountName.concat(rs.getString("FirstName"));
 			accountName = accountName.concat(" ");
 			accountName = accountName.concat(rs.getString("MiddleName"));
