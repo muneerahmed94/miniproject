@@ -4,6 +4,7 @@
 <%@ page import="java.io.PrintWriter" %>
 
 <%!
+		String customer_id = "";
 		String accountName = "";
 		String accountNumber = "";
 		String email = "";
@@ -13,7 +14,7 @@
 <%
 	try
 	{	
-		String customer_id = (String)session.getAttribute("customer_id");
+		customer_id = (String)session.getAttribute("customer_id");
 		if(customer_id == null)
 		{
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
@@ -65,8 +66,6 @@
 			accountName = accountName.concat(rs.getString("MiddleName"));
 			accountName = accountName.concat(" ");
 			accountName = accountName.concat(rs.getString("LastName"));
-			
-			accountBalance = String.valueOf(rs.getInt("accountBalance"));
 		}
 				
 	}
@@ -147,23 +146,23 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">UserID: </td>
-								<td><% out.print(customer_id) %></td>
+								<td><% out.print(customer_id); %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Number: </td>
-								<td><% out.print(accountNumber) %></td>
+								<td><% out.print(accountNumber); %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Holder's Name: </td>
-								<td><% out.print(accountName) %></td>
+								<td><% out.print(accountName); %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Email: </td>
-								<td><% out.print(email) %></td>
+								<td><% out.print(email); %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Phone: </td>
-								<td><% out.print(phone) %></td>
+								<td><% out.print(mobile); %></td>
 							</tr>
 						</table>
 				</td>
