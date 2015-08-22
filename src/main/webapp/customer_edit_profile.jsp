@@ -116,6 +116,24 @@
 				font-size: 17px;
 				font-weight: bold;
 			}
+			
+			a.linkh:link, a.linkh:visited 
+			{
+				display: block;
+				width: 160px;
+				font-weight: bold;
+				color: white;
+				padding: 4px;
+				background-color: #0072c6;
+				text-align: center;
+
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			a.linkh:hover, a.linkh:active 
+			{
+				background-color: #005798;
+			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
