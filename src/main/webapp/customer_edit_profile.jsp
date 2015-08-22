@@ -47,7 +47,7 @@
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
-			accountNumber = rs.getInt("AccountNumber");
+			accountNumber = String.valueOf(rs.getInt("AccountNumber"));
 			
 			email =rs.getString("Email");
 			mobile = rs.getString("Mobile");
