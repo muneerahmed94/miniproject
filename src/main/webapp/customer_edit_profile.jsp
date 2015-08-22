@@ -55,7 +55,7 @@
 		
 		sql = "select * from Customers where AccountNumber=?";
 		pst = conn.prepareStatement(sql);
-		pst.setInt(1, accountNumber);
+		pst.setInt(1, Integer.parseInt(accountNumber));
 		rs = pst.executeQuery();
 		
 		if(rs.next())
@@ -66,7 +66,7 @@
 			accountName = accountName.concat(" ");
 			accountName = accountName.concat(rs.getString("LastName"));
 			
-			accountBalance = rs.getInt("AccountBalance");
+			accountBalance = String.valueOf(rs.getInt("accountBalance"));
 		}
 				
 	}
@@ -147,23 +147,23 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">UserID: </td>
-								<td><%= out.print(customer_id) %></td>
+								<td><% out.print(customer_id) %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Number: </td>
-								<td><%= out.print(accountNumber) %></td>
+								<td><% out.print(accountNumber) %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Holder's Name: </td>
-								<td><%= out.print(accountName) %></td>
+								<td><% out.print(accountName) %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Email: </td>
-								<td><%= out.print(email) %></td>
+								<td><% out.print(email) %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Phone: </td>
-								<td><%= out.print(phone) %></td>
+								<td><% out.print(phone) %></td>
 							</tr>
 						</table>
 				</td>
