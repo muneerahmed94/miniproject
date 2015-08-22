@@ -118,6 +118,10 @@
 			{
 				background-color: #005798;
 			}
+			td, tr
+			{
+				border-color:#E0E0E0;
+			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
