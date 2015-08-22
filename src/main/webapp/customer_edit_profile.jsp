@@ -124,8 +124,14 @@
 			</tr>
 			<!-- ============ NAVIGATION BAR SECTION ============== -->
 			<tr height="28px">
-				<td	colspan=2 bgcolor="#0072c6">
-				
+				<td	colspan=2 bgcolor="#0072c6">		
+					<ul>
+						<li><a class="linkh" href="#Accounts">Accounts</a></li>
+						<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
+						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
+						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
+						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + name); %></li>
+					</ul>
 				</td>
 			</tr>
 			<tr>
@@ -142,7 +148,7 @@
 				<td bgcolor="white" valign="top">
 					<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<td colspan="2" style="background-color:#ccecff;font-weight:bold;">Your Details</td>
+								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Your Details</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">UserID: </td>
