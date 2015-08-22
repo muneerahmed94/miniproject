@@ -172,7 +172,7 @@
 						<li class="lih"><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
 						<li class="lih"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
 						<li class="lih" style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
-						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + name); %></li>
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
 			</tr>
