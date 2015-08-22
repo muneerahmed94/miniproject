@@ -49,12 +49,6 @@
 		{
 			accountNumber = rs.getInt("AccountNumber");
 			
-			name = name.concat(rs.getString("FirstName"));
-			name = name.concat(" ");
-			name = name.concat(rs.getString("MiddleName"));
-			name = name.concat(" ");
-			name = name.concat(rs.getString("LastName"));
-			
 			email =rs.getString("Email");
 			mobile = rs.getString("Mobile");
 		}
@@ -65,7 +59,7 @@
 		rs = pst.executeQuery();
 		
 		if(rs.next())
-		{
+		{	
 			accountName = accountName.concat(rs.getString("FirstName"));
 			accountName = accountName.concat(" ");
 			accountName = accountName.concat(rs.getString("MiddleName"));
@@ -156,12 +150,12 @@
 								<td><%= out.print(customer_id) %></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Name: </td>
-								<td><%= out.print(accountName) %></td>
-							</tr>
-							<tr>
 								<td style="font-weight:bold;">Account Number: </td>
 								<td><%= out.print(accountNumber) %></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Account Holder's Name: </td>
+								<td><%= out.print(accountName) %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Email: </td>
