@@ -6,6 +6,7 @@
 <%!
 		String customer_id = "";
 		String accountName = "";
+		String loginName = "";
 		String accountNumber = "";
 		String email = "";
 		String mobile = "";
@@ -49,6 +50,12 @@
 		if(rs.next())
 		{
 			accountNumber = String.valueOf(rs.getInt("AccountNumber"));
+			
+			loginName = loginName.concat(rs.getString("FirstName"));
+			loginName = loginName.concat(" ");
+			loginName = loginName.concat(rs.getString("MiddleName"));
+			loginName = loginName.concat(" ");
+			loginName = loginName.concat(rs.getString("LastName"));
 			
 			email =rs.getString("Email");
 			mobile = rs.getString("Mobile");
@@ -130,7 +137,7 @@
 						<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
 						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
 						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
-						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + name); %></li>
+						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
 			</tr>
