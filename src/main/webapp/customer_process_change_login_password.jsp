@@ -51,7 +51,7 @@
 			
 			
 			int updated = 0;
-			updated = pst.executeUpdate()
+			updated = pst.executeUpdate();
 			
 			if(updated != 0)
 			{
