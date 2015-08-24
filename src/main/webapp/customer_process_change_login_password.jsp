@@ -50,6 +50,7 @@
 			
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, new_password);
+			pst.setString(2,customer_id);
 			
 			
 			int updated = 0;
