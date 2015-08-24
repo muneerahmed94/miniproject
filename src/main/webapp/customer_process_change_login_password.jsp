@@ -16,13 +16,13 @@
 		String customer_id = (String)session.getAttribute("customer_id");
 		if(customer_id == null)
 		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.jsp");
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
 
 		String otp_correct = (String)session.getAttribute("otp_correct");
 		if(otp_correct == null)
 		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.jsp");
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
 		
 		
@@ -59,12 +59,12 @@
 			if(updated != 0)
 			{
 				session.setAttribute("login_password", newPassword);
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password_successful.html");
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password_successful.jsp");
 			}
 		}
 		else
 		{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_invalid_login_password.html");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_invalid_login_password.jsp");
 		}
 	}
 	catch(Exception e)

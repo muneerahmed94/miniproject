@@ -22,7 +22,7 @@
 		{
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
-		loginName = (String)session.getAttribute("customer_id");
+		loginName = (String)session.getAttribute("login_name");
 	}
 	catch(Exception e)
 	{
