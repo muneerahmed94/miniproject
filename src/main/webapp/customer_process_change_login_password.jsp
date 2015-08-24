@@ -28,7 +28,7 @@
 		
 		String currentPassword = (String)session.getAttribute("login_password");
 		String passwordEntered = request.getParameter("current_password");
-		String new_password = request.getParameter("new_password");
+		String newPassword = request.getParameter("new_password");
 		
 		if(currentPassword.equals(passwordEntered))
 		{
@@ -49,7 +49,7 @@
 			conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 			
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, new_password);
+			pst.setString(1, newPassword);
 			pst.setString(2,customer_id);
 			
 			
@@ -58,6 +58,7 @@
 			
 			if(updated != 0)
 			{
+				session.setAttribute("login_password", newPassword);
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password_successful.html");
 			}
 		}
