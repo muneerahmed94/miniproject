@@ -9,6 +9,7 @@
 		String loginPassword = "";
 		String trasactionPassword = "";
 		String email = "";
+		String mobile = "";
 		
 		int accountNumber = 0;
 		int accountBalance = 0;
@@ -63,6 +64,12 @@
 				loginName = loginName.concat(rs.getString("MiddleName"));
 				loginName = loginName.concat(" ");
 				loginName = loginName.concat(rs.getString("LastName"));
+				
+				loginPassword = rs.getString("LoginPassword");
+				trasactionPassword = rs.getString("TransactionPassword");
+				
+				mobile = rs.getString("Mobile");
+				email = rs.getString("Email");
 			}
 			
 			sql = "select * from Customers where AccountNumber=?";
