@@ -4,13 +4,15 @@
 <%@ page import="java.io.PrintWriter" %>
 
 <%!
-	String loginName = (String)session.getAttribute("login_name");
+	String loginName = "";
 %>
 
 
 <%
 	try
 	{	
+		String loginName = (String)session.getAttribute("login_name");
+		
 		String customer_id = (String)session.getAttribute("customer_id");
 		if(customer_id == null)
 		{
