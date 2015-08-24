@@ -26,7 +26,15 @@
 		{
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
-		
+	}
+	catch(Exception e)
+	{
+		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
+		e.printStackTrace( new PrintWriter(ostr,true) );
+		String foo = ostr.toString();
+		out.println(foo);
+		out.print(e);
+	}
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
