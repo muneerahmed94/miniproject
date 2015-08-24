@@ -5,11 +5,7 @@
 
 <%!
 		String customer_id = "";
-		String accountName = "";
 		String loginName = "";
-		String accountNumber = "";
-		String email = "";
-		String mobile = "";
 %>
 
 <%
@@ -26,6 +22,7 @@
 		{
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
+		loginName = (String)session.getAttribute("customer_id");
 	}
 	catch(Exception e)
 	{
