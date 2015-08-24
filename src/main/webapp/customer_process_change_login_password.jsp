@@ -26,7 +26,7 @@
 		}
 		
 		
-		String currentPassword = (String)session.getAttribute("current_password");
+		String currentPassword = (String)session.getAttribute("login_password");
 		String passwordEntered = request.getParameter("current_password");
 		String new_password = request.getParameter("new_password");
 		
