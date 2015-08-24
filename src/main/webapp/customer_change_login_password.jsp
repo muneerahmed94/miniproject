@@ -27,71 +27,12 @@
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
 		
-		Connection conn = null;
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		
-		String sql = "select * from Users where UserID=?"; 
-		String MYSQL_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-		String MYSQL_PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-		String MYSQL_DATABASE_HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
-		String MYSQL_DATABASE_PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
-		String MYSQL_DATABASE_NAME = "miniproject";
-
-		String url = "jdbc:mysql://" + MYSQL_DATABASE_HOST + ":" + MYSQL_DATABASE_PORT + "/" + MYSQL_DATABASE_NAME;
-		
-		Class.forName("com.mysql.jdbc.Driver");
-		conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
-		
-		pst = conn.prepareStatement(sql);
-		pst.setString(1, customer_id);
-		
-		rs = pst.executeQuery();
-		if(rs.next())
-		{
-			accountNumber = String.valueOf(rs.getInt("AccountNumber"));
-			
-			loginName = "";
-			loginName = loginName.concat(rs.getString("FirstName"));
-			loginName = loginName.concat(" ");
-			loginName = loginName.concat(rs.getString("MiddleName"));
-			loginName = loginName.concat(" ");
-			loginName = loginName.concat(rs.getString("LastName"));
-			
-			email =rs.getString("Email");
-			mobile = rs.getString("Mobile");
-		}
-		
-		sql = "select * from Customers where AccountNumber=?";
-		pst = conn.prepareStatement(sql);
-		pst.setInt(1, Integer.parseInt(accountNumber));
-		rs = pst.executeQuery();
-		
-		if(rs.next())
-		{	
-			accountName = "";
-			accountName = accountName.concat(rs.getString("FirstName"));
-			accountName = accountName.concat(" ");
-			accountName = accountName.concat(rs.getString("MiddleName"));
-			accountName = accountName.concat(" ");
-			accountName = accountName.concat(rs.getString("LastName"));
-		}
-				
-	}
-	catch(Exception e)
-	{
-		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
-		e.printStackTrace( new PrintWriter(ostr,true) );
-		String foo = ostr.toString();
-		out.println(foo);
-		out.print(e);
-	}
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Home</title>
+		<title>Change Login Password</title>
 		<style>
 			
 			ul.unliv 
@@ -223,7 +164,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td bgcolor="white" valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password.jsp" method="POST" onsubmit=" return validateForm()">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_process_change_login_password.jsp" method="POST" onsubmit=" return validateForm()">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
 								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Change Login Password</td>

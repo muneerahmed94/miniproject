@@ -3,19 +3,6 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 
-<%!
-		String loginName = "";
-		String accountName = "";
-		String loginPassword = "";
-		String transactionPassword = "";
-		String email = "";
-		String mobile = "";
-		
-		Integer accountNumber = 0;
-		Integer accountBalance = 0;
-
-		String customer_id = "";
-%>
 
 <%
 	try
@@ -32,14 +19,18 @@
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
 		}
 		
-		String first_time = (String)session.getAttribute("first_time");
-		if(first_time == null)
+		
+		String currentPassword = (String)session.getAttribute("current_password");
+		String passwordEntered = request.getParameter("current_password");
+		String new_password = request.getParameter("new_password");
+		
+		if(currentPassword.equals(passwordEntered))
 		{
 			Connection conn = null;
 			PreparedStatement pst = null;
 			ResultSet rs = null;
 			
-			String sql = "select * from Users where UserID=?"; 
+			String sql = "UPDATE Users SET LoginPassword=? WHERE UserID=?"; 
 			String MYSQL_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 			String MYSQL_PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 			String MYSQL_DATABASE_HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
@@ -52,82 +43,25 @@
 			conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 			
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, customer_id);
+			pst.setString(1, new_password);
 			
-			rs = pst.executeQuery();
-			if(rs.next())
+			
+			if(pst.executeUpdate())
 			{
-				accountNumber = rs.getInt("AccountNumber");
-				
-				loginName = "";
-				loginName = loginName.concat(rs.getString("FirstName"));
-				loginName = loginName.concat(" ");
-				loginName = loginName.concat(rs.getString("MiddleName"));
-				loginName = loginName.concat(" ");
-				loginName = loginName.concat(rs.getString("LastName"));
-				
-				loginPassword = rs.getString("LoginPassword");
-				transactionPassword = rs.getString("TransactionPassword");
-				
-				mobile = rs.getString("Mobile");
-				email = rs.getString("Email");
+				response.sendRedirect(""http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password_successful");
 			}
-			
-			sql = "select * from Customers where AccountNumber=?";
-			pst = conn.prepareStatement(sql);
-			pst.setInt(1, accountNumber);
-			rs = pst.executeQuery();
-			
-			if(rs.next())
-			{
-				accountName = "";
-				accountName = accountName.concat(rs.getString("FirstName"));
-				accountName = accountName.concat(" ");
-				accountName = accountName.concat(rs.getString("MiddleName"));
-				accountName = accountName.concat(" ");
-				accountName = accountName.concat(rs.getString("LastName"));
-				
-				accountBalance = rs.getInt("AccountBalance");
-			}
-			
-			session.setAttribute("account_number", accountNumber.toString());
-			session.setAttribute("login_name", loginName);
-			session.setAttribute("account_name", accountName);
-			session.setAttribute("account_balance", accountBalance.toString());
-			session.setAttribute("login_password", loginPassword);
-			session.setAttribute("transaction_password", transactionPassword);
-			session.setAttribute("email", email);
-			session.setAttribute("mobile", mobile);
-			
-			session.setAttribute("first_time", "no");
 		}
 		else
 		{
-			accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
-			accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
-			loginName = (String)session.getAttribute("login_name");
-			accountName = (String)session.getAttribute("account_name");
-			loginPassword = (String)session.getAttribute("login_password");
-			transactionPassword = (String)session.getAttribute("transaction_password");
-			email = (String)session.getAttribute("email");
-			mobile = (String)session.getAttribute("mobile");
+			response.sendRedirect(""http://miniproject-jntuhceh.rhcloud.com/customer_invalid_login_password");
 		}
-				
-	}
-	catch(Exception e)
-	{
-		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
-		e.printStackTrace( new PrintWriter(ostr,true) );
-		String foo = ostr.toString();
-		out.println(foo);
-		out.print(e);
-	}
+		
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Home</title>
+		<title>Change Login Password</title>
 		<style>
 			
 			ul.unliv 
@@ -190,6 +124,39 @@
 				border-color:#E0E0E0;
 			}
 		</style>
+		<script>
+				function validateForm()
+				{
+					current_password = myForm.current_password.value;
+					if(current_password == null || current_password == "")
+					{
+						alert("Please enter Current Password");
+						return false;
+					}
+					
+					new_password = myForm.new_password.value;
+					if(new_password == null || new_password == "")
+					{
+						alert("Please enter New Password");
+						return false;
+					}
+					
+					confirm_password = myForm.confirm_password.value;
+					if(confirm_password == null || confirm_password == "")
+					{
+						alert("Please enter Confirm Password");
+						return false;
+					}
+					
+					
+					
+					if(new_password != confirm_password)
+					{
+						alert("New Password and Confirm Password doesn't match...");
+						return false;
+					}
+				}
+		</script>
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
@@ -218,39 +185,40 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password.jsp">Change Login Password</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_transaction_password.html">Change Trasaction Password</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password.html">Change Login Password</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_trasaction_password.html">Change Trasaction Password</a></li>
 						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_email.html">Change Email</a></li>
 						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_phone.html">Change Phone Number</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td bgcolor="white" valign="top">
-					<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_process_change_login_password.jsp" method="POST" onsubmit=" return validateForm()">
+						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Your Details</td>
+								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Change Login Password</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">UserID: </td>
-								<td><% out.print(customer_id); %></td>
+								<td style="font-weight:bold;">Current Password: </td>
+								<td><input type="password" name="current_password"/></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Account Number: </td>
-								<td><% out.print(accountNumber); %></td>
+								<td style="font-weight:bold;">New Password: </td>
+								<td><input type="password" name="new_password"/></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Account Holder's Name: </td>
-								<td><% out.print(accountName); %></td>
+								<td style="font-weight:bold;">Confirm Password: </td>
+								<td><input type="password" name="confirm_password"/></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Email: </td>
-								<td><% out.print(email); %></td>
-							</tr>
-							<tr>
-								<td style="font-weight:bold;">Phone: </td>
-								<td><% out.print(mobile); %></td>
+								<td colspan="2" align="center">
+									<input type="submit" value="Change">
+									&nbsp &nbsp &nbsp &nbsp &nbsp 
+									<input type="reset" value="Reset">
+								</td>
 							</tr>
 						</table>
+					</form>
 				</td>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
