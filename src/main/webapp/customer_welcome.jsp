@@ -11,8 +11,8 @@
 		String email = "";
 		String mobile = "";
 		
-		int accountNumber = 0;
-		int accountBalance = 0;
+		Integer accountNumber = 0;
+		Integer accountBalance = 0;
 		
 %>
 
@@ -89,10 +89,10 @@
 				accountBalance = rs.getInt("AccountBalance");
 			}
 			
-			session.setAttribute("account_number", accountNumber);
+			session.setAttribute("account_number", accountNumber.toString());
 			session.setAttribute("login_name", loginName);
 			session.setAttribute("account_name", accountName);
-			session.setAttribute("account_balance", accountBalance);
+			session.setAttribute("account_balance", accountBalance.toString());
 			session.setAttribute("login_password", loginPassword);
 			session.setAttribute("trasaction_password", trasactionPassword);
 			session.setAttribute("email", email);
