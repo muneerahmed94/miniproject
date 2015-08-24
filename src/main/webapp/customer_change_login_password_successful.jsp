@@ -1,3 +1,39 @@
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.Random" %>
+<%@ page import="java.io.ByteArrayOutputStream" %>
+<%@ page import="java.io.PrintWriter" %>
+
+<%!
+		String loginName = "";
+%>
+
+<%
+	try
+	{	
+		String customer_id = (String)session.getAttribute("customer_id");
+		if(customer_id == null)
+		{
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		}
+
+		String otp_correct = (String)session.getAttribute("otp_correct");
+		if(otp_correct == null)
+		{
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		}
+		
+		loginName = (String)session.getAttribute("login_name");
+	}
+	catch(Exception e)
+	{
+		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
+		e.printStackTrace( new PrintWriter(ostr,true) );
+		String foo = ostr.toString();
+		out.println(foo);
+		out.print(e);
+	}
+%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
@@ -151,7 +187,7 @@
 								<td><input type="password" name="confirm_password"/></td>
 							</tr>
 							<tr>
-								<td colspan="2" style="text-align:center;font-weight:bold;color:red">Invalid Current Password</td>
+								<td colspan="2" style="text-align:center;font-weight:bold;color:green">Login password changed successfully</td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
