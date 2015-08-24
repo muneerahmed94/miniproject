@@ -13,6 +13,8 @@
 		
 		Integer accountNumber = 0;
 		Integer accountBalance = 0;
+
+		String customer_id = "";
 %>
 
 <%
