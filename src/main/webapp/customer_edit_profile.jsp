@@ -4,12 +4,15 @@
 <%@ page import="java.io.PrintWriter" %>
 
 <%!
-		String customer_id = "";
-		String accountName = "";
 		String loginName = "";
-		String accountNumber = "";
+		String accountName = "";
+		String loginPassword = "";
+		String trasactionPassword = "";
 		String email = "";
 		String mobile = "";
+		
+		Integer accountNumber = 0;
+		Integer accountBalance = 0;
 %>
 
 <%
