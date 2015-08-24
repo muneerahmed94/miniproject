@@ -57,12 +57,12 @@
 			
 			if(updated != 0)
 			{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password_successful");
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password_successful.html");
 			}
 		}
 		else
 		{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_invalid_login_password");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_invalid_login_password.html");
 		}
 	}
 	catch(Exception e)
