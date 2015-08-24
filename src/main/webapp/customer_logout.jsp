@@ -15,5 +15,14 @@
 	session.setAttribute("otp_correct", null);
 	session.setAttribute("otp", null);
 	
+	session.setAttribute("account_number", null);
+	session.setAttribute("account_balance", null);
+	session.setAttribute("account_name", null);
+	session.setAttribute("login_name", null);
+	session.setAttribute("login_password", null);
+	session.setAttribute("transaction_password", null);
+	session.setAttribute("mobile", null);
+	session.setAttribute("email", null);
+	
 	response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com");
 %>

@@ -7,7 +7,7 @@
 		String loginName = "";
 		String accountName = "";
 		String loginPassword = "";
-		String trasactionPassword = "";
+		String transactionPassword = "";
 		String email = "";
 		String mobile = "";
 		
@@ -67,7 +67,7 @@
 				loginName = loginName.concat(rs.getString("LastName"));
 				
 				loginPassword = rs.getString("LoginPassword");
-				trasactionPassword = rs.getString("TransactionPassword");
+				transactionPassword = rs.getString("TransactionPassword");
 				
 				mobile = rs.getString("Mobile");
 				email = rs.getString("Email");
@@ -95,7 +95,7 @@
 			session.setAttribute("account_name", accountName);
 			session.setAttribute("account_balance", accountBalance.toString());
 			session.setAttribute("login_password", loginPassword);
-			session.setAttribute("trasaction_password", trasactionPassword);
+			session.setAttribute("transaction_password", transactionPassword);
 			session.setAttribute("email", email);
 			session.setAttribute("mobile", mobile);
 			
@@ -105,10 +105,10 @@
 		{
 			accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 			accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
-			loginName = (String)session.getAttribute("account_number");
+			loginName = (String)session.getAttribute("login_name");
 			accountName = (String)session.getAttribute("account_name");
 			loginPassword = (String)session.getAttribute("login_password");
-			trasactionPassword = (String)session.getAttribute("trasaction_password");
+			transactionPassword = (String)session.getAttribute("transaction_password");
 			email = (String)session.getAttribute("email");
 			mobile = (String)session.getAttribute("mobile");
 		}
@@ -219,7 +219,7 @@
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
 						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password.html">Change Login Password</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_trasaction_password.html">Change Trasaction Password</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_transaction_password.html">Change Trasaction Password</a></li>
 						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_email.html">Change Email</a></li>
 						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_phone.html">Change Phone Number</a></li>
 					</ul>

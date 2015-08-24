@@ -7,7 +7,7 @@
 		String loginName = "";
 		String accountName = "";
 		String loginPassword = "";
-		String trasactionPassword = "";
+		String transactionPassword = "";
 		String email = "";
 		String mobile = "";
 		
@@ -66,7 +66,7 @@
 				loginName = loginName.concat(rs.getString("LastName"));
 				
 				loginPassword = rs.getString("LoginPassword");
-				trasactionPassword = rs.getString("TransactionPassword");
+				transactionPassword = rs.getString("TransactionPassword");
 				
 				mobile = rs.getString("Mobile");
 				email = rs.getString("Email");
@@ -94,7 +94,7 @@
 			session.setAttribute("account_name", accountName);
 			session.setAttribute("account_balance", accountBalance.toString());
 			session.setAttribute("login_password", loginPassword);
-			session.setAttribute("trasaction_password", trasactionPassword);
+			session.setAttribute("transaction_password", transactionPassword);
 			session.setAttribute("email", email);
 			session.setAttribute("mobile", mobile);
 			
@@ -104,7 +104,7 @@
 		{
 			accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 			accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
-			loginName = (String)session.getAttribute("account_number");
+			loginName = (String)session.getAttribute("login_name");
 			accountName = (String)session.getAttribute("account_name");
 		}
 	}
@@ -193,7 +193,7 @@
 					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
 							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Customer Name</td>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Holder's Name</td>
 							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balance</td>
 						</tr>
 						<tr>
