@@ -33,8 +33,10 @@ public class SendSmsBean implements java.io.Serializable
 	  this.body = body;	
 	}
    
-   public void sendSms()
+   public String sendSms()
    {
+		String status = "";
+		
 		String authId = "MAZDEXN2VHYTBMMJVJNW";
         String authToken = "OWQyMmI3ZWI2ZDYwYjRiZWI3NDc2NTQ4YTdlY2Q5";
 		
@@ -46,16 +48,23 @@ public class SendSmsBean implements java.io.Serializable
         parameters.put("text", this.body);
         parameters.put("url", "http://server/message/notification/");
 
-        try {
-                MessageResponse msgResponse = api.sendMessage(parameters);
-                System.out.println(msgResponse.apiId);
-                if (msgResponse.serverCode == 202) {
-                        System.out.println(msgResponse.messageUuids.get(0).toString());
-                } else {
-                        System.out.println(msgResponse.error); 
-                }
-        } catch (PlivoException e) {
-                System.out.println(e.getLocalizedMessage());
+        try 
+		{
+			MessageResponse msgResponse = api.sendMessage(parameters);
+			status = status.concat(msgResponse.apiId);
+			if (msgResponse.serverCode == 202) 
+			{
+				status = status.concat(msgResponse.messageUuids.get(0).toString());
+			} 
+			else 
+			{
+				status = status.concat(msgResponse.error);
+			}
+        } 
+		catch (PlivoException e) 
+		{
+			status = status.concat(e.getLocalizedMessage());
         }
+		return status;
    }
 }

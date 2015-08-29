@@ -9,5 +9,6 @@
 		<jsp:setProperty name="sendSmsBean" property="body" value="<%= body %>"/>
 	</jsp:useBean>
 <%
-	sendSmsBean.sendSms();
+	String status = sendSmsBean.sendSms();
+	out.print(status);
 %>
