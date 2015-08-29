@@ -1,0 +1,13 @@
+<%
+	String src = request.getParameter("from");
+	String dst = request.getParameter("to");
+	String body = request.getParameter("body");
+%>
+	<jsp:useBean id="sendSmsBean" class="action.SendSmsBean">
+		<jsp:setProperty name="sendSmsBean" property="src" value="<%= src %>"/>
+		<jsp:setProperty name="sendSmsBean" property="dst" value="<%= dst %>"/>
+		<jsp:setProperty name="sendSmsBean" property="body" value="<%= body %>"/>
+	</jsp:useBean>
+<%
+	sendSmsBean.sendSms();
+%>
