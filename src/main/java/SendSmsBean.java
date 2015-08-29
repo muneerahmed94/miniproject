@@ -43,9 +43,9 @@ public class SendSmsBean implements java.io.Serializable
 		RestAPI api = new RestAPI(authId, authToken, "v1");
 
         LinkedHashMap<String, String> parameters = new LinkedHashMap<String, String>();
-        parameters.put("src", this.src);
-        parameters.put("dst", this.dst);
-        parameters.put("text", this.body);
+        parameters.put("src", src);
+        parameters.put("dst", dst);
+        parameters.put("text", body);
         parameters.put("url", "http://server/message/notification/");
 
         try 
