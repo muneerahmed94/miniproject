@@ -50,8 +50,9 @@
 <html>
 	<head>
 		<title>Welcome</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<style>
-			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			
 			ul 
 			{
 				list-style-type: none;
