@@ -51,6 +51,9 @@
 	<head>
 		<title>Welcome</title>
 		<style>
+			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 			ul 
 			{
 				list-style-type: none;
@@ -119,7 +122,15 @@
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
-						
+						<tr>
+							<td><a style="color:white;background-color:#ccecff;" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp" class="btn btn-info" role="button">Add Benificiary</a></td>
+						</tr>
+						<tr>
+							<td><a style="color:white;background-color:#ccecff;" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp" class="btn btn-info" role="button">View Benificiary</a></td>
+						</tr>
+						<tr>
+							<td><a style="color:white;background-color:#ccecff;" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/transfer.jsp" class="btn btn-info" role="button">Fund Transfer</a></td>
+						</tr>
 					</table>
 				</td>
 			</tr>	
