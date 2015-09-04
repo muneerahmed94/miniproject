@@ -19,6 +19,18 @@
 <%
 	try
 	{	
+		String customer_id = (String)session.getAttribute("customer_id");
+		if(customer_id == null)
+		{
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		}
+
+		String otp_correct = (String)session.getAttribute("otp_correct");
+		if(otp_correct == null)
+		{
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		}
+		
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		loginName = (String)session.getAttribute("login_name");
@@ -107,16 +119,7 @@
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
-						<tr>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Holder's Name</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balance</td>
-						</tr>
-						<tr>
-								<td style="text-align:center;"><% out.print(accountNumber); %></td>
-								<td style="text-align:center;"><% out.print(accountName); %></td>
-								<td style="text-align:center;"><% out.print(accountBalance + " INR"); %></td>
-						</tr>
+						
 					</table>
 				</td>
 			</tr>	
