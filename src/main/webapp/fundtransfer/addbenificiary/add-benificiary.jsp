@@ -7,12 +7,17 @@
 
 <%
 	Integer benificiaryOf = new Integer(0);
+	Integer benificiaryAccountNumber = new Integer(0);
 	String accountNumber = (String)session.getAttribute("account_number");
 	if(accountNumber != null)
 	{
 			benificiaryOf = Integer.parseInt(accountNumber);
 	}
-	Integer benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
+	String temp = request.getParameter("benificiary_account_number");
+	if(temp != null)
+	{
+		benificiaryAccountNumber = Integer.parseInt(temp);
+	}
 	String benificiaryName = request.getParameter("benificiary_name");
 	
 	try
