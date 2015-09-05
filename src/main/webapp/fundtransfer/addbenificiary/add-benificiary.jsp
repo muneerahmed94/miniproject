@@ -37,7 +37,7 @@
 		
 		sql = "SELECT * FROM Customers WHERE AccountNumber=?"; 
 		pst = conn.prepareStatement(sql);
-		pst.setString(1, benificiaryAccountNumber);
+		pst.setInt(1, benificiaryAccountNumber);
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
