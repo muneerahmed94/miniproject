@@ -153,7 +153,7 @@
 					<table class="content" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
 							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary">
 									<div class="link">
 										<span>Add Benificiary</span>
 										
@@ -165,7 +165,7 @@
 						
 						<tr>
 							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/viewbenificiary">
 									<div class="link">
 										<span>View Benificiary</span>
 									</div>
@@ -176,7 +176,7 @@
 						
 						<tr>
 							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/make-payment.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment">
 									<div class="link">
 										<span>Make Payment</span>
 									</div>
@@ -187,7 +187,7 @@
 						 
 						<tr>
 							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/payment-history.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/paymenthistory">
 									<div class="link">
 										<span>Payment History</span>
 									</div>

@@ -116,7 +116,32 @@
 					
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
-				
+				<form action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/add-benificiary.jsp" method="POST">
+					<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+						<tr>
+							<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Register Benificiary</td>
+						</tr>
+						<tr>
+							<td style="font-weight:bold;">Benificiary Account Number: </td>
+							<td><input type="text" size="25" name="benificiary_account_number"></td>
+						</tr>
+						<tr>
+							<td style="font-weight:bold;">Confirm Account Number: </td>
+							<td><input type="password" size="25" name="confirm_account_number"> </td>
+						</tr>
+						<tr>
+							<td style="font-weight:bold;">Benificiary Name: </td>
+							<td><input type="password" size="25" name="benificiary_name"> </td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="submit" value="Login">
+								&nbsp &nbsp &nbsp &nbsp &nbsp 
+								<input type="reset" value="Reset">
+							</td>
+						</tr>
+					</table>
+				</form>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
