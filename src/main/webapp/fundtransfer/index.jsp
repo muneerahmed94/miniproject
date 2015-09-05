@@ -58,7 +58,7 @@
 			  height: 25px;
 			  line-height:55px;
 			  text-align: center;
-			  background-color:#0072c6;
+			  background-color:#ccecff;
 			  border-style:solid;
 			  border-width:1px;
 			  border-color:#46b8da;
@@ -112,10 +112,10 @@
 			.content 
 			{
 				
-				border-top:5px solid #0072c6;
-				border-bottom:5px solid #0072c6;
-				border-right:1px solid #0072c6;
-				border-left:1px solid #0072c6;
+				border-top:5px solid #ccecff;
+				border-bottom:5px solid #ccecff;
+				border-right:1px solid #ccecff;
+				border-left:1px solid #ccecff;
 			}
 		</style>
 	</head>
