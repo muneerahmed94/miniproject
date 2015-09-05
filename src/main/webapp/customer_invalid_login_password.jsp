@@ -172,7 +172,7 @@
 					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_process_change_login_password.jsp" method="POST" onsubmit=" return validateForm()">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Change Login Password</td>
+								<td colspan="2" style="text-align:center;background-color:#a9d0f5;font-weight:bold;">Change Login Password</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Current Password: </td>

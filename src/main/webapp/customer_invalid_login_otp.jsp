@@ -75,7 +75,7 @@
 					<form action="http://miniproject-jntuhceh.rhcloud.com/customer_process_login_otp.jsp" method="POST">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Customer Login</td>
+								<td colspan="2" style="text-align:center;background-color:#a9d0f5;font-weight:bold;">Customer Login</td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center" style="color:red;">Invalid OTP...Please try again</td>
