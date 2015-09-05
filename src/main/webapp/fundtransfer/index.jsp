@@ -151,8 +151,8 @@
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table class="content" align="center" cellpadding="4" style="border-collapse:collapse;">
-						<tr height="100">
-							<td>
+						<tr>
+							<td height="100">
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
 									<div class="link">
 										<span>Add Benificiary</span>
@@ -163,8 +163,8 @@
 							</td>
 						</tr>
 						
-						<tr height="100">
-							<td>
+						<tr>
+							<td height="100">
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp">
 									<div class="link">
 										<span>View Benificiary</span>
@@ -174,8 +174,8 @@
 							</td>
 						</tr>
 						
-						<tr height="100">
-							<td>
+						<tr>
+							<td height="100">
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/make-payment.jsp">
 									<div class="link">
 										<span>Make Payment</span>
@@ -185,8 +185,8 @@
 							</td>
 						</tr>
 						 
-						<tr height="100">
-							<td>
+						<tr>
+							<td height="100">
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/payment-history.jsp">
 									<div class="link">
 										<span>Payment History</span>
