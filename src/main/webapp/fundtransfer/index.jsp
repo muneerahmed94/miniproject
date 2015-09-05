@@ -50,9 +50,31 @@
 <html>
 	<head>
 		<title>Welcome</title>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
 		<style>
-			
+			.link 
+			{
+			  width: 130px;
+			  height: 40px;
+			  line-height:35px;
+			  text-align: center;
+			  background-color:#ccecff;
+			  border-style:solid;
+			  border-width:1px;
+			  border-color:#46b8da;
+			  border-radius:5px;
+			}
+			.link:hover 
+			{
+				border-color:#269abc;
+			}
+
+			span 
+			{
+			  display: inline-block;
+			  vertical-align: middle;
+			  line-height: normal;      
+			}
 			ul 
 			{
 				list-style-type: none;
@@ -122,13 +144,40 @@
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
-							<td><a style="color:white;background-color:#ccecff;" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp" class="btn btn-info" role="button">Add Benificiary</a></td>
+							<td>
+								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
+									<div class="link">
+										<span>Add Benificiary</span>
+									</div>
+								</a>
+							</td>
 						</tr>
 						<tr>
-							<td><a style="color:white;background-color:#ccecff;" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp" class="btn btn-info" role="button">View Benificiary</a></td>
+							<td>
+								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp">
+									<div class="link">
+										<span>View Benificiary</span>
+									</div>
+								</a>
+							</td>
 						</tr>
 						<tr>
-							<td><a style="color:white;background-color:#ccecff;" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/transfer.jsp" class="btn btn-info" role="button">Fund Transfer</a></td>
+							<td>
+								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/make-payment.jsp">
+									<div class="link">
+										<span>Make Payment</span>
+									</div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/payment-history.jsp">
+									<div class="link">
+										<span>Payment History</span>
+									</div>
+								</a>
+							</td>
 						</tr>
 					</table>
 				</td>
