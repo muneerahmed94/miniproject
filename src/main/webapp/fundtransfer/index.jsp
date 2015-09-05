@@ -58,7 +58,7 @@
 			  height: 25px;
 			  line-height:55px;
 			  text-align: center;
-			  background-color:##0072c6;
+			  background-color:#0072c6;
 			  border-style:solid;
 			  border-width:1px;
 			  border-color:#46b8da;
