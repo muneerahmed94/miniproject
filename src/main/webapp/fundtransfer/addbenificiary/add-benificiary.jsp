@@ -74,6 +74,7 @@
 		e.printStackTrace( new PrintWriter(ostr,true) );
 		String foo = ostr.toString();
 		out.println(foo);
+		out.print("<br/><br/>");
 		out.print(e);
 	}
 %>

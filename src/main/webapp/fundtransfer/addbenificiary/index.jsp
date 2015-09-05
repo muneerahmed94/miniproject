@@ -92,7 +92,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="http://miniproject-jntuhceh.rhcloud.com/images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -116,7 +116,7 @@
 					
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
-				<td>
+				<td valign="top">
 					<form action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/add-benificiary.jsp" method="POST">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
