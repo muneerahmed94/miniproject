@@ -8,7 +8,9 @@
 <%
 	String accountNumber = (String)session.getAttribute("account_number");
 	if(accountNumber != null)
-		Integer benificiaryOf = Integer.parseInt(accountNumber);
+	{
+			Integer benificiaryOf = Integer.parseInt(accountNumber);
+	}
 	Integer benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
 	String benificiaryName = request.getParameter("benificiary_name");
 	
