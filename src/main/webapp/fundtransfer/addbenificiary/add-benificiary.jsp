@@ -3,8 +3,8 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 
-<%@ include file="http://miniproject-jntuhceh.rhcloud.com/include/check-password.jsp" >
-<%@ include file="http://miniproject-jntuhceh.rhcloud.com/include/check-otp.jsp" >
+<%@ include file="include/check-password.jsp" >
+<%@ include file="include/check-otp.jsp" >
 
 <%
 	Integer benificiaryOf = Integer.parseInt((String)session.getAttribute("account_number"));
