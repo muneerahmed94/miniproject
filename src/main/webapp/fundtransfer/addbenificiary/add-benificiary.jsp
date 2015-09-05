@@ -54,11 +54,8 @@
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
-			sql = "INSERT INTO Benificiaries (BenificiaryOf, Benificiary, BenficiaryName) VALUES (?, ?, ?)";
+			sql = "INSERT INTO Benificiaries (BenificiaryOf, Benificiary, BenficiaryName) VALUES ('"+benificiaryOf+"', '"+benificiaryAccountNumber+"', '"+benificiaryName+"')";
 			pst = conn.prepareStatement(sql);
-			pst.setInt(1, benificiaryOf);
-			pst.setInt(2, benificiaryAccountNumber);
-			pst.setString(3, benificiaryName);
 			int x = pst.executeUpdate(sql);
 			if(x == 1)
 			{
