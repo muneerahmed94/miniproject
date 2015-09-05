@@ -107,7 +107,15 @@
 			}
 			td, tr
 			{
-				border-color:#E0E0E0;
+				border-color:white;
+			}
+			.content 
+			{
+				border-color:#0072c6;
+				border-top-width:5px;
+				border-bottom-width:5px;
+				border-left-width:2px;
+				border-right-width:2px;
 			}
 		</style>
 	</head>
@@ -142,7 +150,7 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
-					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
+					<table class="content" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
 							<td>
 								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
@@ -155,6 +163,9 @@
 							</td>
 						</tr>
 						<tr>
+						
+						</tr>
+						<tr>
 							<td>
 								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp">
 									<div class="link">
@@ -165,6 +176,9 @@
 							</td>
 						</tr>
 						<tr>
+						
+						</tr>
+						<tr>
 							<td>
 								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/make-payment.jsp">
 									<div class="link">
@@ -173,6 +187,9 @@
 								</a>
 								You can make payment only to a registerd benificiary, select the benificiary and then make payment.
 							</td>
+						</tr>
+						<tr>
+						
 						</tr>
 						<tr>
 							<td>
