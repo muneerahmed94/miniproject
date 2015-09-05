@@ -4,11 +4,10 @@
 <%@ page import="java.io.PrintWriter" %>
 
 <%@ include file="../../include/check-password.jsp" %>
-<%@ include file="../../include/check-otp.jsp" %>
 
 <%
 	Integer benificiaryOf = Integer.parseInt((String)session.getAttribute("account_number"));
-	String benificiaryAccountNumber = request.getParameter("benificiary_account_number");
+	String benificiaryAccountNumber = Integr.parseInt(request.getParameter("benificiary_account_number"));
 	String benificiaryName = request.getParameter("benificiary_name");
 	
 	try
@@ -31,7 +30,7 @@
 		
 		String sql = "SELECT FROM Benificiaries WHERE BenficiaryOf=? AND Benificiary=benificiaryAccountNumber";
 		pst = conn.prepareStatement(sql); 
-		if(rs.next)
+		if(rs.next())
 		{
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/benificiary-already-added.jsp");
 		}
@@ -44,8 +43,8 @@
 		{
 			sql = "INSERT INTO Benificiaries(BenficiaryOf, Benificiary, BenficiaryName) VALUES(?,?,?)";
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, benificiaryOf);
-			pst.setString(2, benificiaryAccountNumber);
+			pst.setInt(1, benificiaryOf);
+			pst.setInt(2, benificiaryAccountNumber);
 			pst.setString(3, benificiaryName);
 			int x = pst.executeUpdate(sql);
 			if(x == 1)
