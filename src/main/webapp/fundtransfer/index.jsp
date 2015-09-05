@@ -58,7 +58,7 @@
 			  height: 40px;
 			  line-height:55px;
 			  text-align: center;
-			  background-color:#ccecff;
+			  background-color:#0072c6;
 			  border-style:solid;
 			  border-width:1px;
 			  border-color:#46b8da;
@@ -112,10 +112,10 @@
 			.content 
 			{
 				
-				border-top:4px solid #0072c6;
-				border-bottom:4px solid #0072c6;
-				border-right:2px solid #0072c6;
-				border-left:2px solid #0072c6;
+				border-top:5px solid #0072c6;
+				border-bottom:5px solid #0072c6;
+				border-right:1px solid #0072c6;
+				border-left:1px solid #0072c6;
 			}
 		</style>
 	</head>
@@ -153,7 +153,7 @@
 					<table class="content" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
 							<td>
-								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
 									<div class="link">
 										<span>Add Benificiary</span>
 										
@@ -167,7 +167,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp">
 									<div class="link">
 										<span>View Benificiary</span>
 									</div>
@@ -180,7 +180,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/make-payment.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/make-payment.jsp">
 									<div class="link">
 										<span>Make Payment</span>
 									</div>
@@ -193,7 +193,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/payment-history.jsp">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/payment-history.jsp">
 									<div class="link">
 										<span>Payment History</span>
 									</div>
