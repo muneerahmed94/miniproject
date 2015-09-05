@@ -192,9 +192,9 @@
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Number</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Holder's Name</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#ccecff">Account Balance</td>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#a9d0f5">Account Number</td>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#a9d0f5">Account Holder's Name</td>
+							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#a9d0f5">Account Balance</td>
 						</tr>
 						<tr>
 								<td style="text-align:center;"><% out.print(accountNumber); %></td>

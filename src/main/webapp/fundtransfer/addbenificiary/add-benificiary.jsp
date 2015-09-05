@@ -38,7 +38,7 @@
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 		
-		String sql = "SELECT FROM Benificiaries WHERE BenficiaryOf=? AND Benificiary=?";
+		String sql = "SELECT * FROM Benificiaries WHERE BenficiaryOf=? AND Benificiary=?";
 		pst = conn.prepareStatement(sql); 
 		pst.setInt(1, benificiaryOf);
 		pst.setInt(2, benificiaryAccountNumber);
