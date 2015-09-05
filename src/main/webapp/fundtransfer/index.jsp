@@ -111,11 +111,11 @@
 			}
 			.content 
 			{
-				border-color:#0072c6;
-				border-top-width:5px;
-				border-bottom-width:5px;
-				border-left-width:2px;
-				border-right-width:2px;
+				
+				border-top:4px solid #0072c6;
+				border-bottom:4px solid #0072c6;
+				border-right:2px solid #0072c6;
+				border-left:2px solid #0072c6;
 			}
 		</style>
 	</head>
