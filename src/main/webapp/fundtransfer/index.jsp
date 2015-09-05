@@ -56,7 +56,7 @@
 			{
 			  width: 130px;
 			  height: 40px;
-			  line-height:35px;
+			  line-height:55px;
 			  text-align: center;
 			  background-color:#ccecff;
 			  border-style:solid;
