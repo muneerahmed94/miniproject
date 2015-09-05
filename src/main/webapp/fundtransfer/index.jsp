@@ -55,7 +55,7 @@
 			.link 
 			{
 			  width: 130px;
-			  height: 40px;
+			  height: 25px;
 			  line-height:55px;
 			  text-align: center;
 			  background-color:#0072c6;
