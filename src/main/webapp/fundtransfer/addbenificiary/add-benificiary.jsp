@@ -40,6 +40,7 @@
 		
 		String sql = "SELECT FROM Benificiaries WHERE BenficiaryOf=? AND Benificiary=benificiaryAccountNumber";
 		pst = conn.prepareStatement(sql); 
+		rs = pst.executeQuery();
 		if(rs.next())
 		{
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/benificiary-already-added.jsp");
