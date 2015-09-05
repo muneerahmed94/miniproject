@@ -7,7 +7,7 @@
 
 <%
 	Integer benificiaryOf = Integer.parseInt((String)session.getAttribute("account_number"));
-	Integer benificiaryAccountNumber = Integr.parseInt(request.getParameter("benificiary_account_number"));
+	Integer benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
 	String benificiaryName = request.getParameter("benificiary_name");
 	
 	try
