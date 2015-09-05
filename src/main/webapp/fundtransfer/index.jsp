@@ -151,7 +151,7 @@
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table class="content" align="center" cellpadding="4" style="border-collapse:collapse;">
-						<tr>
+						<tr height="100">
 							<td>
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
 									<div class="link">
@@ -162,10 +162,8 @@
 								To Register a Benificiary and then confirm, this is one time registration.
 							</td>
 						</tr>
-						<tr>
 						
-						</tr>
-						<tr>
+						<tr height="100">
 							<td>
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/view-benificiary.jsp">
 									<div class="link">
@@ -175,10 +173,8 @@
 								You can view the benificiary or delete the benificiary.
 							</td>
 						</tr>
-						<tr>
 						
-						</tr>
-						<tr>
+						<tr height="100">
 							<td>
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/make-payment.jsp">
 									<div class="link">
@@ -188,10 +184,8 @@
 								You can make payment only to a registerd benificiary, select the benificiary and then make payment.
 							</td>
 						</tr>
-						<tr>
-						
-						</tr>
-						<tr>
+						 
+						<tr height="100">
 							<td>
 								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/payment-history.jsp">
 									<div class="link">
