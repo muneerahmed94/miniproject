@@ -128,11 +128,11 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Confirm Account Number: </td>
-								<td><input type="password" size="25" name="confirm_account_number"> </td>
+								<td><input type="text" size="25" name="confirm_account_number"> </td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Benificiary Name: </td>
-								<td><input type="password" size="25" name="benificiary_name"> </td>
+								<td><input type="text" size="25" name="benificiary_name"> </td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
