@@ -148,8 +148,10 @@
 								<a style="text-decoration:none;color:black;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/add-benificiary.jsp">
 									<div class="link">
 										<span>Add Benificiary</span>
+										
 									</div>
 								</a>
+								To Register a Benificiary and then confirm, this is one time registration.
 							</td>
 						</tr>
 						<tr>
@@ -159,6 +161,7 @@
 										<span>View Benificiary</span>
 									</div>
 								</a>
+								You can view the benificiary or delete the benificiary.
 							</td>
 						</tr>
 						<tr>
@@ -168,6 +171,7 @@
 										<span>Make Payment</span>
 									</div>
 								</a>
+								You can make payment only to a registerd benificiary, select the benificiary and then make payment.
 							</td>
 						</tr>
 						<tr>
@@ -177,6 +181,7 @@
 										<span>Payment History</span>
 									</div>
 								</a>
+								To view the payment history.
 							</td>
 						</tr>
 					</table>
