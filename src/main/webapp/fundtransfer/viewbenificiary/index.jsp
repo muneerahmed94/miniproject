@@ -42,6 +42,7 @@
 			td, tr
 			{
 				border-color:#E0E0E0;
+				text-align:center;
 			}
 			.content 
 			{
