@@ -137,7 +137,7 @@
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<th>
 								<td colspan"2">Fund Transfer</td>
-							<th>
+							</th>
 							<tr>
 								<td class="bold">
 									From Account:
