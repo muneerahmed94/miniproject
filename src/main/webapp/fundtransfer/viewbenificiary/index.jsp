@@ -131,7 +131,7 @@
 							%>
 										<tr>
 											<td>
-												<input type="radio" name="benificiary_account_number" value="<%= benificiary.toString() %>">
+												<input type="radio" name="benificiary_account_number" value="<%= benificiary.toString() %>" checked>
 											</td>
 											<td>
 												<%= benificiaryName %>
