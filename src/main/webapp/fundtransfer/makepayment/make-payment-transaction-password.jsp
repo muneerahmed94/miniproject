@@ -15,7 +15,7 @@
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		benificiaryName = (String)session.getAttribute("benificiary_name");
-		benificiaryAccountNumber = Integer.parseInt((String)session.getAttribute("benificiary_account_number"));
+		benificiaryAccountNumber = session.getAttribute("benificiary_account_number");
 		transactionAmount = request.getParameter("transaction_amount");
 		transactionRemarks = request.getParameter("transaction_remarks");
 	}
