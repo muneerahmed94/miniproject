@@ -58,7 +58,7 @@
 			}
 		</style>
 		<script>
-			function validateDelete()
+			function validatePayment()
 			{
 				var benificiary_account_number = myForm.benificiary_account_number.value;
 				if(benificiary_account_number == "")
@@ -99,7 +99,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/make-payment.jsp" method="POST" onsubmit="return validateDelete()">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/make-payment.jsp" method="POST" onsubmit="return validatePayment()">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
