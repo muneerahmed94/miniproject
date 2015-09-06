@@ -8,7 +8,7 @@
 	try
 	{
 		benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
-		sql = "SELECT BenificiaryName FROM Benificiaries WHERE Benificiary=?";
+		sql = "SELECT * FROM Benificiaries WHERE Benificiary=?";
 		pst = conn.prepareStatement(sql);
 		pst.setInt(1,benificiaryAccountNumber);
 		pst.executeQuery();
