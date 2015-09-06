@@ -7,7 +7,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>View Benificiary</title>
+		<title>Make Payment</title>
 		<style>
 			ul 
 			{
@@ -63,7 +63,7 @@
 				var benificiary_account_number = myForm.benificiary_account_number.value;
 				if(benificiary_account_number == "")
 				{
-					alert("Select a benificiary to delete");
+					alert("Select a benificiary to Make Payment");
 					return false;
 				}
 			}
@@ -99,7 +99,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/delete-benificiary.jsp" method="POST" onsubmit="return validateDelete()">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/make-payment.jsp" method="POST" onsubmit="return validateDelete()">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
@@ -140,7 +140,7 @@
 								}
 							%>
 							<tr>
-								<td colspan="3"><input type="submit" value="Delete"></td>
+								<td colspan="3"><input type="submit" value="Make Payment"></td>
 							</tr>
 						</table>
 					</form>
