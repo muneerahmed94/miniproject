@@ -16,8 +16,8 @@
 		accountBalance = (String)session.getAttribute("accountBalance");
 		benificiaryName = (String)session.getAttribute("benificiary_name");
 		benificiaryAccountNumber = (String)session.getAttribute("benificiary_account_number");
-		transactionAmount = session.request.getParameter("transaction_amount");
-		transactionRemarks = session.request.getParameter("transaction_remarks");
+		transactionAmount = request.getParameter("transaction_amount");
+		transactionRemarks = request.getParameter("transaction_remarks");
 	}
 	catch(Exception e)
 	{
