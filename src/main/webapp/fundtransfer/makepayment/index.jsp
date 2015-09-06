@@ -8,6 +8,17 @@
 <html>
 	<head>
 		<title>View Benificiary</title>
+		<script>
+			function validate()
+			{
+				var benificiary_account_number = myForm.benificiary_account_number.value;
+				if(benificiary_account_number == "")
+				{
+					alert("Select a benificiary");
+					return false;
+				}
+			}
+		</script>
 		<style>
 			ul 
 			{
@@ -57,17 +68,7 @@
 				background-color:#a9d0f5;
 			}
 		</style>
-		<script>
-			function validate()
-			{
-				var benificiary_account_number = myForm.benificiary_account_number.value;
-				if(benificiary_account_number == "")
-				{
-					alert("Select a benificiary");
-					return false;
-				}
-			}
-		</script>
+		
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
@@ -99,7 +100,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp" method="POST" onsubmit="return validate()">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp"  onsubmit="return validate()" method="POST">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
