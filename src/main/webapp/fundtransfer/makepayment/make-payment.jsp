@@ -30,16 +30,20 @@
 		<script>
 			function validate()
 			{
-				if(myForm.benificiary_account_number == null)
+				alert("hi");
+				var transaction_amount = myForm.transaction_amount.value;
+				if(transaction_amount == "" || transaction_amount.search(/\b[0-9]+$\b/) != 0 || transaction_amount == 0)
 				{
+					alert("Enter a valid Transaction Amount");
 					return false;
 				}
-				var benificiary_account_number = myForm.benificiary_account_number.value;
-				if(benificiary_account_number == "" || benificiary_account_number == null)
+				var transaction_remarks = myForm.transaction_remarks.value;
+				if(transaction_remarks == "")
 				{
-					alert("Select a benificiary");
+					alert("Enter valid Transaction Remarks");
 					return false;
 				}
+				return true;
 			}
 		</script>
 		<style>
@@ -131,6 +135,9 @@
 					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp" onsubmit="return validate()" method="POST">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+							<th>
+								<td colspan"2">Fund Transfer</td>
+							<th>
 							<tr>
 								<td class="bold">
 									From Account:
@@ -179,7 +186,7 @@
 									<input type="text" name="transaction_remarks">
 								</td>
 							</tr>
-							<tr>
+							<tr style="text-align:center">
 								<td colspan="2" align="center">
 									<input type="submit" value="Login">
 									&nbsp &nbsp &nbsp &nbsp &nbsp 
