@@ -12,9 +12,9 @@
 		pst = conn.prepareStatement(sql);
 		pst.setInt(1,benificiaryAccountNumber);
 		pst.executeQuery();
-		if(rs.next())
+		while(rs.next())
 		{
-			benificiaryName = rs.getString("BenificiaryName");
+			out.println(rs.getString("BenificiaryName"));
 		}
 	}
 	catch(Exception e)
@@ -158,7 +158,7 @@
 								<td class="bold">
 									Benificiary Account Number: 
 								</td>
-								<td class="bold">
+								<td>
 									<%= benificiaryAccountNumber %>
 								</td>
 							</tr>
