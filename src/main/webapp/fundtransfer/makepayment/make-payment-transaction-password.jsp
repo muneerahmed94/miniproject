@@ -2,7 +2,7 @@
 <%@ include file="../../include/connect-to-db.jsp" %>
 
 <%!
-	String accountNumber;
+	Integer accountNumber;
 	String accountBalance;
 	String benificiaryName;
 	String benificiaryAccountNumber;
@@ -12,7 +12,7 @@
 <%
 	try
 	{
-		accountNumber = (String)session.getAttribute("account_number");
+		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = (String)session.getAttribute("accountBalance");
 		benificiaryName = (String)session.getAttribute("benificiary_name");
 		benificiaryAccountNumber = (String)session.getAttribute("benificiary_account_number");
