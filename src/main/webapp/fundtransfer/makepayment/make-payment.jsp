@@ -135,9 +135,9 @@
 					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp" onsubmit="return validate()" method="POST">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
-							<th>
-								<td colspan"2">Fund Transfer</td>
-							</th>
+							<tr>
+								<th colspan"2">Fund Transfer</th>
+							</tr>
 							<tr>
 								<td class="bold">
 									From Account:
