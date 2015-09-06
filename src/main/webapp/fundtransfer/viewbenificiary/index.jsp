@@ -60,6 +60,10 @@
 		<script>
 			function validateDelete()
 			{
+				if(myForm.benificiary_account_number == null)
+				{
+					return false;
+				}
 				var benificiary_account_number = myForm.benificiary_account_number.value;
 				if(benificiary_account_number == "")
 				{

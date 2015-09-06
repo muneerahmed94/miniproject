@@ -7,11 +7,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>View Benificiary</title>
+		<title>Make Payment</title>
 		<script>
 			function validate()
 			{
-				alert("hii");
+				if(myForm.benificiary_account_number == null)
+				{
+					return false;
+				}
 				var benificiary_account_number = myForm.benificiary_account_number.value;
 				if(benificiary_account_number == "" || benificiary_account_number == null)
 				{
@@ -142,7 +145,7 @@
 								}
 							%>
 							<tr>
-								<td colspan="3"><input type="submit" value="Delete"></td>
+								<td colspan="3"><input type="submit" value="Make Payment"></td>
 							</tr>
 						</table>
 					</form>
