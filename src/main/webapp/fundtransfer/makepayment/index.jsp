@@ -7,7 +7,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Make Payment</title>
+		<title>View Benificiary</title>
 		<style>
 			ul 
 			{
@@ -58,12 +58,21 @@
 			}
 		</style>
 		<script>
-			function validatePayment()
+			function validateDelete()
 			{
 				var benificiary_account_number = myForm.benificiary_account_number.value;
 				if(benificiary_account_number == "")
 				{
 					alert("Select a benificiary to delete");
+					return false;
+				}
+				var response = confirm("Are you sure you want to delete the selected benificiary? This action cannot be undone");
+				if (response == true) 
+				{
+					return true;
+				} 
+				else 
+				{
 					return false;
 				}
 			}
@@ -99,7 +108,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp" method="POST" onsubmit="return validatePayment()">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/viewbenificiary/delete-benificiary.jsp" method="POST" onsubmit="return validateDelete()">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
@@ -140,7 +149,7 @@
 								}
 							%>
 							<tr>
-								<td colspan="3"><input type="submit" value="Make Payment"></td>
+								<td colspan="3"><input type="submit" value="Delete"></td>
 							</tr>
 						</table>
 					</form>
