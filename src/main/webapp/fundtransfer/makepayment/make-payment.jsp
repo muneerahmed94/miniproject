@@ -31,7 +31,6 @@
 		<script>
 			function validate()
 			{
-				alert("hi");
 				var transaction_amount = myForm.transaction_amount.value;
 				if(transaction_amount == "" || transaction_amount.search(/\b[0-9]+$\b/) != 0 || transaction_amount == 0)
 				{
@@ -43,6 +42,7 @@
 				if(parseInt(transaction_amount) > parseInt(account_balance))
 				{
 					alert("Transaction Amount cannot exceed Available Balance");
+					return false;
 				}
 				if(transaction_remarks == "")
 				{
@@ -195,7 +195,7 @@
 							</tr>
 							<tr>
 								<td colspan="2" align="center" style="text-align:center">
-									<input type="submit" value="Login">
+									<input type="submit" value="Transfer">
 									&nbsp &nbsp &nbsp &nbsp &nbsp 
 									<input type="reset" value="Reset">
 								</td>
