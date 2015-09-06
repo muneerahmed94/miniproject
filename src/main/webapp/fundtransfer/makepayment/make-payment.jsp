@@ -11,10 +11,10 @@
 		sql = "SELECT * FROM Benificiaries WHERE Benificiary=?";
 		pst = conn.prepareStatement(sql);
 		pst.setInt(1,benificiaryAccountNumber);
-		pst.executeQuery();
-		while(rs.next())
+		rs = pst.executeQuery();
+		if(rs.next())
 		{
-			out.println(rs.getString("BenificiaryName"));
+			benificiaryName = rs.getString("BenificiaryName");
 		}
 	}
 	catch(Exception e)
@@ -76,7 +76,7 @@
 			td, tr
 			{
 				border-color:#E0E0E0;
-				text-align:center;
+				text-align:left;
 			}
 			.content 
 			{
@@ -93,6 +93,7 @@
 			.bold
 			{
 				font-weight:bold;
+				text-align:left;
 			}
 		</style>
 		
