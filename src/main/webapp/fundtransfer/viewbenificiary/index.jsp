@@ -99,6 +99,7 @@
 								<th>Benificiary Account Number</th>
 							</tr>
 							<%
+								rs = pst.executeQuery();
 								while(rs.next())
 								{
 									benificiaryName = rs.getString("BenificiaryName");
