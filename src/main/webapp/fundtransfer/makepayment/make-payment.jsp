@@ -186,8 +186,8 @@
 									<input type="text" name="transaction_remarks">
 								</td>
 							</tr>
-							<tr style="text-align:center">
-								<td colspan="2" align="center">
+							<tr>
+								<td colspan="2" align="center" style="text-align:center">
 									<input type="submit" value="Login">
 									&nbsp &nbsp &nbsp &nbsp &nbsp 
 									<input type="reset" value="Reset">
