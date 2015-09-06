@@ -61,8 +61,8 @@
 			function validatePayment()
 			{
 				alert("hi");
-				var benificiary_account_number = myForm.benificiary_account_number.value;
-				if(benificiary_account_number == "")
+				var benificiary = myForm.benificiary.value;
+				if(benificiary == "")
 				{
 					alert("Select a benificiary to Make Payment");
 					return false;
@@ -123,7 +123,7 @@
 							%>
 										<tr>
 											<td>
-												<input type="radio" name="benificiary_account_number" value="<%= benificiary.toString() %>">
+												<input type="radio" name="benificiary" value="<%= benificiary.toString() %>">
 											</td>
 											<td>
 												<%= benificiaryName %>
