@@ -4,22 +4,6 @@
 	String benificiaryName;
 	Integer benificiary;
 %>
-
-<%
-	try
-	{
-		Integer benificiaryOf = Integer.parseInt((String)session.getAttribute("account_number"));
-		
-		sql = "SELECT * FROM Benificiaries WHERE BenificiaryOf=?";
-		pst = conn.prepareStatement(sql);
-		pst.setInt(1, benificiaryOf);
-		rs = pst.executeQuery();
-	}
-	catch(Exception e)
-	{
-		out.print(e);
-	}
-%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
@@ -99,6 +83,10 @@
 								<th>Benificiary Account Number</th>
 							</tr>
 							<%
+								Integer benificiaryOf = Integer.parseInt((String)session.getAttribute("account_number"));
+								sql = "SELECT * FROM Benificiaries WHERE BenificiaryOf=?";
+								pst = conn.prepareStatement(sql);
+								pst.setInt(1, benificiaryOf);
 								rs = pst.executeQuery();
 								while(rs.next())
 								{
