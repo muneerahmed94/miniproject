@@ -3,6 +3,7 @@
 <%!
 	String benificiaryName;
 	Integer benificiary;
+	int i;
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -120,7 +121,7 @@
 									pst = conn.prepareStatement(sql);
 									pst.setInt(1, benificiaryOf);
 									rs = pst.executeQuery();
-									int i = 0;
+									i = 0;
 									while(rs.next())
 									{
 										benificiaryName = rs.getString("BenificiaryName");
