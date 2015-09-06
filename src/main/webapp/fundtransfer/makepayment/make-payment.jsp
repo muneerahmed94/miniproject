@@ -40,7 +40,7 @@
 				}
 				var transaction_remarks = myForm.transaction_remarks.value;
 				var account_balance = myForm.account_balance.value;
-				if(transaction_amount > account_balance)
+				if(parseInt(transaction_amount) > parseInt(account_balance))
 				{
 					alert("Transaction Amount cannot exceed Available Balance");
 				}
@@ -142,7 +142,7 @@
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<th colspan="2">Fund Transfer</th>
+								<th style="text-align:center" colspan="2">Fund Transfer</th>
 							</tr>
 							<tr>
 								<td class="bold">
