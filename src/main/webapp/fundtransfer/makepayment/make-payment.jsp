@@ -5,13 +5,21 @@
 	Integer benificiaryAccountNumber;
 %>
 <%
-	benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
-	sql = "SELECT BenificiaryName FROM Benificiaries WHERE Benificiary=?";
-	pst.setInt(1,benificiaryAccountNumber);
-	pst.executeQuery();
-	if(rs.next())
+	try
 	{
-		benificiaryName = rs.getString("BenificiaryName");
+		benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
+		sql = "SELECT BenificiaryName FROM Benificiaries WHERE Benificiary=?";
+		pst = conn.prepareStatement(sql);
+		pst.setInt(1,benificiaryAccountNumber);
+		pst.executeQuery();
+		if(rs.next())
+		{
+			benificiaryName = rs.getString("BenificiaryName");
+		}
+	}
+	catch(Exception e)
+	{
+		out.print(e);
 	}
 %>
 
