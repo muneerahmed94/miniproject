@@ -99,7 +99,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/delete-benificiary.jsp" method="POST" onsubmit="return validateDelete()">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/viewbenificiary/delete-benificiary.jsp" method="POST" onsubmit="return validateDelete()">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
