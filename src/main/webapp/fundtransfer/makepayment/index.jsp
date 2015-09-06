@@ -58,13 +58,12 @@
 			}
 		</style>
 		<script>
-			function validatePayment()
+			function validateDelete()
 			{
-				alert("hi");
-				var benificiary = myForm.benificiary.value;
-				if(benificiary == "")
+				var benificiary_account_number = myForm.benificiary_account_number.value;
+				if(benificiary_account_number == "")
 				{
-					alert("Select a benificiary to Make Payment");
+					alert("Select a benificiary to delete");
 					return false;
 				}
 			}
@@ -100,7 +99,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/make-payment.jsp" method="POST" onsubmit="return validatePayment()">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp" method="POST" onsubmit="return validateDelete()">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
@@ -123,7 +122,7 @@
 							%>
 										<tr>
 											<td>
-												<input type="radio" name="benificiary" value="<%= benificiary.toString() %>">
+												<input type="radio" name="benificiary_account_number" value="<%= benificiary.toString() %>">
 											</td>
 											<td>
 												<%= benificiaryName %>
