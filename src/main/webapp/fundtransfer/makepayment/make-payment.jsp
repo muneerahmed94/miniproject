@@ -2,8 +2,19 @@
 <%@ include file="../../include/connect-to-db.jsp" %>
 <%!
 	String benificiaryName;
-	Integer benificiary;
+	Integer benificiaryAccountNumber;
 %>
+<%
+	benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
+	sql = "SELECT BenificiaryName FROM Benificiaries WHERE Benificiary=?";
+	pst.setInt(1,benificiaryAccountNumber);
+	pst.executeQuery();
+	if(rs.next())
+	{
+		benificiaryName = rs.getString("BenificiaryName");
+	}
+%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
@@ -107,7 +118,61 @@
 					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp" onsubmit="return validate()" method="POST">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
-							
+							<tr>
+								<th>
+									From Account:
+								</th>
+								<td>
+									<%= (String)session.getAttribute("account_number") %>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Available Balance: 
+								</td>
+								<td>
+									<%= (String)session.getAttribute("account_balance") %>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Benificiary Name: 
+								</td>
+								<td>
+									<%= benificiaryName %>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Benificiary Account Number: 
+								</td>
+								<td>
+									<%= benificiaryAccountNumber %>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Trasaction Amount:<font color="red">*</font> 
+								</td>
+								<td>
+									<input type="text" name="transaction_amount">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Transaction Remarks:<font color="red">*</font>
+								</td>
+								<td>
+									<input type="text" name="transaction_remarks">
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center">
+									<input type="submit" value="Login">
+									&nbsp &nbsp &nbsp &nbsp &nbsp 
+									<input type="reset" value="Reset">
+								</td>
+							</tr>
 						</table>
 					</form>
 				</td>

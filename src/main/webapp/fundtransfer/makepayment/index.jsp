@@ -124,6 +124,7 @@
 									i = 0;
 									while(rs.next())
 									{
+										
 										benificiaryName = rs.getString("BenificiaryName");
 										benificiary = rs.getInt("Benificiary");
 							%>
