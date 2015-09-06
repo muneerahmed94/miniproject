@@ -43,6 +43,18 @@
 			{
 				border-color:#E0E0E0;
 			}
+			.content 
+			{
+				
+				border-top:5px solid #0072c6;
+				border-bottom:5px solid #0072c6;
+				border-right:1px solid #0072c6;
+				border-left:1px solid #0072c6;
+			}
+			th
+			{
+				background-color:#a9d0f5;
+			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
@@ -76,7 +88,7 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
 					<form action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/delete-benificiary.jsp" method="POST">
-						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
 								<th>Select</th>
 								<th>Benificiary Name</th>
