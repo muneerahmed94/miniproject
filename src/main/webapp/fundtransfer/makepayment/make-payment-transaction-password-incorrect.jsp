@@ -3,7 +3,7 @@
 <%@ include file="../../include/connect-to-db.jsp" %>
 <%!
 	Integer accountNumber;
-	String accountBalance;
+	Integer accountBalance;
 	String benificiaryName;
 	String benificiaryAccountNumber;
 	String transactionAmount;
@@ -13,7 +13,7 @@
 	try
 	{
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
-		accountBalance = (String)session.getAttribute("accountBalance");
+		accountBalance = Integer.parseInt((String)session.getAttribute("accountBalance"));
 		benificiaryName = (String)session.getAttribute("benificiary_name");
 		benificiaryAccountNumber = (String)session.getAttribute("benificiary_account_number");
 		transactionAmount = request.getParameter("transaction_amount");
