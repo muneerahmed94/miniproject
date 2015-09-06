@@ -89,6 +89,7 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
 					<form action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/delete-benificiary.jsp" method="POST">
+						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
 								<th>Select</th>
@@ -107,27 +108,29 @@
 									{
 										benificiaryName = rs.getString("BenificiaryName");
 										benificiary = rs.getInt("Benificiary");
-									}
-								
 							%>
-									<tr>
-										<td>
-											<input type="radio" name="benificiary" value="<%= benificiary.toString() %>">
-										</td>
-										<td>
-											<%= benificiaryName %>
-										</td>
-										<td>
-											<%= benificiary %>
-										</td>
-									</tr>
+										<tr>
+											<td>
+												<input type="radio" name="benificiary" value="<%= benificiary.toString() %>">
+											</td>
+											<td>
+												<%= benificiaryName %>
+											</td>
+											<td>
+												<%= benificiary %>
+											</td>
+										</tr>
 							<%
+									}
 								}
 								catch(Exception e)
 								{
 									out.print(e);
 								}
 							%>
+							<tr>
+								<td colspan="3"><input type="submit" value="Delete"></td>
+							</tr>
 						</table>
 					</form>
 				</td>
