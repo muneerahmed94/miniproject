@@ -19,6 +19,7 @@
 		}
 		session.setAttribute("benificiary_name", benificiaryName);
 		session.setAttribute("benificiary_account_number", benificiaryAccountNumber);
+		session.setAttribute("passed_make_payment", "yes");
 	}
 	catch(Exception e)
 	{

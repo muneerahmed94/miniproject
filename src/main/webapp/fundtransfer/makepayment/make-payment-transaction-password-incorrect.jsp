@@ -1,4 +1,5 @@
 <%@ include file="../../include/check-password.jsp" %>
+<%@ include file="../../include/check-passed-make-payment.jsp" %>
 <%@ include file="../../include/connect-to-db.jsp" %>
 <%!
 	String accountNumber;
@@ -15,8 +16,8 @@
 		accountBalance = (String)session.getAttribute("accountBalance");
 		benificiaryName = (String)session.getAttribute("benificiary_name");
 		benificiaryAccountNumber = (String)session.getAttribute("benificiary_name");
-		transactionAmount = (String).session.getAttribute("transaction_amount");
-		transactionRemarks = (String).session.getAttribute("transaction_remarks");
+		transactionAmount = (String)session.getAttribute("transaction_amount");
+		transactionRemarks = (String)session.getAttribute("transaction_remarks");
 	}
 	catch(Exception e)
 	{
