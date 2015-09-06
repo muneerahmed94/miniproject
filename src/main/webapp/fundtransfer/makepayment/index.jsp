@@ -13,7 +13,7 @@
 			{
 				alert("hii");
 				var benificiary_account_number = myForm.benificiary_account_number.value;
-				if(benificiary_account_number == "")
+				if(benificiary_account_number == "" || benificiary_account_number == null)
 				{
 					alert("Select a benificiary");
 					return false;
