@@ -1,8 +1,8 @@
 <%@ include file="../../include/check-passed-make-payment.jsp" %>
 
 <%
-	String trasactionPassword = (String)session.getAttribute("trasaction_password");
-	String trasactionPasswordEnterd = request.getParameter("trasaction_password");
+	String trasactionPassword = (String)session.getAttribute("transaction_password");
+	String trasactionPasswordEnterd = request.getParameter("transaction_password");
 	if(trasactionPassword.equals(trasactionPasswordEnterd))
 	{
 		session.setAttribute("passed_make_payment_trasaction_password", "yes");
