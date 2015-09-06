@@ -83,15 +83,19 @@
 								<th>Benificiary Account Number</th>
 							</tr>
 							<%
-								Integer benificiaryOf = Integer.parseInt((String)session.getAttribute("account_number"));
-								sql = "SELECT * FROM Benificiaries WHERE BenificiaryOf=?";
-								pst = conn.prepareStatement(sql);
-								pst.setInt(1, benificiaryOf);
-								rs = pst.executeQuery();
-								while(rs.next())
+								try
 								{
-									benificiaryName = rs.getString("BenificiaryName");
-									benificiary = rs.getInt("Benificiary");
+									Integer benificiaryOf = Integer.parseInt((String)session.getAttribute("account_number"));
+									sql = "SELECT * FROM Benificiaries WHERE BenificiaryOf=?";
+									pst = conn.prepareStatement(sql);
+									pst.setInt(1, benificiaryOf);
+									rs = pst.executeQuery();
+									while(rs.next())
+									{
+										benificiaryName = rs.getString("BenificiaryName");
+										benificiary = rs.getInt("Benificiary");
+									}
+								
 							%>
 									<tr>
 										<td>
@@ -105,6 +109,10 @@
 										</td>
 									</tr>
 							<%
+								}
+								catch(Exception e)
+								{
+									out.print(e);
 								}
 							%>
 						</table>
