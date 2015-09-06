@@ -90,6 +90,10 @@
 			{
 				background-color:#a9d0f5;
 			}
+			.bold
+			{
+				font-weight:bold;
+			}
 		</style>
 		
 	</head>
@@ -127,15 +131,15 @@
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<th>
+								<td class="bold">
 									From Account:
-								</th>
+								</td>
 								<td>
 									<%= (String)session.getAttribute("account_number") %>
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td class="bold">
 									Available Balance: 
 								</td>
 								<td>
@@ -143,7 +147,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td class="bold">
 									Benificiary Name: 
 								</td>
 								<td>
@@ -151,15 +155,15 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td class="bold">
 									Benificiary Account Number: 
 								</td>
-								<td>
+								<td class="bold">
 									<%= benificiaryAccountNumber %>
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td class="bold">
 									Trasaction Amount:<font color="red">*</font> 
 								</td>
 								<td>
@@ -167,7 +171,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td class="bold">
 									Transaction Remarks:<font color="red">*</font>
 								</td>
 								<td>
