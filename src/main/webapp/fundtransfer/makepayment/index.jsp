@@ -11,6 +11,7 @@
 		<script>
 			function validate()
 			{
+				alert("hii");
 				var benificiary_account_number = myForm.benificiary_account_number.value;
 				if(benificiary_account_number == "")
 				{
