@@ -7,6 +7,7 @@
 <%
 	try
 	{
+		
 		benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
 		sql = "SELECT * FROM Benificiaries WHERE Benificiary=?";
 		pst = conn.prepareStatement(sql);
@@ -38,6 +39,11 @@
 					return false;
 				}
 				var transaction_remarks = myForm.transaction_remarks.value;
+				var account_balance = myForm.account_balance.value;
+				if(transaction_amount > account_balance)
+				{
+					alert("Transaction Amount cannot exceed Available Balance");
+				}
 				if(transaction_remarks == "")
 				{
 					alert("Enter valid Transaction Remarks");
@@ -152,6 +158,7 @@
 								</td>
 								<td>
 									<%= (String)session.getAttribute("account_balance") %>
+									<input type="hidden" id="account_balance" name="account_balance" value=<%= (String)session.getAttribute("account_balance") %> >
 								</td>
 							</tr>
 							<tr>
