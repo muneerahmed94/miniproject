@@ -6,7 +6,7 @@
 	Integer accountBalance;
 	String benificiaryName;
 	Integer benificiaryAccountNumber;
-	String transactionAmount;
+	Integer transactionAmount;
 	String transactionRemarks;
 %>
 <%
@@ -16,8 +16,8 @@
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		benificiaryName = (String)session.getAttribute("benificiary_name");
 		benificiaryAccountNumber = Integer.parseInt((String)session.getAttribute("benificiary_account_number"));
-		transactionAmount = request.getParameter("transaction_amount");
-		transactionRemarks = request.getParameter("transaction_remarks");
+		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
+		transactionRemarks = (String)session.getAttribute("transaction_remarks");
 	}
 	catch(Exception e)
 	{
@@ -191,7 +191,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2" style="color:red" align="center">The Trasaction Password you entered is incorrect</td>
+								<td colspan="2" style="color:red;text-align:center" align="center">The Trasaction Password you entered is incorrect</td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center" style="text-align:center">

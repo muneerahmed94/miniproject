@@ -6,7 +6,7 @@
 	Integer accountBalance;
 	String benificiaryName;
 	Integer benificiaryAccountNumber;
-	String transactionAmount;
+	Integer transactionAmount;
 	String transactionRemarks;
 %>
 <%
@@ -16,8 +16,10 @@
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		benificiaryName = (String)session.getAttribute("benificiary_name");
 		benificiaryAccountNumber = Integer.parseInt((String)session.getAttribute("benificiary_account_number"));
-		transactionAmount = request.getParameter("transaction_amount");
+		transactionAmount = Integer.parseInt(request.getParameter("transaction_amount"));
 		transactionRemarks = request.getParameter("transaction_remarks");
+		session.setAttribute("transaction_amount",transactionAmount.toString());
+		session.setAttribute("transaction_remarks",transactionRemarks);
 	}
 	catch(Exception e)
 	{
