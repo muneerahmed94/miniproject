@@ -128,6 +128,7 @@
 									pst = conn.prepareStatement(sql);
 									pst.setInt(1, benificiaryOf);
 									rs = pst.executeQuery();
+									int i = 0;
 									while(rs.next())
 									{
 										benificiaryName = rs.getString("BenificiaryName");
@@ -135,7 +136,21 @@
 							%>
 										<tr>
 											<td>
-												<input type="radio" name="benificiary_account_number" value="<%= benificiary.toString() %>" checked>
+							<%
+												i++;
+												if(i == 1)
+												{
+							%>
+													<input type="radio" name="benificiary_account_number" value=<%= benificiary.toString() %> checked>
+							<%
+												}
+												else
+												{
+							%>
+													<input type="radio" name="benificiary_account_number" value=<%= benificiary.toString() %>>
+							<%
+												}
+							%>
 											</td>
 											<td>
 												<%= benificiaryName %>
@@ -153,7 +168,16 @@
 								}
 							%>
 							<tr>
-								<td colspan="3"><input type="submit" value="Delete"></td>
+							<%
+								if(i != 0)
+								{
+							%>
+									<td colspan="3"><input type="submit" value="Delete"></td>
+							<%
+								}
+								
+							%>
+								
 							</tr>
 						</table>
 					</form>
