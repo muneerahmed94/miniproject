@@ -1,24 +1,22 @@
 <%@ include file="../../include/check-password.jsp" %>
 <%@ include file="../../include/connect-to-db.jsp" %>
 <%!
+	String accountNumber;
+	String accountBalance;
 	String benificiaryName;
-	Integer benificiaryAccountNumber;
+	String benificiaryAccountNumber;
+	String transactionAmount;
+	String transactionRemarks;
 %>
 <%
 	try
 	{
-		
-		benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
-		sql = "SELECT * FROM Benificiaries WHERE Benificiary=?";
-		pst = conn.prepareStatement(sql);
-		pst.setInt(1,benificiaryAccountNumber);
-		rs = pst.executeQuery();
-		if(rs.next())
-		{
-			benificiaryName = rs.getString("BenificiaryName");
-		}
-		session.setAttribute("benificiary_name", benificiaryName);
-		session.setAttribute("benificiary_account_number", benificiaryAccountNumber);
+		accountNumber = session.getAttribute("account_number");
+		accountBalance = session.getAttribute("accountBalance");
+		benificiaryName = (String)session.getAttribute("benificiary_name");
+		benificiaryAccountNumber = (String)session.getAttribute("benificiary_name");
+		transactionAmount = (String).session.getAttribute("transaction_amount");
+		transactionRemarks = (String).session.getAttribute("transaction_remarks");
 	}
 	catch(Exception e)
 	{
@@ -29,28 +27,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Make Payment</title>
+		<title>Make Payment - Transaction Password</title>
 		<script>
 			function validate()
 			{
-				var transaction_amount = myForm.transaction_amount.value;
-				if(transaction_amount == "" || transaction_amount.search(/\b[0-9]+$\b/) != 0 || transaction_amount == 0)
+				var transaction_password = myForm.transaction_password.value;
+				if(transaction_amount == "")
 				{
-					alert("Enter a valid Transaction Amount");
-					return false;
+					alert("Enter the Transaction Password");
+					return false; 
 				}
-				var transaction_remarks = myForm.transaction_remarks.value;
-				var account_balance = myForm.account_balance.value;
-				if(parseInt(transaction_amount) > parseInt(account_balance))
-				{
-					alert("Transaction Amount cannot exceed Available Balance");
-					return false;
-				}
-				if(transaction_remarks == "")
-				{
-					alert("Enter valid Transaction Remarks");
-					return false;
-				}
+				
 				return true;
 			}
 		</script>
@@ -140,7 +127,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-transaction-password.jsp" onsubmit="return validate()" method="POST">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/process-make-payment-transaction-password.jsp" onsubmit="return validate()" method="POST">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
@@ -151,7 +138,7 @@
 									From Account:
 								</td>
 								<td>
-									<%= (String)session.getAttribute("account_number") %>
+									<%= accountNumber %>
 								</td>
 							</tr>
 							<tr>
@@ -159,8 +146,7 @@
 									Available Balance: 
 								</td>
 								<td>
-									<%= (String)session.getAttribute("account_balance") %>
-									<input type="hidden" id="account_balance" name="account_balance" value=<%= (String)session.getAttribute("account_balance") %> >
+									<%= accountBalance %>
 								</td>
 							</tr>
 							<tr>
@@ -184,7 +170,7 @@
 									Trasaction Amount:<font color="red">*</font> 
 								</td>
 								<td>
-									<input type="text" name="transaction_amount">
+									<input type="text" name="transaction_amount" value=<%= transactionAmount %> disabled>
 								</td>
 							</tr>
 							<tr>
@@ -192,7 +178,15 @@
 									Transaction Remarks:<font color="red">*</font>
 								</td>
 								<td>
-									<input type="text" name="transaction_remarks">
+									<input type="text" name="transaction_remarks" value=<%= transactionRemarks %> disabled>
+								</td>
+							</tr>
+							<tr>
+								<td class="bold">
+									Transaction Password:<font color="red">*</font>
+								</td>
+								<td>
+									<input type="text" name="transaction_password">
 								</td>
 							</tr>
 							<tr>
