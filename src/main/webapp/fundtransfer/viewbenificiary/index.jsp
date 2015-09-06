@@ -61,7 +61,7 @@
 			function validateDelete()
 			{
 				var benificiary_account_number = myForm.benificiary_account_number.value;
-				if(benificiary_account_number == null)
+				if(benificiary_account_number == "")
 				{
 					alert("Select a benificiary to delete");
 					return false;

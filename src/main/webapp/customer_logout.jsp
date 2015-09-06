@@ -11,7 +11,7 @@
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_otp.jsp");
 	}
 	
-	session.inValidate();
+	session.invalidate();
 	
 	response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com");
 %>
