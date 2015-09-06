@@ -66,6 +66,15 @@
 					alert("Select a benificiary to delete");
 					return false;
 				}
+				var response = confirm("Are you sure you want to delete the selected benificiary? This action cannot be undone");
+				if (response == true) 
+				{
+					return true;
+				} 
+				else 
+				{
+					return false;
+				}
 			}
 		</script>
 	</head>
