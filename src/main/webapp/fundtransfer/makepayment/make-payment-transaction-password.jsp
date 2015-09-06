@@ -170,7 +170,7 @@
 							</tr>
 							<tr>
 								<td class="bold">
-									Trasaction Amount:<font color="red">*</font> 
+									Transaction Amount:<font color="red">*</font> 
 								</td>
 								<td>
 									<input type="text" name="transaction_amount" value=<%= transactionAmount %> disabled>

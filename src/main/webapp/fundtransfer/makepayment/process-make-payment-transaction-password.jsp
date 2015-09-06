@@ -8,7 +8,7 @@
 		if(trasactionPassword.equals(trasactionPasswordEnterd))
 		{
 			session.setAttribute("passed_make_payment_trasaction_password", "yes");
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-otp.jsp");
+			response.sendRedirect("");
 		}
 		else
 		{
