@@ -129,7 +129,7 @@
 									pst = conn.prepareStatement(sql);
 									pst.setInt(1, benificiaryOf);
 									rs = pst.executeQuery();
-									int i = 0;
+									i = 0;
 									while(rs.next())
 									{
 										benificiaryName = rs.getString("BenificiaryName");
@@ -168,18 +168,16 @@
 									out.print(e);
 								}
 							%>
-							<tr>
+										<tr>
 							<%
-								if(i != 0)
-								{
+										if(i != 0)
+										{
 							%>
-									<td colspan="3"><input type="submit" value="Delete"></td>
+											<td colspan="3"><input type="submit" value="Delete"></td>
 							<%
-								}
-								
+										}
 							%>
-								
-							</tr>
+										</tr>
 						</table>
 					</form>
 				</td>
