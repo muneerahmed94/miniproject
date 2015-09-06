@@ -136,7 +136,7 @@
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<th colspan"2">Fund Transfer</th>
+								<th colspan="2">Fund Transfer</th>
 							</tr>
 							<tr>
 								<td class="bold">
