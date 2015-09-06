@@ -11,8 +11,8 @@
 <%
 	try
 	{
-		accountNumber = session.getAttribute("account_number");
-		accountBalance = session.getAttribute("accountBalance");
+		accountNumber = (String)session.getAttribute("account_number");
+		accountBalance = (String)session.getAttribute("accountBalance");
 		benificiaryName = (String)session.getAttribute("benificiary_name");
 		benificiaryAccountNumber = (String)session.getAttribute("benificiary_name");
 		transactionAmount = (String).session.getAttribute("transaction_amount");
