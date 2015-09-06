@@ -18,7 +18,7 @@
 			benificiaryName = rs.getString("BenificiaryName");
 		}
 		session.setAttribute("benificiary_name", benificiaryName);
-		session.setAttribute("benificiary_account_number", benificiaryAccountNumber);
+		session.setAttribute("benificiary_account_number", benificiaryAccountNumber.toString());
 		session.setAttribute("passed_make_payment", "yes");
 	}
 	catch(Exception e)
