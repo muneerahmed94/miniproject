@@ -8,6 +8,10 @@
 		if(trasactionPassword.equals(trasactionPasswordEnterd))
 		{
 			session.setAttribute("passed_make_payment_transaction_password", "yes");
+			session.setAttribute("otp_type", "Fund Transfer OTP");
+%>
+			<%@ include file="../../include/send-otp.jsp" %>
+<%
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-otp.jsp");
 		}
 		else

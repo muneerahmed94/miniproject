@@ -27,7 +27,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Make Payment - Transaction Password</title>
+		<title>Make Payment - Enter OTP</title>
 		<script>
 			function validate()
 			{
@@ -182,11 +182,14 @@
 								</td>
 							</tr>
 							<tr>
+								<td colspan="2" align="center" style="color:green;">OTP sent to your registered email</td>
+							</tr>
+							<tr>
 								<td class="bold">
-									Transaction Password:<font color="red">*</font>
+									Enter the OTP:<font color="red">*</font>
 								</td>
 								<td>
-									<input type="text" name="transaction_password">
+									<input type="text" name="otp">
 								</td>
 							</tr>
 							<tr>
