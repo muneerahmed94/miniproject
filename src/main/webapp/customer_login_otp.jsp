@@ -78,7 +78,7 @@
 								<td colspan="2" style="text-align:center;background-color:#a9d0f5;font-weight:bold;">Customer Login</td>
 							</tr>
 							<tr>
-								<td colspan="2" align="center" style="color:green;">OTP sent to your registered email</td>
+								<td colspan="2" align="center" style="color:green;">OTP sent to your registered Email and Mobile</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Enter the OTP: </td>
