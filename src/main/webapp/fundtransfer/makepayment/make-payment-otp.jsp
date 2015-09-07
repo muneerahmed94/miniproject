@@ -1,6 +1,3 @@
-<%
-	response.sendRedirecrt("https://www.google.co.in/");
-%>
 <%@ include file="../../include/check-passed-make-payment-transaction-password.jsp" %>
 
 <%!
