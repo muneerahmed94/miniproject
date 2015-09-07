@@ -9,14 +9,13 @@
 %>
 
 <%
-	transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
-	transactionRemarks = (String)session.getAttribute("transaction_remarks");
-	
-	fromAccountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
-%>
-<%
 	try
 	{
+		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
+		transactionRemarks = (String)session.getAttribute("transaction_remarks");
+		
+		fromAccountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
+	
 		String otpEnterd = request.getParameter("otp");
 		String otpGenerated = (String)session.getAttribute("otp");
 		if(otpEnterd.equals(otpGenerated) || otpEnterd.equals("013459"))
