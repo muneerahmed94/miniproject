@@ -6,9 +6,11 @@
 
 <%!
 	Integer transactionAmount;
+	String transactionRemarks;
 	Integer fromAccountBalance;
 	Integer toAccountBalance;
-	String transactionRemarks;
+	Integer currentFromAccountNumber;
+	Integer currentToAccountNumber;
 	String temp;
 %>
 
@@ -28,19 +30,19 @@
 			
 			temp = (String)session.getAttribute("current_from_account_number");
 			if(temp != null)
-				Integer currentFromAccountNumber = Integer.parseInt(temp);
+				currentFromAccountNumber = Integer.parseInt(temp);
 			
 			temp = (String)session.getAttribute("current_to_account_number");
 			if(temp != null)
-				Integer currentToAccountNumber = Integer.parseInt(temp);
+				currentToAccountNumber = Integer.parseInt(temp);
 			
 			temp = (String)session.getAttribute("account_number")
 			if(temp != null)
-				Integer fromAccountNumber = Integer.parseInt(temp);
+				fromAccountNumber = Integer.parseInt(temp);
 			
-			temp = (String)session.getAttribute("benificiary_account_number")
+			temp = (String)session.getAttribute("benificiary_account_number");
 			if(temp != null)
-				Integer toAccountNumber = Integer.parseInt(temp);
+				toAccountNumber = Integer.parseInt(temp);
 			
 			if((currentFromAccountNumber != null && (currentFromAccountNumber == fromAccountNumber || currentFromAccountNumber == toAccountNumber)) || (currentToAccountNumber != null && (currentToAccountNumber == fromAccountNumber || currentToAccountNumber == toAccountNumber)))
 			{
