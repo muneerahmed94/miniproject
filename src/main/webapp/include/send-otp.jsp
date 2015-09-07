@@ -21,15 +21,21 @@
 	<jsp:setProperty name="sendOtpBean" property="email" value="<%= email %>"/>
 	<jsp:setProperty name="sendOtpBean" property="subject" value="<%= otp_type %>"/>
 </jsp:useBean>
+
 <%
 	sendOtpBean.sendOtp();
 %>
+
+<%
+	otp = "Your " + otp_type + " is:" + " " + otp;
+%>
+
 <jsp:useBean id="sendSmsBean" class="action.SendSmsBean">
 	<jsp:setProperty name="sendSmsBean" property="src" value="<%= src %>"/>
 	<jsp:setProperty name="sendSmsBean" property="dst" value="<%= mobile %>"/>
 	<jsp:setProperty name="sendSmsBean" property="body" value="<%= otp %>"/>
 </jsp:useBean>
+
 <%
-	otp = "Your " + otp_type + " is:" + " " + otp;
 	sendSmsBean.sendSms();
 %>
