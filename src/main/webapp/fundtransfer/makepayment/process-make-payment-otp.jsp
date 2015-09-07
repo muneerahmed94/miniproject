@@ -1,11 +1,15 @@
 <%@ include file="../../include/check-passed-make-payment-transaction-password.jsp" %>
 <%@ include file="../../include/connect-to-db.jsp" %>
+<%@ page import="java.util.Random" %>
+<%@ page import="java.io.ByteArrayOutputStream" %>
+<%@ page import="java.io.PrintWriter" %>
 
 <%!
 	Integer transactionAmount;
 	Integer fromAccountBalance;
 	Integer toAccountBalance;
 	String transactionRemarks;
+	String temp;
 %>
 
 <%
@@ -22,13 +26,23 @@
 		{
 			session.setAttribute("passed_make_make_payment_otp", "yes");
 			
-			Integer currentFromAccountNumber = Integer.parseInt((String)session.getAttribute("current_from_account_number"));
-			Integer currentToAccountNumber = Integer.parseInt((String)session.getAttribute("current_to_account_number"));
+			temp = (String)session.getAttribute("current_from_account_number");
+			if(temp != null)
+				Integer currentFromAccountNumber = Integer.parseInt(temp);
 			
-			Integer fromAccountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
-			Integer toAccountNumber = Integer.parseInt((String)session.getAttribute("benificiary_account_number"));
+			temp = (String)session.getAttribute("current_to_account_number");
+			if(temp != null)
+				Integer currentToAccountNumber = Integer.parseInt(temp);
 			
-			if((currentFromAccountNumber != null && (currentFromAccountNumber.equals(fromAccountNumber) || currentFromAccountNumber.equals(toAccountNumber))) || (currentToAccountNumber != null && (currentToAccountNumber.equals(fromAccountNumber) || currentToAccountNumber.equals(toAccountNumber))))
+			temp = (String)session.getAttribute("account_number")
+			if(temp != null)
+				Integer fromAccountNumber = Integer.parseInt(temp);
+			
+			temp = (String)session.getAttribute("benificiary_account_number")
+			if(temp != null)
+				Integer toAccountNumber = Integer.parseInt(temp);
+			
+			if((currentFromAccountNumber != null && (currentFromAccountNumber == fromAccountNumber || currentFromAccountNumber == toAccountNumber)) || (currentToAccountNumber != null && (currentToAccountNumber == fromAccountNumber || currentToAccountNumber == toAccountNumber)))
 			{
 				
 				try 
@@ -95,6 +109,11 @@
 	}
 	catch(Exception e)
 	{
+		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
+		e.printStackTrace( new PrintWriter(ostr,true) );
+		String foo = ostr.toString();
+		out.println(foo);
+		out.print("<br/><br/>")
 		out.print(e);
 	}
 %>
