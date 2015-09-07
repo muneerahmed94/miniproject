@@ -182,7 +182,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2" align="center" style="color:green;">OTP sent to your registered email</td>
+								<td colspan="2" align="center" style="color:green;text-align:center">OTP sent to your registered email</td>
 							</tr>
 							<tr>
 								<td class="bold">

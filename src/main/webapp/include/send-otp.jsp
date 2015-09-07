@@ -19,7 +19,7 @@
 <jsp:useBean id="sendOtpBean" class="action.SendOtpBean">
 	<jsp:setProperty name="sendOtpBean" property="otp" value="<%= otp %>"/>
 	<jsp:setProperty name="sendOtpBean" property="email" value="<%= email %>"/>
-	<jsp:setProperty name="sendOtpBean" property="subject" value="L<%= otp_type %>"/>
+	<jsp:setProperty name="sendOtpBean" property="subject" value="<%= otp_type %>"/>
 </jsp:useBean>
 <%
 	sendOtpBean.sendOtp();
@@ -30,5 +30,6 @@
 	<jsp:setProperty name="sendSmsBean" property="body" value="<%= otp %>"/>
 </jsp:useBean>
 <%
+	otp = "Your " + otp_type + " is:" + " " + otp;
 	sendSmsBean.sendSms();
 %>
