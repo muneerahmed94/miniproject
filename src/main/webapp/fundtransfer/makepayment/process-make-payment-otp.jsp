@@ -11,6 +11,8 @@
 	Integer toAccountBalance;
 	Integer currentFromAccountNumber;
 	Integer currentToAccountNumber;
+	Integer fromAccountNumber;
+	Integer toAccountNumber;
 	String temp;
 %>
 
@@ -36,7 +38,7 @@
 			if(temp != null)
 				currentToAccountNumber = Integer.parseInt(temp);
 			
-			temp = (String)session.getAttribute("account_number")
+			temp = (String)session.getAttribute("account_number");
 			if(temp != null)
 				fromAccountNumber = Integer.parseInt(temp);
 			
