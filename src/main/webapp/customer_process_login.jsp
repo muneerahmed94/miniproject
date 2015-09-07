@@ -26,7 +26,7 @@
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 			
-			String sql = "select email from Users where UserID=? and LoginPassword=?";
+			String sql = "select * from Users where UserID=? and LoginPassword=?";
 			pst = conn.prepareStatement(sql);
             pst.setString(1, customerId);
             pst.setString(2, password);
