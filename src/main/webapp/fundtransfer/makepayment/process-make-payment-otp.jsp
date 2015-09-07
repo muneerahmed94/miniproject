@@ -90,6 +90,8 @@
 			pst.setInt(1, finalFromAccountBalance);
 			pst.setInt(2, currentFromAccountNumber);
 			pst.executeUpdate();
+			session.setAttribute("account_balance",finalFromAccountBalance.toString());
+			
 				
 			sql = "UPDATE Customers SET AccountBalance=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
@@ -106,7 +108,8 @@
 			pst.executeUpdate();
 			
 			request.getSession().removeAttribute("busy");
-				
+			request.getSession().removeAttribute("current_from_account_number");
+			request.getSession().removeAttribute("current_to_account_number");
 			
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-successfull.jsp");
 		}
