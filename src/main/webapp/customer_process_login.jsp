@@ -11,7 +11,7 @@
 	PreparedStatement pst = null;
 	ResultSet rs = null;
 	
-	String sql = "select email from Users where UserID=? and LoginPassword=?"; 
+	 
         try
         {
 		
@@ -26,6 +26,7 @@
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 			
+			String sql = "select email from Users where UserID=? and LoginPassword=?";
 			pst = conn.prepareStatement(sql);
             pst.setString(1, customerId);
             pst.setString(2, password);
@@ -34,20 +35,14 @@
             if(rs.next())
             {
 				String email = rs.getString("Email");
-%>
-				<jsp:useBean id="otpBean" class="action.OtpBean"/>
-<%
-				String otp = otpBean.getOtp();
+				String mobile = rs.getString("Mobile");
+				session.setAttribute("email", email);
+				session.setAttribute("mobile", mobile);
+				session.setAttribute("otp_type", "Login OTP");
 				session.setAttribute("customer_id",customerId);
-				session.setAttribute("otp", otp);
 %>
-				<jsp:useBean id="sendOtpBean" class="action.SendOtpBean">
-					<jsp:setProperty name="sendOtpBean" property="otp" value="<%= otp %>"/>
-					<jsp:setProperty name="sendOtpBean" property="email" value="<%= email %>"/>
-					<jsp:setProperty name="sendOtpBean" property="subject" value="Login OTP"/>
-				</jsp:useBean>
+				<%@ include file="../../include/send-otp.jsp" %>
 <%
-				sendOtpBean.sendOtp();
 				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_otp.jsp");
 			}
 			else
