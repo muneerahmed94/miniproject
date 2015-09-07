@@ -1,4 +1,3 @@
-<%@ include file="../../include/check-password.jsp" %>
 <%
 	try
 	{

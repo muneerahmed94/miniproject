@@ -1,3 +1,6 @@
+<%
+	response.sendRedirecrt("https://www.google.co.in/");
+%>
 <%@ include file="../../include/check-passed-make-payment-transaction-password.jsp" %>
 
 <%!
@@ -127,7 +130,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/process-make-payment-transaction-password.jsp" onsubmit="return validate()" method="POST">
+					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/process-make-payment-otp.jsp" onsubmit="return validate()" method="POST">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>

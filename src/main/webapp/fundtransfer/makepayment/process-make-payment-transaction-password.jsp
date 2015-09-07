@@ -7,8 +7,8 @@
 		String trasactionPasswordEnterd = request.getParameter("transaction_password");
 		if(trasactionPassword.equals(trasactionPasswordEnterd))
 		{
-			session.setAttribute("passed_make_payment_trasaction_password", "yes");
-			response.sendRedirect("");
+			session.setAttribute("passed_make_payment_transaction_password", "yes");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-otp.jsp");
 		}
 		else
 		{

@@ -189,7 +189,7 @@
 									Transaction Password:<font color="red">*</font>
 								</td>
 								<td>
-									<input type="text" name="transaction_password">
+									<input type="password" name="transaction_password">
 								</td>
 							</tr>
 							<tr>

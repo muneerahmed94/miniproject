@@ -1,4 +1,3 @@
-<%@ include file="../../include/check-password.jsp" %>
 <%@ include file="../../include/check-passed-make-payment.jsp" %>
 <%@ include file="../../include/connect-to-db.jsp" %>
 <%!
@@ -187,7 +186,7 @@
 									Transaction Password:<font color="red">*</font>
 								</td>
 								<td>
-									<input type="text" name="transaction_password">
+									<input type="password" name="transaction_password">
 								</td>
 							</tr>
 							<tr>
