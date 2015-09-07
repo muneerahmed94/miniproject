@@ -66,7 +66,7 @@
 			}
 			
 			Integer finalFromAccountBalance = fromAccountBalance - transactionAmount;
-			Integer finalToAccountBalance = toAccountBalance + transactionAmount
+			Integer finalToAccountBalance = toAccountBalance + transactionAmount;
 			
 			sql = "UPDATE Customers SET AccountBalance=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
