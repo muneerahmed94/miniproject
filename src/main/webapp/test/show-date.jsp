@@ -5,9 +5,9 @@
 	try
 	{
         String dateStr = request.getParameter("date");
-        Date dateObj =new SimpleDateFormat("dd MMM yyyy").parse(dateStr);
-		
-		out.println(dateObj);
+        Date dateObj =new SimpleDateFormat("dd-MM-yyyy").parse(dateStr);
+		SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, MMM d, ''yy");
+		String d = dataFormat.format(dateObj);
 	}
 	catch(Exception e)
 	{
