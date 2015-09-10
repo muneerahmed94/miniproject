@@ -11,7 +11,7 @@
 		
 		Date dateObj = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
-		out.print(formatter.format(dateObj+ "<br>"));
+		out.print(formatter.format(dateObj));
 		
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 		Date date = new Date();
