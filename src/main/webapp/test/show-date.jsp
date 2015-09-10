@@ -11,11 +11,11 @@
 		
 		Date dateObj = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
-		out.print(formatter.format(dateObj));
+		out.print(formatter.format(dateObj) + "<br/>");
 		
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 		Date date = new Date();
-		out.println(dateFormat.format(date));
+		out.println(dateFormat.format(date) + "<br/>");
 
 		/*
 		 * Add x hours to the time
@@ -26,9 +26,10 @@
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 
-		calendar.add(Calendar.HOUR, x);
+		calendar.add(Calendar.HOUR, 7);
+		calendar.add(Calendar.MINUTE, 30);
 
-		out.println(dateFormat.format(calendar.getTime()));
+		out.println(dateFormat.format(calendar.getTime()) + "<br/>");
 		
 %>
 		<%= new java.util.Date() %>
