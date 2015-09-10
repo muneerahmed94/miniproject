@@ -22,7 +22,7 @@
 		sql = "INSERT INTO Test (Name, DateTime) VALUES (?, ?)";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1,name);
-		pst.setString(2, strDate)
+		pst.setString(2, strDate);
 		
 		pst.executeUpdate();
 	}
