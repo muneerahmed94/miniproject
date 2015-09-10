@@ -17,7 +17,7 @@
 		Date now = new Date();
 		String strDate = sdfDate.format(now);
 		
-		out.print(strDate)
+		out.print(strDate);
 		
 		sql = "INSERT INTO DateTime (Date, Time) VALUES (?, CURRENT_TIMESTAMP)";
 		pst = conn.prepareStatement(sql);
