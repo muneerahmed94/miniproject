@@ -10,7 +10,12 @@
 		
 		Date dateObj = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
-		out.print(formatter.format(dateObj));
+		out.print(formatter.format(dateObj) + "<br>");
+		
+%>
+		<%= new java.util.Date() %>
+<%
+		
 		
 		
 		
