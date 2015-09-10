@@ -5,23 +5,25 @@
 <%
 	try
 	{
-        String dateStr = request.getParameter("date");
-        out.println(dateStr);
+        String name = request.getParameter("name");
+		String dateStr = request.getParameter("date");
+		
 		Date dateObj = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
-		out.print(formatter.format(dateObj));
+		out.print(formatter.format(dateObj + "<br>"));
 		
 		
 		
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");//dd/MM/yyyy
 		Date now = new Date();
 		String strDate = sdfDate.format(now);
-		
 		out.print(strDate);
 		
-		sql = "INSERT INTO DateTime (Date, Time) VALUES (?, CURRENT_TIMESTAMP)";
+		sql = "INSERT INTO Test (Name, DateTime) VALUES (?, ?)";
 		pst = conn.prepareStatement(sql);
-		pst.setString(1,dateStr);
+		pst.setString(1,name);
+		pst.setString(2, strDate)
+		
 		pst.executeUpdate();
 	}
 	catch(Exception e)
