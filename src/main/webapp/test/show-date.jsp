@@ -8,7 +8,7 @@
         Date currentDate =new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
 		DateFormat dtformat = new DateFormat();
 		dtformat = DateFormat.getDateInstance(DateFormat.LONG);
-		out.println(dateform.format(currentDate));
+		out.println(dtformat.format(currentDate));
 	}
 	catch(Exception e)
 	{
