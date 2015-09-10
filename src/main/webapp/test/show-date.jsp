@@ -1,12 +1,14 @@
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.text.*" %>
 
 <%
 	try
 	{
         String dateStr = request.getParameter("date");
         Date currentDate =new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
-        out.println("Date is ::"+currentDate);
+		DateFormat dtformat = new DateFormat();
+		dtformat = DateFormat.getDateInstance(DateFormat.LONG);
+		out.println(dateform.format(currentDate));
 	}
 	catch(Exception e)
 	{
