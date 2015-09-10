@@ -11,6 +11,14 @@
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
 		out.print(formatter.format(dateObj));
 		
+		
+		
+		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");//dd/MM/yyyy
+		Date now = new Date();
+		String strDate = sdfDate.format(now);
+		
+		out.print(strDate)
+		
 		sql = "INSERT INTO DateTime (Date, Time) VALUES (?, CURRENT_TIMESTAMP)";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1,dateStr);
