@@ -7,7 +7,7 @@
         String dateStr = request.getParameter("date");
         out.println(dateStr);
 		Date dateObj =new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
-		DateFormat formatter = DateFormat.getDateInstance(DateFormat.LONG);
+		DateFormat formatter = DateFormat.getDateInstance("EEE, MMM d, ''yyyy");
 		out.print(formatter.format(dateObj));
 	}
 	catch(Exception e)
