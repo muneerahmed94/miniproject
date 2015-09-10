@@ -4,8 +4,8 @@
 <%
 	try
 	{
-        String date = request.getParameter("date");
-        Date currentDate =new SimpleDateFormat("yyyy/MM/dd").parse(valuee);
+        String dateStr = request.getParameter("date");
+        Date currentDate =new SimpleDateFormat("yyyy/MM/dd").parse(dateStr);
         out.println("Date is ::"+currentDate);
 	}
 	catch(Exception e)
