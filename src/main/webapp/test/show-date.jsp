@@ -1,4 +1,4 @@
-<%@ page import="java.util.*" %>
+<%@ page import="java.util.Date" %>
 <%@ page import="java.text.*" %>
 <%@ include file="../include/connect-to-db.jsp" %>
 
