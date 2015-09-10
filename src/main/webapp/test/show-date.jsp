@@ -13,7 +13,7 @@
 		
 		sql = "INSERT INTO DateTime (Date, Time) VALUES (?, CURRENT_TIMESTAMP)";
 		pst = conn.prepareStatement(sql);
-		pst.setString(dateStr);
+		pst.setString(1,dateStr);
 		pst.executeUpdate();
 	}
 	catch(Exception e)
