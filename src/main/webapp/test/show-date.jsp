@@ -11,8 +11,9 @@
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
 		out.print(formatter.format(dateObj));
 		
-		sql = "INSERT INTO DateTime (Date, Time) VALUES ('"+dateStr+"', CURRENT_TIMESTAMP);
+		sql = "INSERT INTO DateTime (Date, Time) VALUES (?, CURRENT_TIMESTAMP);
 		pst = conn.prepareStatement(sql);
+		pst.setString(dateStr);
 		pst.executeUpdate();
 	}
 	catch(Exception e)
