@@ -5,10 +5,10 @@
 	try
 	{
         String dateStr = request.getParameter("date");
-        Date currentDate =new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
-		DateFormat dtformat = new DateFormat();
-		dtformat = DateFormat.getDateInstance(DateFormat.LONG);
-		out.println(dtformat.format(currentDate));
+        Date dateObj =new SimpleDateFormat("dd-MM-yyyy").parse(dateStr);
+		SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy");
+		String dateToStr = format.format(dateObj);
+		out.println(dateToStr);
 	}
 	catch(Exception e)
 	{
