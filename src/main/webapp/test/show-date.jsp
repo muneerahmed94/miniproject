@@ -21,6 +21,7 @@
 		
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");//dd/MM/yyyy
 		Date now = new Date();
+		Date newDate = DateUtils.addHours(now, 7);
 		String strDate = sdfDate.format(now);
 		out.print(strDate);
 		
