@@ -8,6 +8,7 @@
         Date dateObj =new SimpleDateFormat("dd-MM-yyyy").parse(dateStr);
 		SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, MMM d, ''yy");
 		String d = dateFormat.format(dateObj);
+		out.print(d);
 	}
 	catch(Exception e)
 	{
