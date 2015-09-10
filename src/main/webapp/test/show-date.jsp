@@ -11,7 +11,7 @@
 		
 		Date dateObj = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
-		out.print(formatter.format(dateObj+ "<br>");
+		out.print(formatter.format(dateObj+ "<br>"));
 		
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 		Date date = new Date();
@@ -37,11 +37,7 @@
 		
 		
 		
-		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");//dd/MM/yyyy
-		Date now = new Date();
-		Date newDate = DateUtils.addHours(now, 7);
-		String strDate = sdfDate.format(now);
-		out.print(strDate);
+		
 		
 		sql = "INSERT INTO Test (Name, DateTime) VALUES (?, ?)";
 		pst = conn.prepareStatement(sql);
