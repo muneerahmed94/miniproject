@@ -25,7 +25,7 @@
 	{
 		if(session.getAttribute("payment_complete") != null)
 		{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer");
 		}
 		
 		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
