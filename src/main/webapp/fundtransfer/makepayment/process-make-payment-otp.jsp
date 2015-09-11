@@ -128,7 +128,7 @@
 			request.getSession().removeAttribute("current_from_account_number");
 			request.getSession().removeAttribute("current_to_account_number");
 			
-			sql = "SELECT TransactionID FROM Transactions WHERE FromAccountNumber=?, ToAccountNumber=?, TransactionAmount=? TransactionRemarks=?, TransactionTimeStamp=?";
+			sql = "SELECT TransactionID FROM Transactions WHERE FromAccountNumber=? AND ToAccountNumber=? AND TransactionAmount=? AND TransactionRemarks=? AND TransactionTimeStamp=?";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, currentFromAccountNumber);
 			pst.setInt(2, currentToAccountNumber);
