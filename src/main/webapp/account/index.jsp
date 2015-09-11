@@ -63,6 +63,18 @@
 			{
 				border-color:#E0E0E0;
 			}
+			.content 
+			{
+				
+				border-top:5px solid #0072c6;
+				border-bottom:5px solid #0072c6;
+				border-right:1px solid #0072c6;
+				border-left:1px solid #0072c6;
+			}
+			th
+			{
+				background-color:#a9d0f5;
+			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
@@ -70,7 +82,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -96,22 +108,31 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
-					<table border="1" align="center" cellpadding="4" style="border-collapse:collapse;">
+					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#a9d0f5">Account Number</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#a9d0f5">Account Holder's Name</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#a9d0f5">Account Balance</td>
-							<td style="text-align:center;font-weight:bold;font-size:20px;background-color:#a9d0f5">Statement</td>
+							<th style="text-align:center" colspan="2">Account Number</th>
+							<th style="text-align:center" colspan="2">Account Holder's Name</th>
+							<th style="text-align:center" colspan="2">Account Balance</th>
+							<th style="text-align:center" colspan="2">Statement</th>
 						</tr>
 						<tr>
-								<td style="text-align:center;"><% out.print(accountNumber); %></td>
-								<td style="text-align:center;"><% out.print(accountName); %></td>
-								<td style="text-align:center;"><% out.print(accountBalance + " INR"); %></td>
-								<td>
-									<a href="http://miniproject-jntuhceh.rhcloud.com/account/mini.jsp">Mini</a> | <a href="http://miniproject-jntuhceh.rhcloud.com/account/detail.jsp">Detail</a>
-								</td>
+							<td style="text-align:center;"><% out.print(accountNumber); %></td>
+							<td style="text-align:center;"><% out.print(accountName); %></td>
+							<td style="text-align:center;"><% out.print(accountBalance + " INR"); %></td>
+							<td>
+								<a href="http://miniproject-jntuhceh.rhcloud.com/account/mini.jsp">Mini</a> | <a href="http://miniproject-jntuhceh.rhcloud.com/account/detail.jsp">Detail</a>
+							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>	
+			<!-- ============ FOOTER SECTION ============== -->
+			<tr>
+				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
+					JNTUHCEH Internet Banking Mini Project
+				</td>
+			</tr>
+		</table>
 				</td>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
