@@ -110,10 +110,10 @@
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
-							<th style="text-align:center" colspan="2">Account Number</th>
-							<th style="text-align:center" colspan="2">Account Holder's Name</th>
-							<th style="text-align:center" colspan="2">Account Balance</th>
-							<th style="text-align:center" colspan="2">Statement</th>
+							<th style="text-align:center">Account Number</th>
+							<th style="text-align:center">Account Holder's Name</th>
+							<th style="text-align:center">Account Balance</th>
+							<th style="text-align:center">Statement</th>
 						</tr>
 						<tr>
 							<td style="text-align:center;"><% out.print(accountNumber); %></td>
