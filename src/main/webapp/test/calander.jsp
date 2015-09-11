@@ -8,18 +8,22 @@
 	{
 		DateFormat displayFormat = new SimpleDateFormat("EEE, MMM d, yyyy hh:mm aaa");
 		DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		displayFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 
-		insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 
+		Date date = new Date();
 		
-		Date currentDateTime = new Date();
-	
-		out.println(insertFormat.format(currentDateTime) + "<br/>");
-		out.println(displayFormat.format(currentDateTime) + "<br/>");
+
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+
+		calendar.add(Calendar.HOUR, 9);
+		calendar.add(Calendar.MINUTE, 30);
+		
+		out.println(insertFormat.format(calendar.getTime()) + "<br/>");
+		out.println(displayFormat.format(calendar.getTime()) + "<br/>");
 		
 		String sql = "INSERT INTO Test(Name, DateTime) VALUES(?, ?)";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, request.getParameter("name"));
-		pst.setString(2, insertFormat.format(currentDateTime).toString());
+		pst.setString(2, insertFormat.format(calendar.getTime()).toString());
 		pst.executeUpdate();
 	}
 	catch(Exception e)
