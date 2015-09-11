@@ -123,7 +123,7 @@
 							</tr>
 							<tr>
 								<tr>
-									<td>
+									<td class="bold">
 										Payment Status: 
 									</td>
 									<td style="color:green">
@@ -131,7 +131,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td>
+									<td class="bold">
 										Transaction Time: 
 									</td>
 									<td>
@@ -163,29 +163,20 @@
 							</tr>
 							<tr>
 								<td class="bold">
-									Transaction Amount:<font color="red">*</font> 
+									Transaction Amount:
 								</td>
 								<td>
-									<input type="text" name="transaction_amount" value=<%= transactionAmount %> disabled>
+									<%= transactionAmount %>
 								</td>
 							</tr>
 							<tr>
 								<td class="bold">
-									Transaction Remarks:<font color="red">*</font>
+									Transaction Remarks:
 								</td>
 								<td>
-									<input type="text" name="transaction_remarks" value=<%= transactionRemarks %> disabled>
+									<%= transactionRemarks %>
 								</td>
 							</tr>
-							<tr>
-								<td class="bold">
-									Transaction Password:<font color="red">*</font>
-								</td>
-								<td>
-									<input type="password" name="transaction_password">
-								</td>
-							</tr>
-							
 						</table>
 					</form>
 				</td>
