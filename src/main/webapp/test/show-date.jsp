@@ -18,7 +18,7 @@
 		calendar.add(Calendar.HOUR, 9);
 		calendar.add(Calendar.MINUTE, 30);
 		
-		out.println(insertFormat.format(date) + "<br/>");
+		out.println(insertFormat.format(calendar.getTime()) + "<br/>");
 		out.println(displayFormat.format(calendar.getTime()) + "<br/>");
 		
 		String sql = "INSERT INTO Test(Name, DateTime) VALUES(?, ?)";
