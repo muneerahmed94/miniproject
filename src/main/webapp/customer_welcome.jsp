@@ -5,20 +5,6 @@
 <%@ include file="include/check-password.jsp" %>
 <%@ include file="include/set-session-attributes.jsp" %>
 
-
-<%!
-		String loginName = "";
-		String accountName = "";
-		String loginPassword = "";
-		String transactionPassword = "";
-		String email = "";
-		String mobile = "";
-		
-		Integer accountNumber = 0;
-		Integer accountBalance = 0;
-		
-%>
-
 <%
 	try
 	{	
