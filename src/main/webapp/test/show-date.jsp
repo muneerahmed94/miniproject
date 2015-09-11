@@ -13,7 +13,7 @@
 		DateFormat formatter = new SimpleDateFormat("EEE, MMM d, yyyy");
 		out.print(formatter.format(dateObj) + "<br/>");
 		
-		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		DateFormat dateFormat = new SimpleDateFormat("EEE, MMM d, yyyy HH:mm:ss");
 		Date date = new Date();
 		out.println(dateFormat.format(date) + "<br/>");
 
