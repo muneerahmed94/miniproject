@@ -137,7 +137,8 @@
 			rs = pst.executeQuery();
 			if(rs.next())
 			{
-				session.setAttribute("transaction_id", rs.getInt("TransactionID").toString());
+				Integer transactionID = rs.getInt("TransactionID");
+				session.setAttribute("transaction_id", transactionID.toString());
 			}
 			
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-successfull.jsp");
