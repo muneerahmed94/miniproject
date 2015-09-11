@@ -18,7 +18,7 @@
 		benificiaryAccountNumber = Integer.parseInt((String)session.getAttribute("benificiary_account_number"));
 		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
 		transactionRemarks = (String)session.getAttribute("transaction_remarks");
-		trasactionTime = (String)session.getAttribute("transaction_time");
+		transactionTime = (String)session.getAttribute("transaction_time");
 	}
 	catch(Exception e)
 	{
