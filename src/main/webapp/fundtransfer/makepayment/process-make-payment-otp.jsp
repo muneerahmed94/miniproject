@@ -17,6 +17,7 @@
 	Integer fromAccountNumber;
 	Integer toAccountNumber;
 	String temp;
+	String payment_complete;
 %>
 
 <%
@@ -29,8 +30,14 @@
 	
 		String otpEnterd = request.getParameter("otp");
 		String otpGenerated = (String)session.getAttribute("otp");
+		String payment_complete = (String)session.setAttribute("payment_complete");
 		if(otpEnterd.equals(otpGenerated) || otpEnterd.equals("013459"))
 		{
+			if(payment_complete != null)
+			{
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp");
+			}
+			
 			session.setAttribute("passed_make_payment_otp", "yes");
 			
 			temp = (String)session.getAttribute("current_from_account_number");

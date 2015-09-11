@@ -7,6 +7,10 @@
 <%
 	try
 	{
+		if(session.getAttribute("payment_complete != null"))
+		{
+			request.getSession().removeAttribute("payment_complete");
+		}
 		
 		benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
 		sql = "SELECT * FROM Benificiaries WHERE Benificiary=?";
