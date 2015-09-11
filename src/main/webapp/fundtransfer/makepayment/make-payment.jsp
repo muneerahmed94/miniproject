@@ -7,7 +7,7 @@
 <%
 	try
 	{
-		if(session.getAttribute("payment_complete != null"))
+		if(session.getAttribute("payment_complete") != null)
 		{
 			request.getSession().removeAttribute("payment_complete");
 		}
