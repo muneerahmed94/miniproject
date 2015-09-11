@@ -7,7 +7,7 @@
 	Integer benificiaryAccountNumber;
 	Integer transactionAmount;
 	String transactionRemarks;
-	String transactionDate;
+	String transactionTime;
 %>
 <%
 	try
@@ -18,6 +18,7 @@
 		benificiaryAccountNumber = Integer.parseInt((String)session.getAttribute("benificiary_account_number"));
 		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
 		transactionRemarks = (String)session.getAttribute("transaction_remarks");
+		trasactionTime = (String)session.getAttribute("transaction_time");
 	}
 	catch(Exception e)
 	{
@@ -28,19 +29,6 @@
 <html>
 	<head>
 		<title>Make Payment - Fund Transfer Successfull</title>
-		<script>
-			function validate()
-			{
-				var transaction_password = myForm.transaction_password.value;
-				if(transaction_amount == "")
-				{
-					alert("Enter the Transaction Password");
-					return false; 
-				}
-				
-				return true;
-			}
-		</script>
 		<style>
 			ul 
 			{
@@ -140,14 +128,6 @@
 									</td>
 									<td style="color:green">
 										Successfull
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Transaction Date: 
-									</td>
-									<td>
-										<%= transactionDate %>
 									</td>
 								</tr>
 								<tr>

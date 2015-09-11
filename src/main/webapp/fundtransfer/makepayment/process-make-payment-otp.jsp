@@ -88,15 +88,19 @@
 			Integer finalFromAccountBalance = fromAccountBalance - transactionAmount;
 			Integer finalToAccountBalance = toAccountBalance + transactionAmount;
 			
-			DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
+			DateFormat displayFormat = new SimpleDateFormat("EEE, MMM d, yyyy hh:mm aaa");
+			DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			displayFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 
 			insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 			
 			Date currentDateTimeObject = new Date();
-			String currentDateTimeString = insertFormat.format(currentDateTimeObject).toString();
+			String currentDateTimeStringInsert = insertFormat.format(currentDateTimeObject).toString();
+			String currentDateTimeStringDisplay = displayFormat.format(currentDateTimeObject.toString()); 
+			session.setAttribute("transaction_time", currentDateTimeStringDisplay);
 			
 			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, finalFromAccountBalance);
-			pst.setString(2, currentDateTimeString);
+			pst.setString(2, currentDateTimeStringInsert);
 			pst.setInt(3, currentFromAccountNumber);
 			pst.executeUpdate();
 			session.setAttribute("account_balance",finalFromAccountBalance.toString());
@@ -105,7 +109,7 @@
 			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, finalToAccountBalance);
-			pst.setString(2, currentDateTimeString);
+			pst.setString(2, currentDateTimeStringInsert);
 			pst.setInt(3, currentToAccountNumber);
 			pst.executeUpdate();
 			
@@ -117,7 +121,7 @@
 			pst.setInt(2, currentToAccountNumber);
 			pst.setInt(3, transactionAmount);
 			pst.setString(4, transactionRemarks);
-			pst.setString(5, currentDateTimeString);
+			pst.setString(5, currentDateTimeStringInsert);
 			pst.executeUpdate();
 			
 			request.getSession().removeAttribute("busy");
