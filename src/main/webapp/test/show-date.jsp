@@ -8,9 +8,9 @@
 	{
         
 		DateFormat dateFormat = new SimpleDateFormat("EEE, MMM d, yyyy HH:mm:ss");
+		DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date = new Date();
-		out.print(date.toString() + "<br/>");
-		out.println(dateFormat.format(date) + "<br/>");
+		out.println(insertFormat.format(date) + "<br/>");
 
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
