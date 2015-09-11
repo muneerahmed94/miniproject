@@ -21,6 +21,8 @@
 <%
 	try
 	{
+		String customer_id = (String)session.getAttribute("customer_id");
+		
 		sql = "SELECT * FROM Users WHERE UserID=?"; 
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, customer_id);
