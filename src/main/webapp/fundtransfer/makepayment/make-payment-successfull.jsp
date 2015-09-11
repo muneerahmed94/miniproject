@@ -23,6 +23,13 @@
 		transactionRemarks = (String)session.getAttribute("transaction_remarks");
 		transactionTime = (String)session.getAttribute("transaction_time");
 		transactionID = Integer.parseInt((String)session.getAttribute("transaction_id"));
+		
+		request.getSession().removeAttribute("benificiary_name");
+		request.getSession().removeAttribute("benificiary_account_number");
+		request.getSession().removeAttribute("transaction_amount");
+		request.getSession().removeAttribute("transaction_remarks");
+		request.getSession().removeAttribute("transaction_time");
+		request.getSession().removeAttribute("transaction_id");
 	}
 	catch(Exception e)
 	{
