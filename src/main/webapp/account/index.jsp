@@ -118,7 +118,7 @@
 						<tr>
 							<td style="text-align:center;"><% out.print(accountNumber); %></td>
 							<td style="text-align:center;"><% out.print(accountName); %></td>
-							<td style="text-align:center;"><% out.print(accountBalance + " INR"); %></td>
+							<td style="text-align:center;">&#8377;<% out.print(accountBalance); %></td>
 							<td>
 								<a href="http://miniproject-jntuhceh.rhcloud.com/account/mini.jsp">Mini</a> | <a href="http://miniproject-jntuhceh.rhcloud.com/account/detail.jsp">Detail</a>
 							</td>
