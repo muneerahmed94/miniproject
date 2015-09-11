@@ -184,7 +184,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2" align="center" style="color:red;text-align:center">Invalid OTP</td>
+								<td colspan="2" align="center" style="color:red;text-align:center">The OTP you entered is incorrect</td>
 							</tr>
 							<tr>
 								<td class="bold">
