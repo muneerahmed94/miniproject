@@ -6,15 +6,10 @@
 <%
 	try
 	{
-        DateFormat dateFormat = new SimpleDateFormat("EEE, MMM d, yyyy HH:mm:ss");
+        out.print(request.getParameter("date" + "<br/>"));
+		DateFormat dateFormat = new SimpleDateFormat("EEE, MMM d, yyyy HH:mm:ss");
 		Date date = new Date();
 		out.println(dateFormat.format(date) + "<br/>");
-
-		/*
-		 * Add x hours to the time
-		 */
-
-		int x = 10;
 
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
