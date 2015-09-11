@@ -13,7 +13,15 @@
 <%
 	try
 	{
-		session.setAttribute("payment_complete", "yes");
+		if(session.getAttribute("payment_complete") != null)
+		{
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp");
+		}
+		else
+		{
+			session.setAttribute("payment_complete", "yes");
+		}
+		
 		
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
