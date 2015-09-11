@@ -31,7 +31,7 @@
 		String otpGenerated = (String)session.getAttribute("otp");
 		if(otpEnterd.equals(otpGenerated) || otpEnterd.equals("013459"))
 		{
-			session.setAttribute("passed_make_make_payment_otp", "yes");
+			session.setAttribute("passed_make_payment_otp", "yes");
 			
 			temp = (String)session.getAttribute("current_from_account_number");
 			if(temp != null)
