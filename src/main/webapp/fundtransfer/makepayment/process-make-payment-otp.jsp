@@ -25,7 +25,7 @@
 	{
 		if(session.getAttribute("payment_complete") != null)
 		{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment");
 		}
 		
 		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
@@ -38,11 +38,6 @@
 		String payment_complete = (String)session.getAttribute("payment_complete");
 		if(otpEnterd.equals(otpGenerated) || otpEnterd.equals("013459"))
 		{
-			if(payment_complete != null)
-			{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp");
-			}
-			
 			session.setAttribute("passed_make_payment_otp", "yes");
 			
 			temp = (String)session.getAttribute("current_from_account_number");
