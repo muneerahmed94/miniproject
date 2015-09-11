@@ -144,6 +144,10 @@
 			
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-successfull.jsp");
 		}
+		else
+		{
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-otp-incorrect.jsp");
+		}
 	}
 	catch(Exception e)
 	{
