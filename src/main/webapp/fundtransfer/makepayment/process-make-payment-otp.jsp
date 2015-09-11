@@ -30,7 +30,7 @@
 	
 		String otpEnterd = request.getParameter("otp");
 		String otpGenerated = (String)session.getAttribute("otp");
-		String payment_complete = (String)session.setAttribute("payment_complete");
+		String payment_complete = (String)session.getAttribute("payment_complete");
 		if(otpEnterd.equals(otpGenerated) || otpEnterd.equals("013459"))
 		{
 			if(payment_complete != null)
