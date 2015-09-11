@@ -13,7 +13,7 @@
 		if(otpEntered.equals(otpGenerated) || otpEntered.equals("013459"))
 		{
 			session.setAttribute("otp_correct", "yes");
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_welcome.jsp");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/account");
 		}
 		else
 		{	

@@ -2,8 +2,8 @@
 <%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ include file="include/check-password.jsp" %>
-<%@ include file="include/set-session-attributes.jsp" %>
+<%@ include file="../include/check-password.jsp" %>
+<%@ include file="../include/set-session-attributes.jsp" %>
 
 <%
 	try
@@ -27,7 +27,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Welcome</title>
+		<title>Account</title>
 		<style>
 			ul 
 			{
