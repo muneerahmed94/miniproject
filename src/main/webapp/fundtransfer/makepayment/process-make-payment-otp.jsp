@@ -94,7 +94,7 @@
 			insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 			
 			Date currentDateTimeObject = new Date();
 			String currentDateTimeStringInsert = insertFormat.format(currentDateTimeObject).toString();
-			String currentDateTimeStringDisplay = displayFormat.format(currentDateTimeObject.toString()); 
+			String currentDateTimeStringDisplay = displayFormat.format(currentDateTimeObject).toString(); 
 			session.setAttribute("transaction_time", currentDateTimeStringDisplay);
 			
 			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
