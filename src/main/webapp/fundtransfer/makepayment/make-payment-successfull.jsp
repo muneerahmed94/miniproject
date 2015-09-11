@@ -8,6 +8,7 @@
 	Integer transactionAmount;
 	String transactionRemarks;
 	String transactionTime;
+	Integer transactionID;
 %>
 <%
 	try
@@ -19,6 +20,7 @@
 		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
 		transactionRemarks = (String)session.getAttribute("transaction_remarks");
 		transactionTime = (String)session.getAttribute("transaction_time");
+		transactionID = Integer.parseInt((String)session.getAttribute("transaction_id"));
 	}
 	catch(Exception e)
 	{
@@ -122,6 +124,14 @@
 								<th style="text-align:center" colspan="2">Fund Transfer Reciept</th>
 							</tr>
 							<tr>
+								<tr>
+									<td class="bold">
+										Transaction ID: 
+									</td>
+									<td style="color:green">
+										<%= transactionID %>
+									</td>
+								</tr>
 								<tr>
 									<td class="bold">
 										Payment Status: 

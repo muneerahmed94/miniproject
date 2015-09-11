@@ -128,6 +128,18 @@
 			request.getSession().removeAttribute("current_from_account_number");
 			request.getSession().removeAttribute("current_to_account_number");
 			
+			sql = "SELECT TransactionID FROM Transactions WHERE FromAccountNumber=?, ToAccountNumber=?, TransactionAmount=? TransactionRemarks=?, TransactionTimeStamp=?";
+			pst.setInt(1, currentFromAccountNumber);
+			pst.setInt(2, currentToAccountNumber);
+			pst.setInt(3, transactionAmount);
+			pst.setString(4, transactionRemarks);
+			pst.setString(5, currentDateTimeStringInsert);
+			rs = pst.executeQuery();
+			if(rs.next())
+			{
+				session.setAttribute("transaction_id", rs.getInt("TransactionID").toString());
+			}
+			
 			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment-successfull.jsp");
 		}
 	}
