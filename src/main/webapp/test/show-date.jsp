@@ -8,7 +8,7 @@
 	{
 		DateFormat displayFormat = new SimpleDateFormat("EEE, MMM d, yyyy hh:mm aaa");
 		DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		displayFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta)); 
+		displayFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 
 		insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 
 		Date date = new Date();
 		
