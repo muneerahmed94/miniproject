@@ -1,6 +1,9 @@
 <%@ include file="../../include/check-passed-make-payment-transaction-password.jsp" %>
 <%@ include file="../../include/connect-to-db.jsp" %>
 <%@ page import="java.util.Random" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.text.*" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 
@@ -85,26 +88,36 @@
 			Integer finalFromAccountBalance = fromAccountBalance - transactionAmount;
 			Integer finalToAccountBalance = toAccountBalance + transactionAmount;
 			
-			sql = "UPDATE Customers SET AccountBalance=? WHERE AccountNumber=?";
+			DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
+			insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 			
+			Date currentDateTimeObject = new Date();
+			String currentDateTimeString = currentDateTimeObject.toString();
+			
+			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, finalFromAccountBalance);
 			pst.setInt(2, currentFromAccountNumber);
+			pst.setString(3, currentDateTimeString);
 			pst.executeUpdate();
 			session.setAttribute("account_balance",finalFromAccountBalance.toString());
 			
 				
-			sql = "UPDATE Customers SET AccountBalance=? WHERE AccountNumber=?";
+			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, finalToAccountBalance);
 			pst.setInt(2, currentToAccountNumber);
+			pst.setString(3, currentDateTimeString);
 			pst.executeUpdate();
 			
-			sql = "INSERT INTO Transactions(FromAccountNumber, ToAccountNumber, TransactionAmount, TransactionRemarks) VALUES(?, ?, ?, ?)";
+			
+			
+			sql = "INSERT INTO Transactions(FromAccountNumber, ToAccountNumber, TransactionAmount, TransactionRemarks, TransactionTimeStamp) VALUES(?, ?, ?, ?, ?)";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, currentFromAccountNumber);
 			pst.setInt(2, currentToAccountNumber);
 			pst.setInt(3, transactionAmount);
 			pst.setString(4, transactionRemarks);
+			pst.setString(5, currentDateTimeString);
 			pst.executeUpdate();
 			
 			request.getSession().removeAttribute("busy");
