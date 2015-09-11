@@ -26,7 +26,7 @@
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 
-		calendar.add(Calendar.HOUR, 7);
+		calendar.add(Calendar.HOUR, 9);
 		calendar.add(Calendar.MINUTE, 30);
 
 		out.println(dateFormat.format(calendar.getTime()) + "<br/>");
