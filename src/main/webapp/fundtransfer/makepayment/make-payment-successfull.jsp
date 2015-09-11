@@ -22,7 +22,6 @@
 			session.setAttribute("payment_complete", "yes");
 		}
 		
-		
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		benificiaryName = (String)session.getAttribute("benificiary_name");

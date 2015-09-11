@@ -23,6 +23,11 @@
 <%
 	try
 	{
+		if(session.getAttribute("payment_complete") != null)
+		{
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment/make-payment.jsp");
+		}
+		
 		transactionAmount = Integer.parseInt((String)session.getAttribute("transaction_amount"));
 		transactionRemarks = (String)session.getAttribute("transaction_remarks");
 		
