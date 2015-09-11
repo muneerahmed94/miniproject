@@ -96,8 +96,8 @@
 			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, finalFromAccountBalance);
-			pst.setInt(2, currentDateTimeString);
-			pst.setString(3, currentFromAccountNumber);
+			pst.setString(2, currentDateTimeString);
+			pst.setInt(3, currentFromAccountNumber);
 			pst.executeUpdate();
 			session.setAttribute("account_balance",finalFromAccountBalance.toString());
 			
@@ -105,8 +105,8 @@
 			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
 			pst.setInt(1, finalToAccountBalance);
-			pst.setInt(2, currentDateTimeString);
-			pst.setString(3, currentToAccountNumber);
+			pst.setString(2, currentDateTimeString);
+			pst.setInt(3, currentToAccountNumber);
 			pst.executeUpdate();
 			
 			
