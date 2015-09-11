@@ -91,7 +91,7 @@
 			DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
 			insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta")); 			
 			Date currentDateTimeObject = new Date();
-			String currentDateTimeString = currentDateTimeObject.toString();
+			String currentDateTimeString = insertFormat.format(currentDateTimeObject).toString();
 			
 			sql = "UPDATE Customers SET AccountBalance=?, LastTransactionTime=? WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
