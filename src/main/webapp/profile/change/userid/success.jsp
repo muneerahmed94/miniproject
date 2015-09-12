@@ -4,13 +4,14 @@
 
 <%!
 	String loginName;
+	String alternate_userid_set; 
 %>
 
 <%
 	
 	try
 	{	
-		String alternate_userid_set = (String)session.getAttribute(alternate_userid_set);
+		alternate_userid_set = (String)session.getAttribute(alternate_userid_set);
 		if(alternate_userid_set == null)
 		{
 			response.sendRedirect("../../");
