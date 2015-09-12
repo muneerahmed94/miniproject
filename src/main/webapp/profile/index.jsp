@@ -163,7 +163,7 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Email: </td>
-								<td><%= email %>/td>
+								<td><%= email %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Phone: </td>
