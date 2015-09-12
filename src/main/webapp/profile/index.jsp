@@ -107,11 +107,6 @@
 			{
 				background-color:#a9d0f5;
 			}
-			.bold
-			{
-				font-weight:bold;
-				text-align:left;
-			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
@@ -150,7 +145,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td bgcolor="white" valign="top">
-					<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
 								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Your Details</td>
 							</tr>
