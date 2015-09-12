@@ -5,18 +5,13 @@
 
 <%@ include file="include/connect-to-db.jsp" %>
 
-<%!
-	String customerId;
-	String customer_id;
-%>
-
 <%
 		try
 		{
 			int validUser = 0;;
 			
-			customerId = request.getParameter("customer_id");
-			password = request.getParameter("password");
+			String customerId = request.getParameter("customer_id");
+			String password = request.getParameter("password");
 			
 			sql = "select * from Users where UserID=? and LoginPassword=?";
 			pst = conn.prepareStatement(sql);
