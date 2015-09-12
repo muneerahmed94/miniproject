@@ -124,7 +124,7 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Confirm New UserID: </td>
-								<td><input type="password" size="25" name="confirm_user_id"> </td>
+								<td><input type="text" size="25" name="confirm_user_id"> </td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
