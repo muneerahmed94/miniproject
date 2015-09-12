@@ -121,10 +121,10 @@
 					<form name="myForm" action="process.jsp" method="POST" onsubmit="return validate()">
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<td colspan="2" style="color:green;text-align:center">Alternate UserID Updated Successfully</td>
+								<th colspan="2" style="text-align:center">Update Alternate UserID</th>
 							</tr>
 							<tr>
-								<th colspan="2" style="text-align:center">Update Alternate UserID</th>
+								<td colspan="2" style="color:green;text-align:center">Alternate UserID Updated Successfully</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">New UserID: </td>
