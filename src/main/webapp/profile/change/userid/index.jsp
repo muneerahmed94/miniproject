@@ -1,6 +1,6 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ include file="../include/check-password.jsp" %>
+<%@ include file="../../../include/check-password.jsp" %>
 
 <%
 	try
