@@ -9,6 +9,8 @@
 <%
 	try
 	{	
+		request.getSession().removeAttribute("alternate_userid_set");
+		
 		loginName = (String)session.getAttribute("login_name");
 	}
 	catch(Exception e)

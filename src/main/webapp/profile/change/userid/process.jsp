@@ -22,6 +22,7 @@
 		int x = pst.executeUpdate();
 		if(x == 1)
 		{
+			session.setAttribute("alternate_userid_set", "yes");
 			response.sendRedirect("success.jsp");
 		}
 	}
