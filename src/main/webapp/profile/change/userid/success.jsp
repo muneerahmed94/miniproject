@@ -12,10 +12,7 @@
 	try
 	{	
 		alternate_userid_set = (String)session.getAttribute(alternate_userid_set);
-		if(alternate_userid_set == null)
-		{
-			response.sendRedirect("../../");
-		}
+		out.print(alternate_userid_set);
 		loginName = (String)session.getAttribute("login_name");
 	}
 	catch(Exception e)
