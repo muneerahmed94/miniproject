@@ -69,6 +69,7 @@
 			{
 				out.print("inside else");
 			}
+			out.print((String)session.getAttribute("customer_id"));
         }
         catch(Exception e)
         {
