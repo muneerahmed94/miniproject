@@ -33,6 +33,24 @@
 			session.setAttribute("mobile", mobile);	
 			session.setAttribute("customer_id",username);
 		}
+		sql = "select * from Users where AlterUserID=? and LoginPassword=?";
+		pst = conn.prepareStatement(sql);
+		pst.setString(1, username);
+		pst.setString(2, password);
+		rs = pst.executeQuery();
+		if(rs.next())
+		{
+			out.print("inside 2");
+			validUser = 2;
+			email = rs.getString("Email");
+			mobile = rs.getString("Mobile");
+			Integer userid = rs.getInt("UserID");
+			String userid2 = userid.toString();
+			session.setAttribute("email", email);
+			session.setAttribute("mobile", mobile);	
+			session.setAttribute("customer_id",userid2);
+		}
+		
 	}
 	catch(Exception e)
 	{
