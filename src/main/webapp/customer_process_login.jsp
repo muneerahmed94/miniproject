@@ -22,14 +22,14 @@
             rs = pst.executeQuery();
             if(rs.next())
             {
+				out.print("inside 1");
 				validUser = 1;
 				email = rs.getString("Email");
 				mobile = rs.getString("Mobile");
 				session.setAttribute("email", email);
 				session.setAttribute("mobile", mobile);	
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_otp.jsp");
+				
 			}
-			
 			sql = "select * from Users where AlternateUserID=? and LoginPassword=?";
 			pst = conn.prepareStatement(sql);
             pst.setString(1, customerId);
@@ -37,6 +37,7 @@
             rs = pst.executeQuery();
             if(rs.next())
             {
+				out.print("inside 2");
 				validUser = 2;
 				customer_id = rs.getString("UserID");
 				email = rs.getString("Email");
@@ -47,24 +48,26 @@
 			if(validUser == 1 || validUser ==2)
 			{
 
-				
+				out.print("inside 12");
 				session.setAttribute("otp_type", "Login OTP");
 				if(validUser == 2)
 				{
+					out.print("inside 12 2")
 					session.setAttribute("customer_id",customer_id);
 				}
 				else
 				{
+					out.print("inside 12 1");
 					session.setAttribute("customer_id", customerId);
 				}
 %>
 				<%@ include file="../../include/send-otp.jsp" %>
 <%
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_otp.jsp");
+				
 			}
 			else
 			{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_mismatch.html");
+				out.print("inside else");
 			}
         }
         catch(Exception e)
