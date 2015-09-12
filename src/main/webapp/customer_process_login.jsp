@@ -17,24 +17,29 @@
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
-			Integer customer_id = rs.getInt("UserID");
-			String email = rs.getString("Email");
-			String mobile = rs.getString("Mobile");
+			Integer UserID = rs.getInt("UserID");
+			String Email = rs.getString("Email");
+			String Mobile = rs.getString("Mobile");
 			
-			session.setAttribute("customer_id",customer_id.toString());
-			session.setAttribute("email", email);
-			session.setAttribute("mobile", mobile);	
+			session.setAttribute("customer_id",UserID.toString());
+			session.setAttribute("email", Email);
+			session.setAttribute("mobile", Mobile);	
+			session.setAttribute("otp_type", "Login OTP");
+%>
+			<%@ include file="../../include/send-otp.jsp" %>
+<%
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_otp.jsp");
 		}
 		else
 		{
-			out.print("inside else");
+			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_mismatch.html");
 		}
 		
 	}
 	catch(Exception e)
 	{
 		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
-		e.printStackTrace( new PrintWriter(ostr,true) );
+		e.printStackTrace( new PrintWriter(ostr,true));
 		String foo = ostr.toString();
 		out.println(foo + "<br/>");
 		out.print(e);
