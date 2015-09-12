@@ -2,6 +2,15 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ include file="../include/check-password.jsp" %>
 
+<%!
+	String customer_id;
+	String accountNumber;
+	String accountName;
+	String email;
+	String mobile;
+
+%>
+
 <%
 	try
 	{	
@@ -151,11 +160,11 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Number: </td>
-								<td><%= account_number %></td>
+								<td><%= accountNumber %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Holder's Name: </td>
-								<td><%= account_name %></td>
+								<td><%= accountName %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Email: </td>
