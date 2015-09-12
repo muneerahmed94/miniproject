@@ -13,6 +13,8 @@
 			String customerId = request.getParameter("customer_id");
 			String password = request.getParameter("password");
 			
+			String customer_id = "";
+			
 			sql = "select * from Users where UserID=? and LoginPassword=?";
 			pst = conn.prepareStatement(sql);
             pst.setString(1, customerId);
