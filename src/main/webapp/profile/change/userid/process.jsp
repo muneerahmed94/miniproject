@@ -1,5 +1,5 @@
-<%@ include file="../include/check-password.jsp" %>
-<%@ include file="../include/connect-to-db.jsp" %>
+<%@ include file="../../../include/check-password.jsp" %>
+<%@ include file="../../../include/connect-to-db.jsp" %>
 <%
 	try
 	{
