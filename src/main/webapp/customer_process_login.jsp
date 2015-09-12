@@ -52,7 +52,7 @@
 				session.setAttribute("otp_type", "Login OTP");
 				if(validUser == 2)
 				{
-					out.print("inside 12 2")
+					out.print("inside 12 2");
 					session.setAttribute("customer_id",customer_id);
 				}
 				else
