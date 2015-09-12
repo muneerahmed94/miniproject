@@ -8,8 +8,6 @@
 <%!
 	String customerId;
 	String customer_id;
-	String email;
-	String mobile;
 %>
 
 <%
