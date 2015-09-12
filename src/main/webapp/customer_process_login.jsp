@@ -1,82 +1,45 @@
-<%@ page import="java.sql.*" %>
-<%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 
 <%@ include file="include/connect-to-db.jsp" %>
 
+<%!
+	String username;
+	String password;
+	String email;
+	String mobile;
+%>
+
 <%
 	try
 	{
-		int validUser = 0;;
+		int validUser = 0;
 		
-		String customerId = request.getParameter("customer_id");
-		String password = request.getParameter("password");
-		
-		String customer_id = "not present";
-		session.setAttribute("customer_id",customer_id);	
+		username = request.getParameter("customer_id");
+		password = request.getParameter("password");
 		
 		sql = "select * from Users where UserID=? and LoginPassword=?";
 		pst = conn.prepareStatement(sql);
-		pst.setString(1, customerId);
+		pst.setString(1, username);
 		pst.setString(2, password);
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
 			out.print("inside 1");
 			validUser = 1;
-			String email = rs.getString("Email");
-			String mobile = rs.getString("Mobile");
+			email = rs.getString("Email");
+			mobile = rs.getString("Mobile");
 			session.setAttribute("email", email);
 			session.setAttribute("mobile", mobile);	
-			session.setAttribute("customer_id",customerId);
+			session.setAttribute("customer_id",username);
 		}
-		sql = "select * from Users where AlternateUserID=? and LoginPassword=?";
-		pst = conn.prepareStatement(sql);
-		pst.setString(1, customerId);
-		pst.setString(2, password);
-		rs = pst.executeQuery();
-		if(rs.next())
-		{
-			out.print("inside 2");
-			validUser = 2;
-			customer_id = rs.getString("UserID");
-			String email = rs.getString("Email");
-			String mobile = rs.getString("Mobile");
-			session.setAttribute("email", email);
-			session.setAttribute("mobile", mobile);		
-			session.setAttribute("customer_id",customer_id);			
-		}
-		if(validUser == 1 || validUser ==2)
-		{
-
-			out.print("inside 12");
-			session.setAttribute("otp_type", "Login OTP");
-			if(validUser == 2)
-			{
-				out.print("inside 12 2");
-			}
-			else
-			{
-				out.print("inside 12 1");
-			}
-%>
-			<%@ include file="../../include/send-otp.jsp" %>
-<%
-			
-		}
-		else
-		{
-			out.print("inside else");
-		}
-		out.print((String)session.getAttribute("customer_id"));
 	}
 	catch(Exception e)
 	{
-				ByteArrayOutputStream ostr = new ByteArrayOutputStream();
-				e.printStackTrace( new PrintWriter(ostr,true) );
-				String foo = ostr.toString();
-				out.println(foo);
-				out.print(e);
+		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
+		e.printStackTrace( new PrintWriter(ostr,true) );
+		String foo = ostr.toString();
+		out.println(foo + "<br/>");
+		out.print(e);
 	}
 %>
