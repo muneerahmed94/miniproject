@@ -94,7 +94,7 @@
 					<ul>
 						<li><a class="linkh" href="#Accounts">Accounts</a></li>
 						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/">Fund Transfer</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/profile">Edit Profile</a></li>
+						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/profile">Profile</a></li>
 						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
 						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
