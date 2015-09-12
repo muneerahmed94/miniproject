@@ -33,7 +33,7 @@
 			session.setAttribute("mobile", mobile);	
 			session.setAttribute("customer_id",username);
 		}
-		sql = "select * from Users where AlterUserID=? and LoginPassword=?";
+		sql = "select * from Users where AlternateUserID=? and LoginPassword=?";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, username);
 		pst.setString(2, password);
