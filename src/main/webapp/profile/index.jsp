@@ -1,30 +1,15 @@
-
-<%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
-
-<%@ include file="../../include/check-password.jsp" %>
-
-<%!
-		String loginName = "";
-		String accountName = "";
-		String loginPassword = "";
-		String transactionPassword = "";
-		String email = "";
-		String mobile = "";
-		
-		Integer accountNumber = 0;
-		Integer accountBalance = 0;
-		
-%>
+<%@ include file="../include/check-password.jsp" %>
 
 <%
 	try
 	{	
+		customer_id = (String)session.getAttribute("customer_id");
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
-		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
-		loginName = (String)session.getAttribute("login_name");
 		accountName = (String)session.getAttribute("account_name");
+		email = (String)session.getAttribute("email");
+		mobile = (String)session.getAttribute("mobile");
 	}
 	catch(Exception e)
 	{
@@ -39,33 +24,36 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Profile</title>
-		
+		<title>Home</title>
 		<style>
-			.link 
+			
+			ul.unliv 
 			{
-			  width: 130px;
-			  height: 25px;
-			  line-height:55px;
-			  text-align: center;
-			  background-color:#0072c6;
-			  border-style:solid;
-			  border-width:1px;
-			  border-color:#46b8da;
-			  border-radius:5px;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
 			}
-			.link:hover 
+			a.linkv:link, a.linkv:visited 
 			{
-				border-color:#269abc;
+				display: block;
+				width: 196px;
+				color: black;
+				font-size: 15px;
+				background-color: #f3f3f3;
+				text-align: left;
+				padding: 4px;
+				padding-left:20px;
+				text-decoration: none;
 			}
-
-			span 
+			a.linkv:hover, a.lielv:active 
 			{
-			  display: inline-block;
-			  vertical-align: middle;
-			  line-height: normal;      
+				background-color: #cccccc;
+				font-size: 17px;
+				font-weight: bold;
 			}
-			ul 
+			
+			
+			ul.ulh
 			{
 				list-style-type: none;
 				margin: 0;
@@ -73,11 +61,10 @@
 				overflow: hidden;
 			}
 
-			li 
+			li.lih 
 			{
 				float: left;
 			}
-
 			a.linkh:link, a.linkh:visited 
 			{
 				display: block;
@@ -97,7 +84,7 @@
 			}
 			td, tr
 			{
-				border-color:white;
+				border-color:#E0E0E0;
 			}
 			.content 
 			{
@@ -107,6 +94,15 @@
 				border-right:1px solid #0072c6;
 				border-left:1px solid #0072c6;
 			}
+			th
+			{
+				background-color:#a9d0f5;
+			}
+			.bold
+			{
+				font-weight:bold;
+				text-align:left;
+			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
@@ -114,7 +110,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="http://miniproject-jntuhceh.rhcloud.com/images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -123,80 +119,59 @@
 			<!-- ============ NAVIGATION BAR SECTION ============== -->
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
-					<ul>
-						<li><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
-						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
+					<ul class="ulh">
+						<li class="lih"><a class="linkh" href="#Accounts">Accounts</a></li>
+						<li class="lih"><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
+						<li class="lih"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
+						<li class="lih" style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome: Shaik Muneer Ahmed</li>
 					</ul>
 				</td>
 			</tr>
 			<tr>
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
-					
+					<ul class="unliv">
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/userid">Add Alternate UserID</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/loginpassword">Change Login Password</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/transactionpassword">Change Trasaction Password</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/email">Change Email</a></li>
+						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/mobile">Change Phone Number</a></li>
+					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
-				<td style="background-color:white;vertical-align:top;">
-					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
-					<table class="content" align="center" cellpadding="4" style="border-collapse:collapse;">
-						<tr>
-							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary">
-									<div class="link">
-										<span>Add Alternate User ID</span>
-									</div>
-								</a>
-							</td>
-						</tr>
-						
-						<tr>
-							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/viewbenificiary">
-									<div class="link">
-										<span>Change Login Password</span>
-									</div>
-								</a>
-								
-							</td>
-						</tr>
-						
-						<tr>
-							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment">
-									<div class="link">
-										<span>Change Transaction Password</span>
-									</div>
-								</a>
-							</td>
-						</tr>
-						 
-						<tr>
-							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/paymenthistory">
-									<div class="link">
-										<span>Change Email</span>
-									</div>
-								</a>
-							</td>
-						</tr>
-						<tr>
-							<td height="80">
-								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/paymenthistory">
-									<div class="link">
-										<span>Change Mobile</span>
-									</div>
-								</a>
-							</td>
-						</tr>
-					</table>
+				<td bgcolor="white" valign="top">
+					<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+							<tr>
+								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Your Details</td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">UserID: </td>
+								<td><%= customer_id %></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Account Number: </td>
+								<td><%= account_number %></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Account Holder's Name: </td>
+								<td><%= account_name %></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Email: </td>
+								<td><%= email %>/td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Phone: </td>
+								<td><%= mobile %></td>
+							</tr>
+						</table>
 				</td>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
-				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					JNTUHCEH Internet Banking Mini Project
+				<td align="center" bgcolor="#e7e6e6" colspan="2" height="20px">
+					© JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>
