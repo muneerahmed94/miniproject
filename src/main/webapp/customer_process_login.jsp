@@ -26,10 +26,11 @@
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
 			
-			String sql = "select * from Users where UserID=? and LoginPassword=?";
+			String sql = "SELECT * FROM Users WHERE (UserID=? OR AlternateUserID=?) AND LoginPassword=?";
 			pst = conn.prepareStatement(sql);
             pst.setString(1, customerId);
-            pst.setString(2, password);
+            pst.setString(2, customerId);
+            pst.setString(3, password);
             
             rs = pst.executeQuery();
             if(rs.next())
