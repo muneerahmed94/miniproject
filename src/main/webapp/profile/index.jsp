@@ -1,14 +1,26 @@
-<%@ page import="java.sql.*" %>
+
 <%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ include file="../include/check-password.jsp" %>
-<%@ include file="../include/set-session-attributes.jsp" %>
+
+<%@ include file="../../include/check-password.jsp" %>
+
+<%!
+		String loginName = "";
+		String accountName = "";
+		String loginPassword = "";
+		String transactionPassword = "";
+		String email = "";
+		String mobile = "";
+		
+		Integer accountNumber = 0;
+		Integer accountBalance = 0;
+		
+%>
 
 <%
 	try
 	{	
-		
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		loginName = (String)session.getAttribute("login_name");
@@ -27,8 +39,32 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Account</title>
+		<title>Profile</title>
+		
 		<style>
+			.link 
+			{
+			  width: 130px;
+			  height: 25px;
+			  line-height:55px;
+			  text-align: center;
+			  background-color:#0072c6;
+			  border-style:solid;
+			  border-width:1px;
+			  border-color:#46b8da;
+			  border-radius:5px;
+			}
+			.link:hover 
+			{
+				border-color:#269abc;
+			}
+
+			span 
+			{
+			  display: inline-block;
+			  vertical-align: middle;
+			  line-height: normal;      
+			}
 			ul 
 			{
 				list-style-type: none;
@@ -61,7 +97,7 @@
 			}
 			td, tr
 			{
-				border-color:#E0E0E0;
+				border-color:white;
 			}
 			.content 
 			{
@@ -71,10 +107,6 @@
 				border-right:1px solid #0072c6;
 				border-left:1px solid #0072c6;
 			}
-			th
-			{
-				background-color:#a9d0f5;
-			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
@@ -82,7 +114,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="http://miniproject-jntuhceh.rhcloud.com/images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -93,8 +125,8 @@
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul>
 						<li><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/">Fund Transfer</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/profile">Edit Profile</a></li>
+						<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
+						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
 						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
 						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
@@ -108,31 +140,57 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
-					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+					<table class="content" align="center" cellpadding="4" style="border-collapse:collapse;">
 						<tr>
-							<th style="text-align:center">Account Number</th>
-							<th style="text-align:center">Account Holder's Name</th>
-							<th style="text-align:center">Account Balance</th>
-							<th style="text-align:center">Statement</th>
+							<td height="80">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary">
+									<div class="link">
+										<span>Add Alternate User ID</span>
+									</div>
+								</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td height="80">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/viewbenificiary">
+									<div class="link">
+										<span>Change Login Password</span>
+									</div>
+								</a>
+								
+							</td>
+						</tr>
+						
+						<tr>
+							<td height="80">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/makepayment">
+									<div class="link">
+										<span>Change Transaction Password</span>
+									</div>
+								</a>
+							</td>
+						</tr>
+						 
+						<tr>
+							<td height="80">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/paymenthistory">
+									<div class="link">
+										<span>Change Email</span>
+									</div>
+								</a>
+							</td>
 						</tr>
 						<tr>
-							<td style="text-align:center;"><% out.print(accountNumber); %></td>
-							<td style="text-align:center;"><% out.print(accountName); %></td>
-							<td style="text-align:center;">&#8377;<% out.print(accountBalance); %></td>
-							<td>
-								<a href="http://miniproject-jntuhceh.rhcloud.com/account/mini.jsp">Mini</a> | <a href="http://miniproject-jntuhceh.rhcloud.com/account/detail.jsp">Detail</a>
+							<td height="80">
+								<a style="text-decoration:none;color:white;"href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/paymenthistory">
+									<div class="link">
+										<span>Change Mobile</span>
+									</div>
+								</a>
 							</td>
 						</tr>
 					</table>
-				</td>
-			</tr>	
-			<!-- ============ FOOTER SECTION ============== -->
-			<tr>
-				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					JNTUHCEH Internet Banking Mini Project
-				</td>
-			</tr>
-		</table>
 				</td>
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
