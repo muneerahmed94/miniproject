@@ -3,44 +3,65 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 
-<%
-	String customerId = request.getParameter("customer_id");
-	String password = request.getParameter("password");
-	
-	Connection conn = null;
-	PreparedStatement pst = null;
-	ResultSet rs = null;
-	
-	 
-        try
-        {
-		
-			String MYSQL_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-			String MYSQL_PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-			String MYSQL_DATABASE_HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
-			String MYSQL_DATABASE_PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
-			String MYSQL_DATABASE_NAME = "miniproject";
+<%@ include file="../../include/connect-to-db.jsp" %>
 
-			String url = "jdbc:mysql://" + MYSQL_DATABASE_HOST + ":" + MYSQL_DATABASE_PORT + "/" + MYSQL_DATABASE_NAME;
+<%!
+	String customerId;
+	String customer_id;
+	String email;
+	String mobile;
+%>
+
+<%
+		try
+		{
+			int validUser = 0;;
 			
-			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection(url, MYSQL_USERNAME, MYSQL_PASSWORD);
+			customerId = request.getParameter("customer_id");
+			password = request.getParameter("password");
 			
-			String sql = "SELECT * FROM Users WHERE (UserID=? OR AlternateUserID=?) AND LoginPassword=?";
+			sql = "select * from Users where UserID=? and LoginPassword=?";
 			pst = conn.prepareStatement(sql);
             pst.setString(1, customerId);
-            pst.setString(2, customerId);
-            pst.setString(3, password);
-            
+            pst.setString(2, password);
             rs = pst.executeQuery();
             if(rs.next())
             {
-				String email = rs.getString("Email");
-				String mobile = rs.getString("Mobile");
+				validUser = 1;
+				email = rs.getString("Email");
+				mobile = rs.getString("Mobile");
 				session.setAttribute("email", email);
-				session.setAttribute("mobile", mobile);
+				session.setAttribute("mobile", mobile);	
+				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login_otp.jsp");
+			}
+			
+			sql = "select * from Users where AlternateUserID=? and LoginPassword=?";
+			pst = conn.prepareStatement(sql);
+            pst.setString(1, customerId);
+            pst.setString(2, password);
+            rs = pst.executeQuery();
+            if(rs.next())
+            {
+				validUser = 2;
+				customer_id = rs.getString("UserID");
+				email = rs.getString("Email");
+				mobile = rs.getString("Mobile");
+				session.setAttribute("email", email);
+				session.setAttribute("mobile", mobile);				
+			}
+			if(validUser == 1 || validUser ==2)
+			{
+
+				
 				session.setAttribute("otp_type", "Login OTP");
-				session.setAttribute("customer_id",customerId);
+				if(validUser == 2)
+				{
+					session.setAttribute("customer_id",customer_id);
+				}
+				else
+				{
+					session.setAttribute("customer_id", customerId);
+				}
 %>
 				<%@ include file="../../include/send-otp.jsp" %>
 <%
