@@ -3,52 +3,31 @@
 
 <%@ include file="include/connect-to-db.jsp" %>
 
-<%!
-	String username;
-	String password;
-	String email;
-	String mobile;
-%>
-
 <%
 	try
-	{
-		int validUser = 0;
+	{	
+		String username = request.getParameter("customer_id");
+		String password = request.getParameter("password");
 		
-		username = request.getParameter("customer_id");
-		password = request.getParameter("password");
-		
-		sql = "select * from Users where UserID=? and LoginPassword=?";
+		sql = "SELECT * FROM Users WHERE (UserID=? OR AlternateUserID=?) AND LoginPassword=?";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, username);
-		pst.setString(2, password);
+		pst.setString(2, username);
+		pst.setString(3, password);
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
-			out.print("inside 1");
-			validUser = 1;
-			email = rs.getString("Email");
-			mobile = rs.getString("Mobile");
+			Integer customer_id = rs.getInt("UserID");
+			String email = rs.getString("Email");
+			String mobile = rs.getString("Mobile");
+			
+			session.setAttribute("customer_id",customer_id.toString());
 			session.setAttribute("email", email);
 			session.setAttribute("mobile", mobile);	
-			session.setAttribute("customer_id",username);
 		}
-		sql = "select * from Users where AlternateUserID=? and LoginPassword=?";
-		pst = conn.prepareStatement(sql);
-		pst.setString(1, username);
-		pst.setString(2, password);
-		rs = pst.executeQuery();
-		if(rs.next())
+		else
 		{
-			out.print("inside 2");
-			validUser = 2;
-			email = rs.getString("Email");
-			mobile = rs.getString("Mobile");
-			Integer userid = rs.getInt("UserID");
-			String userid2 = userid.toString();
-			session.setAttribute("email", email);
-			session.setAttribute("mobile", mobile);	
-			session.setAttribute("customer_id",userid2);
+			out.print("inside else");
 		}
 		
 	}
