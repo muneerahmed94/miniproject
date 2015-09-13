@@ -39,7 +39,33 @@
 			}
 		</script>
 		<style>
-			ul 
+			ul.unliv 
+			{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			a.linkv:link, a.linkv:visited 
+			{
+				display: block;
+				width: 196px;
+				color: black;
+				font-size: 15px;
+				background-color: #f3f3f3;
+				text-align: left;
+				padding: 4px;
+				padding-left:20px;
+				text-decoration: none;
+			}
+			a.linkv:hover, a.lielv:active 
+			{
+				background-color: #cccccc;
+				font-size: 17px;
+				font-weight: bold;
+			}
+			
+			
+			ul.ulh
 			{
 				list-style-type: none;
 				margin: 0;
@@ -47,11 +73,10 @@
 				overflow: hidden;
 			}
 
-			li 
+			li.lih 
 			{
 				float: left;
 			}
-
 			a.linkh:link, a.linkh:visited 
 			{
 				display: block;
@@ -113,7 +138,13 @@
 			<tr>
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
-					
+					<ul class="unliv">
+						<li class="lielv"><a class="linkv" href="index.jsp">Change Alternate User ID</a></li>
+						<li class="lielv"><a class="linkv" href="../loginpassword">Change Login Password</a></li>
+						<li class="lielv"><a class="linkv" href="../transactionpassword">Change Trasaction Password</a></li>
+						<li class="lielv"><a class="linkv" href="../email">Change Email</a></li>
+						<li class="lielv"><a class="linkv" href="../mobile">Change Phone Number</a></li>
+					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
