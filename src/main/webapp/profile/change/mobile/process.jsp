@@ -14,7 +14,7 @@
 		
 		if(currentPassword.equals(passwordEntered))
 		{
-			sql = "UPDATE Users SET Email=? WHERE UserID=?"; 
+			sql = "UPDATE Users SET Phone=? WHERE UserID=?"; 
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, newEmail);
 			pst.setString(2,customer_id);
