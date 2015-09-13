@@ -81,10 +81,10 @@
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul class="ulh">
-						<li class="lih"><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li class="lih"><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
-						<li class="lih"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
-						<li class="lih" style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
+						<li class="lih"><a class="linkh" href="../../../account">Account</a></li>
+						<li class="lih"><a class="linkh" href="../../../fundtransfer">Fund Transfer</a></li>
+						<li class="lih"><a class="linkh" href="../../../profile">Profile</a></li>
+						<li class="lih" style="float:right;"><a class="linkh" href="../../../account/logout.jsp">Logout</a></li>
 						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
@@ -122,7 +122,7 @@
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
-									<input type="submit" value="Update">
+									<input type="submit" value="Change">
 									&nbsp &nbsp &nbsp &nbsp &nbsp 
 									<input type="reset" value="Reset">
 								</td>

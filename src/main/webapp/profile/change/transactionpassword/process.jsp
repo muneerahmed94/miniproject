@@ -14,7 +14,7 @@
 		
 		if(currentPassword.equals(passwordEntered))
 		{
-			sql = "UPDATE Users SET LoginPassword=? WHERE UserID=?"; 
+			sql = "UPDATE Users SET TransactionPassword=? WHERE UserID=?"; 
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, newPassword);
 			pst.setString(2,customer_id);
@@ -24,7 +24,7 @@
 			
 			if(updated == 1)
 			{
-				session.setAttribute("login_password", newPassword);
+				session.setAttribute("transaction_password", newPassword);
 				response.sendRedirect("success.jsp");
 			}
 		}

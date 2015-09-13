@@ -24,7 +24,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Change Login Password</title>
+		<title>Change Transaction Password</title>
 		<link rel="icon" type="image/x-icon" href="../../../images/jntu-logo.ico">
 		<link rel="stylesheet" type="text/css" href="../../../css/main.css">
 		<script>
@@ -93,8 +93,8 @@
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
 						<li class="lielv"><a class="linkv" href="../userid">Change Alternate User ID</a></li>
-						<li class="lielv"><a class="linkv" href="index.jsp">Change Login Password</a></li>
-						<li class="lielv"><a class="linkv" href="../transactionpassword">Change Trasaction Password</a></li>
+						<li class="lielv"><a class="linkv" href="../loginpassword">Change Login Password</a></li>
+						<li class="lielv"><a class="linkv" href="index.jsp">Change Trasaction Password</a></li>
 						<li class="lielv"><a class="linkv" href="../email">Change Email</a></li>
 						<li class="lielv"><a class="linkv" href="../mobile">Change Phone Number</a></li>
 					</ul>
@@ -105,21 +105,21 @@
 					<form name="myForm" action="process.jsp" method="POST" onsubmit="return validate()">
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<th colspan="2" style="text-align:center">Change Login Password</th>
+								<th colspan="2" style="text-align:center">Change Transaction Password</th>
 							</tr>
 							<tr>
-								<td colspan="2" style="color: green; text-align:center">Login Password changed successfully</td>
+								<td colspan="2" style="color: green; text-align:center">Transaction Password changed successfully</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Current Login Password: </td>
+								<td style="font-weight:bold;">Current Transaction Password: </td>
 								<td><input type="password" size="25" name="current_password"></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">New Login Password: </td>
+								<td style="font-weight:bold;">New Transaction Password: </td>
 								<td><input type="password" size="25" name="new_password"></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Confirm Login Password: </td>
+								<td style="font-weight:bold;">Confirm Transaction Password: </td>
 								<td><input type="password" size="25" name="confirm_password"> </td>
 							</tr>
 							<tr>
