@@ -132,7 +132,7 @@
 						<li class="lih"><a class="linkh" href="../fundtransfer">Fund Transfer</a></li>
 						<li class="lih"><a class="linkh" href="index.jsp">Profile</a></li>
 						<li class="lih" style="float:right;"><a class="linkh" href="../account/logout.jsp">Logout</a></li>
-						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome: <%= login_name %></li> 
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome: <%= loginName %></li> 
 					</ul>
 				</td>
 			</tr>
