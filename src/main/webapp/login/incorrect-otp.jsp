@@ -1,6 +1,5 @@
 <%
 	String customer_id = (String)session.getAttribute("customer_id");
-	
 	if(customer_id == null)
 	{
 		response.sendRedirect("index.html");
@@ -10,37 +9,7 @@
 <html>
 	<head>
 		<title>Customer Login OTP</title>
-		<style>
-			
-			ul.unliv 
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			a.linkv:link, a.linkv:visited 
-			{
-				display: block;
-				width: 196px;
-				color: black;
-				font-size: 15px;
-				background-color: #f3f3f3;
-				text-align: left;
-				padding: 4px;
-				padding-left:20px;
-				text-decoration: none;
-			}
-			a.linkv:hover, a.lielv:active 
-			{
-				background-color: #cccccc;
-				font-size: 17px;
-				font-weight: bold;
-			}
-			td, tr
-			{
-				border-color:#E0E0E0;
-			}
-		</style>
+		<link rel="stylesheet" type="text.css" href="../css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">

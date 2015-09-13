@@ -2,9 +2,10 @@
 	try
 	{
 		String customer_id = (String)session.getAttribute("customer_id");
-		if(customer_id == null)
+		String otp_correct = (String)session.getAttribute("otp_correct");
+		if(customer_id == null || otp_correct == null)
 		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+				response.sendRedirect("../login");
 		}
 	}
 	catch(Exception e)
