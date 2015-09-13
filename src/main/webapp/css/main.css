@@ -1,16 +1,9 @@
-ul
-{
-	list-style-type: none;
-}
-a
-{
-	text-decoration: none;
-}
 ul.unliv 
 {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 a.linkv:link, a.linkv:visited 
 {
@@ -37,6 +30,7 @@ ul.ulh
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	list-style-type: none;
 }
 
 li.lih 
@@ -52,7 +46,6 @@ a.linkh:link, a.linkh:visited
 	padding: 4px;
 	background-color: #0072c6;
 	text-align: center;
-
 	text-decoration: none;
 	text-transform: uppercase;
 }
