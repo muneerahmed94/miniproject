@@ -116,7 +116,7 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Profile Password: </td>
-								<td align="right"><input type="password" size="30" name="profile_password"></td>
+								<td align="right"><input type="password" size="31" name="profile_password"></td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
