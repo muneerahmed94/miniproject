@@ -10,13 +10,15 @@
 	
 		String currentPassword = (String)session.getAttribute("login_password");
 		String passwordEntered = request.getParameter("profile_password");
-		String newEmail = request.getParameter("new_email");
+		String newPhone = request.getParameter("new_phone");
+		String temp = "+91";
+		newPhone = temp.concat(newPhone);
 		
 		if(currentPassword.equals(passwordEntered))
 		{
-			sql = "UPDATE Users SET Phone=? WHERE UserID=?"; 
+			sql = "UPDATE Users SET Mobile=? WHERE UserID=?"; 
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, newEmail);
+			pst.setString(1, newPhone);
 			pst.setString(2,customer_id);
 			
 			int updated = 0;
@@ -24,7 +26,7 @@
 			
 			if(updated == 1)
 			{
-				session.setAttribute("email", newEmail);
+				session.setAttribute("mobile", newPhone);
 				response.sendRedirect("success.jsp");
 			}
 		}
