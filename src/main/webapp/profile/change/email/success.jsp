@@ -104,9 +104,6 @@
 								<td colspan="2" style="color: green; text-align:center">Email changed successfully</td>
 							</tr>
 							<tr>
-								<th colspan="2" style="text-align:center">Change Email</th>
-							</tr>
-							<tr>
 								<td style="font-weight:bold;">New Email: </td>
 								<td><input type="password" size="25" name="new_email"></td>
 							</tr>

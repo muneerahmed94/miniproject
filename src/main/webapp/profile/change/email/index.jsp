@@ -102,11 +102,11 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">New Email: </td>
-								<td><input type="password" size="25" name="new_email"></td>
+								<td><input type="text" size="25" name="new_email"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Confirm Email: </td>
-								<td><input type="password" size="25" name="confirm_email"> </td>
+								<td><input type="text" size="25" name="confirm_email"> </td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Profile Password: </td>

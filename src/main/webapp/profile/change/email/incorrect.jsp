@@ -104,9 +104,6 @@
 								<td colspan="2" style="color: red; text-align:center">Profile Password entered is incorrect</td>
 							</tr>
 							<tr>
-								<th colspan="2" style="text-align:center">Change Email</th>
-							</tr>
-							<tr>
 								<td style="font-weight:bold;">New Email: </td>
 								<td><input type="password" size="25" name="new_email"></td>
 							</tr>
