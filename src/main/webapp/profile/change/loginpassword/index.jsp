@@ -87,6 +87,18 @@
 			{
 				border-color:#E0E0E0;
 			}
+			.content 
+			{
+				
+				border-top:5px solid #0072c6;
+				border-bottom:5px solid #0072c6;
+				border-right:1px solid #0072c6;
+				border-left:1px solid #0072c6;
+			}
+			th
+			{
+				background-color:#a9d0f5;
+			}
 		</style>
 		<script>
 				function validate()
@@ -131,7 +143,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="../../../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -170,15 +182,15 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Current Login Password: </td>
-								<td><input type="text" size="25" name="current_password"></td>
+								<td><input type="password" size="25" name="current_password"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">New Login Password: </td>
-								<td><input type="text" size="25" name="new_password"></td>
+								<td><input type="password" size="25" name="new_password"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Confirm Login Password: </td>
-								<td><input type="text" size="25" name="confirm_password"> </td>
+								<td><input type="password" size="25" name="confirm_password"> </td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
