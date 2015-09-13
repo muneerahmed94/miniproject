@@ -7,6 +7,7 @@
 	String alternate_id;
 	Integer accountNumber;
 	String accountName;
+	String loginName;
 	String email;
 	String mobile;
 
@@ -19,6 +20,7 @@
 		alternate_id = (String)session.getAttribute("alternate_id");
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountName = (String)session.getAttribute("account_name");
+		loginName = (String)session.getAttribute("login_name");
 		email = (String)session.getAttribute("email");
 		mobile = (String)session.getAttribute("mobile");
 	}
@@ -126,11 +128,11 @@
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul class="ulh">
-						<li class="lih"><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li class="lih"><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
-						<li class="lih"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
-						<li class="lih" style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
-						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome: Shaik Muneer Ahmed</li>
+						<li class="lih"><a class="linkh" href="../account">Account</a></li>
+						<li class="lih"><a class="linkh" href="../fundtransfer">Fund Transfer</a></li>
+						<li class="lih"><a class="linkh" href="index.jsp">Profile</a></li>
+						<li class="lih" style="float:right;"><a class="linkh" href="../account/logout.jsp">Logout</a></li>
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome: <%= login_name %></li> 
 					</ul>
 				</td>
 			</tr>
@@ -138,11 +140,11 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/userid">Add Alternate UserID</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/loginpassword">Change Login Password</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/transactionpassword">Change Trasaction Password</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/email">Change Email</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/profile/change/mobile">Change Phone Number</a></li>
+						<li class="lielv"><a class="linkv" href="change/userid">Add Alternate UserID</a></li>
+						<li class="lielv"><a class="linkv" href="change/loginpassword">Change Login Password</a></li>
+						<li class="lielv"><a class="linkv" href="change/transactionpassword">Change Trasaction Password</a></li>
+						<li class="lielv"><a class="linkv" href="change/email">Change Email</a></li>
+						<li class="lielv"><a class="linkv" href="change/mobile">Change Phone Number</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
