@@ -2,7 +2,6 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ include file="../../../include/check-password.jsp"%>
 
-
 <%!	
 		String loginName;
 %>
