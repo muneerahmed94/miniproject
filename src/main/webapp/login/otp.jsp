@@ -3,7 +3,7 @@
 	
 	if(customer_id == null)
 	{
-		response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
+		response.sendRedirect("index.html");
 	}
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
