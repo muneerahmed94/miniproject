@@ -1,7 +1,7 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ include file="../../../check-password.jsp"%>
-<%@ include file="../../../connect-to-db.jsp"%>
+<%@ include file="../../../include/check-password.jsp"%>
+<%@ include file="../../../include/connect-to-db.jsp"%>
 
 <%
 	try
