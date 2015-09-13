@@ -1,5 +1,3 @@
-<%@ page import="java.sql.*" %>
-<%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ include file="../include/check-password.jsp" %>
@@ -92,10 +90,10 @@
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul>
-						<li><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/">Fund Transfer</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/profile">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
+						<li><a class="linkh" href="index.jsp">Account</a></li>
+						<li><a class="linkh" href="../fundtransfer/">Fund Transfer</a></li>
+						<li><a class="linkh" href="../profile">Profile</a></li>
+						<li style="float:right;"><a class="linkh" href="logout.jsp">Logout</a></li>
 						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
