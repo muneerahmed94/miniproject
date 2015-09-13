@@ -6,6 +6,7 @@
 <%@ include file="connect-to-db.jsp" %>
 
 <%!
+		String alternate_id = "";
 		String loginName = "";
 		String accountName = "";
 		String loginPassword = "";
@@ -44,6 +45,7 @@
 			
 			mobile = rs.getString("Mobile");
 			email = rs.getString("Email");
+			alternate_id = rs.getString("AlternateUserID");
 		}
 		
 		sql = "SELECT * FROM Customers WHERE AccountNumber=?";
@@ -63,6 +65,7 @@
 			accountBalance = rs.getInt("AccountBalance");
 		}
 		
+		session.setAttribute("alternate_id", alternate_id);
 		session.setAttribute("account_number", accountNumber.toString());
 		session.setAttribute("login_name", loginName);
 		session.setAttribute("account_name", accountName);

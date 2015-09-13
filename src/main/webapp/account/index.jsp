@@ -6,7 +6,6 @@
 <%
 	try
 	{	
-		
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		loginName = (String)session.getAttribute("login_name");

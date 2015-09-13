@@ -4,6 +4,7 @@
 
 <%!
 	String customer_id;
+	String alternate_id;
 	Integer accountNumber;
 	String accountName;
 	String email;
@@ -15,6 +16,7 @@
 	try
 	{	
 		customer_id = (String)session.getAttribute("customer_id");
+		alternate_id = (String)session.getAttribute("alernate_id");
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountName = (String)session.getAttribute("account_name");
 		email = (String)session.getAttribute("email");
@@ -152,6 +154,10 @@
 							<tr>
 								<td style="font-weight:bold;">UserID: </td>
 								<td><%= customer_id %></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;">Alternate UserID: </td>
+								<td><%= alternate_id %></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Number: </td>
