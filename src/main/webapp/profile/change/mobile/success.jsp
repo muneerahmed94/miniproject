@@ -24,29 +24,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Change Email</title>
+		<title>Change Phone Number</title>
 		<link rel="icon" type="image/x-icon" href="../../../images/jntu-logo.ico">
 		<link rel="stylesheet" type="text/css" href="../../../css/main.css">
 		<script>
 			function validate()
 			{
-				new_email = myForm.new_email.value;
-				if(new_email == null || new_email == "")
+				new_phone = myForm.new_phone.value;
+				if(new_phone == null || new_phone == "")
 				{
-					alert("Enter New Email");
+					alert("Enter New Phone number");
 					return false;
 				}
 				
-				confirm_email = myForm.confirm_email.value;
-				if(confirm_email == null || confirm_email == "")
+				confirm_phone = myForm.confirm_phone.value;
+				if(confirm_phone == null || confirm_phone == "")
 				{
-					alert("Enter Confirm Email");
+					alert("Enter Confirm Phone number");
 					return false;
 				}
 				
-				if(new_email != confirm_email)
+				if(new_phone != confirm_phone)
 				{
-					alert("New Email and Confirm Email should match");
+					alert("New Phone number and Confirm Phone number should match");
 					return false;
 				}
 				profile_password = myForm.profile_password.value;
@@ -88,8 +88,8 @@
 						<li class="lielv"><a class="linkv" href="../userid">Change Alternate User ID</a></li>
 						<li class="lielv"><a class="linkv" href="../loginpassword">Change Login Password</a></li>
 						<li class="lielv"><a class="linkv" href="../transactionpassword">Change Trasaction Password</a></li>
-						<li class="lielv"><a class="linkv" href="index.jsp">Change Email</a></li>
-						<li class="lielv"><a class="linkv" href="../mobile">Change Phone Number</a></li>
+						<li class="lielv"><a class="linkv" href="../email">Change Email</a></li>
+						<li class="lielv"><a class="linkv" href="index.jsp">Change Phone Number</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
@@ -98,18 +98,24 @@
 					<form name="myForm" action="process.jsp" method="POST" onsubmit="return validate()">
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<th colspan="2" style="text-align:center">Change Email</th>
+								<th colspan="2" style="text-align:center">Change Phone Number</th>
 							</tr>
 							<tr>
 								<td colspan="2" style="color: green; text-align:center">Phone number changed successfully</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">New Email: </td>
-								<td><input type="text" size="25" name="new_email"></td>
+								<td style="font-weight:bold;">New Phone Number: </td>
+								<td>
+									<input type="text" size="3" maxlength="3" value="+91" disabled>
+									<input type="text" size="25" name="new_phone">
+								</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Confirm Email: </td>
-								<td><input type="text" size="25" name="confirm_email"> </td>
+								<td style="font-weight:bold;">Confirm Phone Number: </td>
+								<td>
+									<input type="text" size="3" maxlength="3" value="+91" disabled>
+									<input type="text" size="25" name="confirm_phone"> 
+								</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Profile Password: </td>
