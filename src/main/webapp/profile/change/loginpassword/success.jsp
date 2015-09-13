@@ -1,27 +1,14 @@
-<%@ page import="java.sql.*" %>
-<%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ page include file="../../../check-password.jsp"%>
 
-<%!
+<%!	
 		String loginName = "";
 %>
 
 <%
 	try
 	{	
-		String customer_id = (String)session.getAttribute("customer_id");
-		if(customer_id == null)
-		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-		}
-
-		String otp_correct = (String)session.getAttribute("otp_correct");
-		if(otp_correct == null)
-		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-		}
-		
 		loginName = (String)session.getAttribute("login_name");
 	}
 	catch(Exception e)
@@ -101,34 +88,38 @@
 			}
 		</style>
 		<script>
-				function validateForm()
+				function validate()
 				{
 					current_password = myForm.current_password.value;
 					if(current_password == null || current_password == "")
 					{
-						alert("Please enter Current Password");
+						alert("Enter Current Password");
 						return false;
 					}
 					
 					new_password = myForm.new_password.value;
 					if(new_password == null || new_password == "")
 					{
-						alert("Please enter New Password");
+						alert("Enter New Password");
 						return false;
 					}
 					
 					confirm_password = myForm.confirm_password.value;
 					if(confirm_password == null || confirm_password == "")
 					{
-						alert("Please enter Confirm Password");
+						alert("Enter Confirm Password");
 						return false;
 					}
 					
-					
+					if(new_password == current_password)
+					{
+						alert("New Password and Confirm Password should be different");
+						return false;
+					}
 					
 					if(new_password != confirm_password)
 					{
-						alert("New Password and Confirm Password doesn't match...");
+						alert("New Password and Confirm Password doesn't match");
 						return false;
 					}
 				}
@@ -161,37 +152,39 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_login_password.html">Change Login Password</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_trasaction_password.html">Change Trasaction Password</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_email.html">Change Email</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_change_phone.html">Change Phone Number</a></li>
+						<li class="lielv"><a class="linkv" href="../userid">Change Alternate User ID</a></li>
+						<li class="lielv"><a class="linkv" href="index.jsp">Change Login Password</a></li>
+						<li class="lielv"><a class="linkv" href="../transactionpassword">Change Trasaction Password</a></li>
+						<li class="lielv"><a class="linkv" href="../email">Change Email</a></li>
+						<li class="lielv"><a class="linkv" href="../mobile">Change Phone Number</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td bgcolor="white" valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_process_change_login_password.jsp" method="POST" onsubmit=" return validateForm()">
-						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
+					<form name="myForm" action="process.jsp" method="POST" onsubmit="return validate()">
+						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<td colspan="2" style="text-align:center;background-color:#ccecff;font-weight:bold;">Change Login Password</td>
+								<th colspan="2" style="text-align:center">Change Login Password</th>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Current Password: </td>
-								<td><input type="password" name="current_password"/></td>
+								<td colspan="2" style="color: green; text-align:center">Login Password changed successfully</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">New Password: </td>
-								<td><input type="password" name="new_password"/></td>
+								<td style="font-weight:bold;">Current Login Password: </td>
+								<td><input type="text" size="25" name="current_password"></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Confirm Password: </td>
-								<td><input type="password" name="confirm_password"/></td>
+								<td style="font-weight:bold;">New Login Password: </td>
+								<td><input type="text" size="25" name="new_password"></td>
 							</tr>
 							<tr>
-								<td colspan="2" style="text-align:center;font-weight:bold;color:green">Login password changed successfully</td>
+								<td style="font-weight:bold;">Confirm Login Password: </td>
+								<td><input type="text" size="25" name="confirm_password"> </td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
-									<input type="submit" value="Change">
+									<input type="submit" value="Update">
 									&nbsp &nbsp &nbsp &nbsp &nbsp 
 									<input type="reset" value="Reset">
 								</td>
