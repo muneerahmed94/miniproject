@@ -106,20 +106,20 @@
 							<tr>
 								<td style="font-weight:bold;">New Phone Number: </td>
 								<td>
-									<input type="text" size="3" maxlength="3" value="+91" disabled>
-									<input type="text" size="25" name="new_phone">
+									<input type="text" size="1" maxlength="3" value="+91" disabled>
+									<input type="text" size="20" name="new_phone">
 								</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Confirm Phone Number: </td>
 								<td>
-									<input type="text" size="3" maxlength="3" value="+91" disabled>
-									<input type="text" size="25" name="confirm_phone"> 
+									<input type="text" size="1" maxlength="3" value="+91" disabled>
+									<input type="text" size="20" name="confirm_phone"> 
 								</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Profile Password: </td>
-								<td><input type="password" size="25" name="profile_password"></td>
+								<td><input type="password" size="26" name="profile_password"></td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
