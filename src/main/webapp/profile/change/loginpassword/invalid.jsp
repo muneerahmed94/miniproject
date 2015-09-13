@@ -1,9 +1,9 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ page include file="../../../check-password.jsp"%>
+<%@ include file="../../../check-password.jsp"%>
 
 <%!	
-		String loginName = "";
+		String loginName;
 %>
 
 <%
