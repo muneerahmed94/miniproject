@@ -126,12 +126,12 @@
 			<!-- ============ NAVIGATION BAR SECTION ============== -->
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
-					<ul>
-						<li><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/">Fund Transfer</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/profile">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
-						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
+					<ul class="ulh">
+						<li class="lih"><a class="linkh" href="#Accounts">Accounts</a></li>
+						<li class="lih"><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
+						<li class="lih"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
+						<li class="lih" style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
 			</tr>
