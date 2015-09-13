@@ -16,7 +16,7 @@
 	try
 	{	
 		customer_id = (String)session.getAttribute("customer_id");
-		alternate_id = (String)session.getAttribute("alernate_id");
+		alternate_id = (String)session.getAttribute("alternate_id");
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountName = (String)session.getAttribute("account_name");
 		email = (String)session.getAttribute("email");
