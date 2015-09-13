@@ -25,116 +25,44 @@
 <html>
 	<head>
 		<title>Change Login Password</title>
-		<style>
-			
-			ul.unliv 
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			a.linkv:link, a.linkv:visited 
-			{
-				display: block;
-				width: 196px;
-				color: black;
-				font-size: 15px;
-				background-color: #f3f3f3;
-				text-align: left;
-				padding: 4px;
-				padding-left:20px;
-				text-decoration: none;
-			}
-			a.linkv:hover, a.lielv:active 
-			{
-				background-color: #cccccc;
-				font-size: 17px;
-				font-weight: bold;
-			}
-			
-			
-			ul.ulh
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-			}
-
-			li.lih 
-			{
-				float: left;
-			}
-			a.linkh:link, a.linkh:visited 
-			{
-				display: block;
-				width: 160px;
-				font-weight: bold;
-				color: white;
-				padding: 4px;
-				background-color: #0072c6;
-				text-align: center;
-
-				text-decoration: none;
-				text-transform: uppercase;
-			}
-			a.linkh:hover, a.linkh:active 
-			{
-				background-color: #005798;
-			}
-			td, tr
-			{
-				border-color:#E0E0E0;
-			}
-			.content 
-			{
-				
-				border-top:5px solid #0072c6;
-				border-bottom:5px solid #0072c6;
-				border-right:1px solid #0072c6;
-				border-left:1px solid #0072c6;
-			}
-			th
-			{
-				background-color:#a9d0f5;
-			}
-		</style>
+		<link rel="icon" type="image/x-icon" href="../../../images/jntu-logo.ico">
+		<link rel="stylesheet" type="text/css" href="../../../css/main.css">
 		<script>
-				function validate()
+			function validate()
+			{
+				current_password = myForm.current_password.value;
+				if(current_password == null || current_password == "")
 				{
-					current_password = myForm.current_password.value;
-					if(current_password == null || current_password == "")
-					{
-						alert("Enter Current Password");
-						return false;
-					}
-					
-					new_password = myForm.new_password.value;
-					if(new_password == null || new_password == "")
-					{
-						alert("Enter New Password");
-						return false;
-					}
-					
-					confirm_password = myForm.confirm_password.value;
-					if(confirm_password == null || confirm_password == "")
-					{
-						alert("Enter Confirm Password");
-						return false;
-					}
-					
-					if(new_password == current_password)
-					{
-						alert("New Password and Confirm Password should be different");
-						return false;
-					}
-					
-					if(new_password != confirm_password)
-					{
-						alert("New Password and Confirm Password doesn't match");
-						return false;
-					}
+					alert("Enter Current Password");
+					return false;
 				}
+				
+				new_password = myForm.new_password.value;
+				if(new_password == null || new_password == "")
+				{
+					alert("Enter New Password");
+					return false;
+				}
+				
+				confirm_password = myForm.confirm_password.value;
+				if(confirm_password == null || confirm_password == "")
+				{
+					alert("Enter Confirm Password");
+					return false;
+				}
+				
+				if(new_password == current_password)
+				{
+					alert("New Password and Confirm Password should be different");
+					return false;
+				}
+				
+				if(new_password != confirm_password)
+				{
+					alert("New Password and Confirm Password doesn't match");
+					return false;
+				}
+			}
 		</script>
 	</head>
 	<body style="margin:0px;padding:0px;">

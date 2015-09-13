@@ -9,7 +9,7 @@
 <html>
 	<head>
 		<title>Customer Login OTP</title>
-		<link rel="icon" href="images/jntu-logo.ico" type="image/x-icon" />
+		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
