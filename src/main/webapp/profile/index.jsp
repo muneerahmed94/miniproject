@@ -68,7 +68,7 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="change/userid">Add Alternate UserID</a></li>
+						<li class="lielv"><a class="linkv" href="change/userid">Change Alternate UserID</a></li>
 						<li class="lielv"><a class="linkv" href="change/loginpassword">Change Login Password</a></li>
 						<li class="lielv"><a class="linkv" href="change/transactionpassword">Change Trasaction Password</a></li>
 						<li class="lielv"><a class="linkv" href="change/email">Change Email</a></li>
