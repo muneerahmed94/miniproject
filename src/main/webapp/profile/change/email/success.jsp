@@ -101,7 +101,7 @@
 								<th colspan="2" style="text-align:center">Change Email</th>
 							</tr>
 							<tr>
-								<td colspan="2" style="color: green; text-align:center">Phone number changed successfully</td>
+								<td colspan="2" style="color: green; text-align:center">Email number changed successfully</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">New Email: </td>
