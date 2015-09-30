@@ -80,43 +80,15 @@
 		
 				}
 		</script>
-		<style>
-			ul.unliv 
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			a.linkv:link, a.linkv:visited 
-			{
-				display: block;
-				width: 196px;
-				color: black;
-				font-size: 15px;
-				background-color: #f3f3f3;
-				text-align: left;
-				padding: 4px;
-				padding-left:20px;
-				text-decoration: none;
-			}
-			a.linkv:hover, a.lielv:active 
-			{
-				background-color: #cccccc;
-				font-size: 17px;
-				font-weight: bold;
-			}
-			td, tr
-			{
-				border-color:#E0E0E0;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="icon" type="image/x-icon" href="images/jntu-logo.ico">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -132,20 +104,17 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/open_account.html">Open an Account</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_registration.html">Internet Banking-Register</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_login.html">Internet Banking-Login</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/employee_login.html">Employee Login</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/admin_login.html">Administrator Login</a></li>
+						<li class="lielv"><a class="linkv" href="open_account.html">Open an Account</a></li>
+						<li class="lielv"><a class="linkv" href="customer_registration.html">Internet Banking-Register</a></li>
+						<li class="lielv"><a class="linkv" href="login">Internet Banking-Login</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
 					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_registration.jsp" onsubmit="return validateForm()" method="POST">
-						<form action="" accept="image/gif, image/jpeg" method="POST">
-						<table border="1" cellpadding="4" style="border-collapse:collapse;">
+						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<td colspan="4" style="font-weight:bold;font-size:20px;background-color:#ccecff">Internet Banking Registration</td>
+								<td colspan="4" style="text-align:center;background-color:#a9d0f5;font-weight:bold;">Internet Banking Registration</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Applicant's Name: </td>
@@ -171,8 +140,9 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Account Number: </td>
-								<td colspan="2"><input type="text" name="account_number" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
-								<td colspan="2">Confirm Account Number: <input type="text" name="account_number2" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
+								<td ><input type="text" name="account_number" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
+								<td  style="font-weight:bold;">Confirm Account Number: </td>
+								<td><input type="text" name="account_number2" placeholder="#Account Number" size="35" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td align="center" colspan="4"><input type="checkbox" value="agreed" name="tos">I agree to the JNTU Bank Internet Banking <a href="#Terms of Service">Terms of Service</a> and <a href="#Privacy Policy">Privacy Policy</a></td>
