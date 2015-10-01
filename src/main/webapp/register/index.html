@@ -2,93 +2,16 @@
 <html>
 	<head>
 		<title>Customer Registration</title>
-			<script>
-				function validateForm()
-				{
-					first_name = myForm.first_name.value;
-					if(first_name == null || first_name == "")
-					{
-						alert("Please enter the Applicant's first name");
-						return false;
-					}
-					
-					mobile_number = myForm.mobile_number.value;
-					if(mobile_number == null || mobile_number == "")
-					{
-						alert("Please enter Mobile Number");
-						return false;
-					}
-					
-					mobile_number2 = myForm.mobile_number2.value;
-					if(mobile_number2 == null || mobile_number2 == "")
-					{
-						alert("Please enter Mobile Number");
-						return false;
-					}
-					
-					if(mobile_number != mobile_number2)
-					{
-						alert("please enter same Mobile Number twice");
-						return false;
-					}
-					
-					email = myForm.email.value;
-					if(email == null || email == "")
-					{
-						alert("Please enter Email");
-						return false;
-					}
-					
-					email2 = myForm.email2.value;
-					if(email2 == null || email2 == "")
-					{
-						alert("Please enter Confirm Email");
-						return false;
-					}
-					
-					if(email != email2)
-					{
-						alert("Please enter same Email twice");
-						return false;
-					}
-					
-					account_number = myForm.account_number.value;
-					if(account_number == null || account_number == "")
-					{
-						alert("Please enter Account Number");
-						return false;
-					}
-					
-					account_number2 = myForm.account_number2.value;
-					if(account_number2 == null || account_number2 == "")
-					{
-						alert("Please enter Confirm Account Number");
-						return false;
-					}
-					
-					if(account_number != account_number2)
-					{
-						alert("Please enter same Account Number twice");
-						return false;
-					}
-					
-					if(!myForm.tos.checked)
-					{
-						alert("Please accept the terms of service")
-					}
-					
-		
-				}
-		</script>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="icon" type="image/x-icon" href="images/jntu-logo.ico">
+		<script src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -104,14 +27,14 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="open_account.html">Open an Account</a></li>
-						<li class="lielv"><a class="linkv" href="customer_registration.html">Internet Banking-Register</a></li>
-						<li class="lielv"><a class="linkv" href="login">Internet Banking-Login</a></li>
+						<li class="lielv"><a class="linkv" href="../openaccount">Open an Account</a></li>
+						<li class="lielv"><a class="linkv" href="index.html">Internet Banking-Register</a></li>
+						<li class="lielv"><a class="linkv" href="../login">Internet Banking-Login</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/customer_registration.jsp" onsubmit="return validateForm()" method="POST">
+					<form name="myForm" action="register.jsp" onsubmit="return validateForm()" method="POST">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
 								<td colspan="4" style="text-align:center;background-color:#a9d0f5;font-weight:bold;">Internet Banking Registration</td>
@@ -166,8 +89,8 @@
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
-				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					JNTUHCEH Internet Banking Mini Project
+				<td align="center" bgcolor="#e7e6e6" colspan="2" height="20px">
+					&#169; JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>
