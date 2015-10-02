@@ -42,14 +42,14 @@
 								<td colspan="4" style="font-weight:bold;background-color:#a9d0f5">Personal Details</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Applicant's Name: </td>
+								<td style="font-weight:bold;">Applicant's Name:<font color="red">*</font> </td>
 								<td><input type="text" name="first_name" placeholder="First Name" onkeyup="validateFName()" style="text-transform:uppercase"></td>
 								<td><input type="text" name="middle_name"  placeholder="Middle Name" style="text-transform:uppercase"></td>
 								<td><input type="text" name="last_name" id="last_name" placeholder="Last Name" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">
-									Name of : 
+									Name of :<font color="red">*</font> 
 									<select name="fghtype">
 										  <option value="Father">Father</option>
 										  <option value="Guardian">Guardian</option>
@@ -61,11 +61,11 @@
 								<td><input type="text" name="fghlname" placeholder="Last Name" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Date of Birth: </td>
+								<td style="font-weight:bold;">Date of Birth:<font color="red">*</font> </td>
 								<td><input type="date" name="date_of_birth"></td>
 								<td>
 									<b>Gender:</b> 
-									<input type="radio" name="gender" value="male">Male
+									<input type="radio" name="gender" value="male" checked>Male
 									<input type="radio" name="gender" value="female">Female
 								</td>
 								<td style="font-weight:bold;">
@@ -79,7 +79,7 @@
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">
-									Mother's Maiden Name: 
+									Mother's Maiden Name:<font color="red">*</font>
 								</td>					
 								<td colspan="3">
 									<input type="text" name="mother_name">
@@ -87,12 +87,12 @@
 							</tr>
 							<tr>
 								<td colspan="4" style="font-weight:bold;">
-									Applicant's Passport Size Photograph:
+									Applicant's Passport Size Photograph:<font color="red">*</font>
 									<input type="file" name="pass_pic" id="pass_pic">
 								</td>
 							</tr>
 							<tr>
-								<td colspan="4" style="font-weight:bold;">Applicant's Proof of Identity
+								<td colspan="4" style="font-weight:bold;">Applicant's Proof of Identity:<font color="red">*</font>
 									<select name="proof_type">
 									  <option value="Aadhaar">Aadhaar</option>
 									  <option value="Voter ID">Voter ID</option>
@@ -107,16 +107,16 @@
 								<td colspan="4" style="font-weight:bold;background-color:#a9d0f5">Correspondence Address</td>
 							</tr>
 							<tr>
-								<td><input type="text" name="door_no" placeholder="Door/Flat No;Building/Society" size="25" style="text-transform:uppercase"></td>
-								<td><input type="text" name="street" placeholder="Street/Road Name"  size="29" style="text-transform:uppercase"></td>
-								<td><input type="text" name="locality" placeholder="Locality/Village" size="30" style="text-transform:uppercase"></td>
+								<td><input type="text" name="door_no" placeholder="Door No / Building" size="25" style="text-transform:uppercase"></td>
+								<td><input type="text" name="street" placeholder="Street"  size="29" style="text-transform:uppercase"></td>
+								<td><input type="text" name="locality" placeholder="Locality / Village" size="30" style="text-transform:uppercase"></td>
 								<td style="font-weight:bold;"><input name="landmark" placeholder="Landmark" type="text" size="29" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">City: <input type="text" name="city" style="text-transform:uppercase"></td>
-								<td style="font-weight:bold;">District: <input type="text" name="district" size="20" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">District:<font color="red">*</font> <input type="text" name="district" size="20" style="text-transform:uppercase"></td>
 								<td style="font-weight:bold;">
-									State:
+									State:<font color="red">*</font>
 									<select name="state">
 									<option value="Select">Select</option>
 									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -157,18 +157,18 @@
 									<option value="West Bengal">West Bengal</option>
 									</select>
 								</td>
-								<td style="font-weight:bold;">Pin: <input type="text" name="pincode" size="24" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">Pin:<font color="red">*</font> <input type="text" name="pincode" size="24" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;background-color:white">
-									Mobile Number:
+									Mobile Number:<font color="red">*</font>
 								</td>
 								<td>
 									<input type="text" size="3" maxlength="3" value="+91" disabled>
 									<input type="text" name="mobile_number" size="21">
 								</td>
 								<td style="font-weight:bold;background-color:white">
-									Confirm Mobile Number:
+									Confirm Mobile Number:<font color="red">*</font>
 								</td>
 								<td>
 									<input type="text" size="3" maxlength="3" value="+91" disabled>
@@ -176,9 +176,9 @@
 								</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Email:</td> 
+								<td style="font-weight:bold;">Email:<font color="red">*</font></td> 
 								<td><input type="text" name="email" size="29"></td>
-								<td style="font-weight:bold;">Confirm Email: </td>
+								<td style="font-weight:bold;">Confirm Email:<font color="red">*</font> </td>
 								<td><input type="text" name="email2" size="29"></td>
 							</tr>
 							<tr>
@@ -194,16 +194,16 @@
 								</td>
 							</tr>
 							<tr>
-								<td><input type="text" name="door_no" placeholder="Door/Flat No;Building/Society" size="25" style="text-transform:uppercase"></td>
-								<td><input type="text" name="street" placeholder="Street/Road Name"  size="29" style="text-transform:uppercase"></td>
-								<td><input type="text" name="locality" placeholder="Locality/Village" size="30" style="text-transform:uppercase"></td>
+								<td><input type="text" name="door_no" placeholder="Door No / Building" size="25" style="text-transform:uppercase"></td>
+								<td><input type="text" name="street" placeholder="Street"  size="29" style="text-transform:uppercase"></td>
+								<td><input type="text" name="locality" placeholder="Locality / Village" size="30" style="text-transform:uppercase"></td>
 								<td style="font-weight:bold;"><input name="landmark" placeholder="Landmark" type="text" size="29" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">City: <input type="text" name="city" style="text-transform:uppercase"></td>
-								<td style="font-weight:bold;">District: <input type="text" name="district" size="20" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">District:<font color="red">*</font> <input type="text" name="district" size="20" style="text-transform:uppercase"></td>
 								<td style="font-weight:bold;">
-									State:
+									State:<font color="red">*</font>
 									<select name="state">
 									<option value="Select">Select</option>
 									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -244,18 +244,18 @@
 									<option value="West Bengal">West Bengal</option>
 									</select>
 								</td>
-								<td style="font-weight:bold;">Pin: <input type="text" name="pincode" size="24" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">Pin:<font color="red">*</font> <input type="text" name="pincode" size="24" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;background-color:white">
-									Mobile Number:
+									Mobile Number:<font color="red">*</font>
 								</td>
 								<td>
 									<input type="text" size="3" maxlength="3" value="+91" disabled>
 									<input type="text" name="mobile_number" size="21">
 								</td>
 								<td style="font-weight:bold;background-color:white">
-									Confirm Mobile Number:
+									Confirm Mobile Number:<font color="red">*</font>
 								</td>
 								<td>
 									<input type="text" size="3" maxlength="3" value="+91" disabled>
@@ -263,9 +263,9 @@
 								</td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">Email:</td> 
+								<td style="font-weight:bold;">Email:<font color="red">*</font></td> 
 								<td><input type="text" name="email" size="29"></td>
-								<td style="font-weight:bold;">Confirm Email: </td>
+								<td style="font-weight:bold;">Confirm Email:<font color="red">*</font> </td>
 								<td><input type="text" name="email2" size="29"></td>
 							</tr>
 							<tr>

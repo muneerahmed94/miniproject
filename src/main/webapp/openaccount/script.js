@@ -1,21 +1,21 @@
 function validateForm()
 {
 	first_name = myForm.first_name.value;
-	if(first_name == null || first_name == "")
+	if(first_name == "")
 	{
 		alert("Please enter the Applicant's first name");
 		return false;
 	}
 	
-	father_first_name = myForm.father_first_name.value;
-	if(father_first_name == null || father_first_name == "")
+	father_first_name = myForm.fghfname.value;
+	if(father_first_name == "")
 	{
 		alert("Please enter the Father's first name");
 		return false;
 	}
 		
 	dob = myForm.date_of_birth.value;
-	if(dob == null || dob == "")
+	if(dob == "")
 	{
 		alert("Please enter the DOB");
 		return false;
@@ -29,49 +29,43 @@ function validateForm()
 	}
 	
 	mother_name = myForm.mother_name.value;
-	if(mother_name == null || mother_name == "")
+	if(mother_name == "")
 	{
 		alert("Please enter Mother's Name");
 		return false;
 	}
 	
 	door_no = myForm.door_no.value;
-	if(door_no == null || door_no == "")
+	if(door_no == "")
 	{
-		alert("Please enter doorno");
+		alert("Please enter Door No");
 		return false;
 	}
 	
-	door_no = myForm.door_no.value;
-	if(door_no == null || door_no == "")
-	{
-		alert("Please enter doorno");
-		return false;
-	}
 	
 	street = myForm.street.value;
-	if(street == null || street == "")
+	if(street == "")
 	{
 		alert("Please enter street/locality");
 		return false;
 	}
 	
 	district = myForm.district.value;
-	if(district == null || district == "")
+	if(district == "")
 	{
 		alert("Please enter district");
 		return false;
 	}
 	
 	state = myForm.state.value;
-	if(state == null || state == "" || state == "Select")
+	if(state == "" || state == "Select")
 	{
 		alert("Please select State");
 		return false;
 	}
 	
 	pincode = myForm.pincode.value;
-	if(pincode == null || pincode == "")
+	if(pincode == "")
 	{
 		alert("Please enter pincode");
 		return false;
