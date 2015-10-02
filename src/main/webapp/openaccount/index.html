@@ -1,130 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0057)http://miniproject-jntuhceh.rhcloud.com/open_account.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html>
+	<head>
 		<title>Open Account</title>
-		<script>
-			function validateForm()
-			{
-				first_name = myForm.first_name.value;
-				if(first_name == null || first_name == "")
-				{
-					alert("Please enter the Applicant's first name");
-					return false;
-				}
-				
-				father_first_name = myForm.father_first_name.value;
-				if(father_first_name == null || father_first_name == "")
-				{
-					alert("Please enter the Father's first name");
-					return false;
-				}
-					
-				dob = myForm.date_of_birth.value;
-				if(dob == null || dob == "")
-				{
-					alert("Please enter the DOB");
-					return false;
-				}
-				
-				gender = myForm.gender.value;
-				if(gender == "")
-				{
-					alert("Please Select Geder");
-					return false;
-				}
-				
-				mother_name = myForm.mother_name.value;
-				if(mother_name == null || mother_name == "")
-				{
-					alert("Please enter Mother's Name");
-					return false;
-				}
-				
-				door_no = myForm.door_no.value;
-				if(door_no == null || door_no == "")
-				{
-					alert("Please enter doorno");
-					return false;
-				}
-				
-				door_no = myForm.door_no.value;
-				if(door_no == null || door_no == "")
-				{
-					alert("Please enter doorno");
-					return false;
-				}
-				
-				street = myForm.street.value;
-				if(street == null || street == "")
-				{
-					alert("Please enter street/locality");
-					return false;
-				}
-				
-				district = myForm.district.value;
-				if(district == null || district == "")
-				{
-					alert("Please enter district");
-					return false;
-				}
-				
-				state = myForm.state.value;
-				if(state == null || state == "" || state == "Select")
-				{
-					alert("Please select State");
-					return false;
-				}
-				
-				pincode = myForm.pincode.value;
-				if(pincode == null || pincode == "")
-				{
-					alert("Please enter pincode");
-					return false;
-				}
-				if(!myForm.tos.checked)
-				{
-					alert("Please accept the terms of service")
-				}
-				
-			}
-		</script>
-		<style>
-			ul.unliv 
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			a.linkv:link, a.linkv:visited 
-			{
-				display: block;
-				width: 196px;
-				color: black;
-				font-size: 15px;
-				background-color: #f3f3f3;
-				text-align: left;
-				padding: 4px;
-				padding-left:20px;
-				text-decoration: none;
-			}
-			a.linkv:hover, a.lielv:active 
-			{
-				background-color: #cccccc;
-				font-size: 17px;
-				font-weight: bold;
-			}
-			td, tr
-			{
-				border-color:#E0E0E0;
-			}
-		</style>
+		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<script src="script.js"></script>
 	</head>
+	
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
 			<!-- ============ HEADER SECTION ============== -->
 			<tbody><tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -140,25 +29,23 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="./Open Account_files/Open Account.html">Open an Account</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_registration.html">Internet Banking-Register</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_login.html">Internet Banking-Login</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/employee_login.html">Employee Login</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/admin_login.html">Administrator Login</a></li>
+						<li class="lielv"><a class="linkv" href="index.html">Open an Account</a></li>
+						<li class="lielv"><a class="linkv" href="../register">Internet Banking-Register</a></li>
+						<li class="lielv"><a class="linkv" href="../login">Internet Banking-Login</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/open_account.jsp" onsubmit="return validateForm()" accept="image/gif, image/jpeg" method="POST">
-						<table border="1" cellpadding="4" style="border-collapse:collapse;">
+					<form name="myForm" action="open-account.jsp" onsubmit="return validateForm()" accept="image/gif, image/jpeg" method="POST">
+						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="8px">
 							<tbody><tr>
-								<td colspan="4" style="font-weight:bold;font-size:20px;background-color:#ccecff">Personal Details</td>
+								<td colspan="4" style="font-weight:bold;background-color:#a9d0f5">Personal Details</td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Applicant's Name: </td>
 								<td><input type="text" name="first_name" placeholder="First Name" onkeyup="validateFName()" style="text-transform:uppercase"></td>
-								<td><input type="text" name="" id="middle_name" placeholder="Middle Name" style="text-transform:uppercase"></td>
-								<td><input type="text" name="lname" id="last_name" placeholder="Last Name" style="text-transform:uppercase"></td>
+								<td><input type="text" name="middle_name"  placeholder="Middle Name" style="text-transform:uppercase"></td>
+								<td><input type="text" name="last_name" id="last_name" placeholder="Last Name" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">
@@ -169,9 +56,9 @@
 										  <option value="Husband">Husband</option>
 									</select>
 								</td>
-								<td><input type="text" name="father_first_name" id="father_first_name" placeholder="First Name" onkeyup="validateFatherFName()" style="text-transform:uppercase"></td>
-								<td><input type="text" name="fghlname" placeholder="father_middle_name" style="text-transform:uppercase"></td>
-								<td><input type="text" name="fghlname" placeholder="father_last_name" style="text-transform:uppercase"></td>
+								<td><input type="text" name="fghfname"  placeholder="First Name" onkeyup="validateFatherFName()" style="text-transform:uppercase"></td>
+								<td><input type="text" name="fghmname" placeholder="Middle Name" style="text-transform:uppercase"></td>
+								<td><input type="text" name="fghlname" placeholder="Last Name" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Date of Birth: </td>
@@ -217,17 +104,17 @@
 		
 							</tr>
 							<tr>
-								<td colspan="4" style="font-weight:bold;font-size:20px;background-color:#ccecff">Correspondence Address</td>
+								<td colspan="4" style="font-weight:bold;background-color:#a9d0f5">Correspondence Address</td>
 							</tr>
 							<tr>
-								<td><input type="text" name="door_no" placeholder="Door/Flat No;Building/Society" size="35" style="text-transform:uppercase"></td>
-								<td><input type="text" name="street" placeholder="Street/Road Name" size="35" style="text-transform:uppercase"></td>
-								<td><input type="text" name="locality" placeholder="Locality/Village" size="35" style="text-transform:uppercase"></td>
-								<td style="font-weight:bold;"><input name="landmark" placeholder="Landmark" type="text" style="text-transform:uppercase"></td>
+								<td><input type="text" name="door_no" placeholder="Door/Flat No;Building/Society" size="25" style="text-transform:uppercase"></td>
+								<td><input type="text" name="street" placeholder="Street/Road Name"  size="29" style="text-transform:uppercase"></td>
+								<td><input type="text" name="locality" placeholder="Locality/Village" size="30" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;"><input name="landmark" placeholder="Landmark" type="text" size="29" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">City: <input type="text" name="city" style="text-transform:uppercase"></td>
-								<td style="font-weight:bold;">District: <input type="text" name="district" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">District: <input type="text" name="district" size="20" style="text-transform:uppercase"></td>
 								<td style="font-weight:bold;">
 									State:
 									<select name="state">
@@ -270,26 +157,32 @@
 									<option value="West Bengal">West Bengal</option>
 									</select>
 								</td>
-								<td style="font-weight:bold;">Pin: <input type="text" name="pincode" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">Pin: <input type="text" name="pincode" size="24" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
-								<td colspan="2" style="font-weight:bold;background-color:white">
+								<td style="font-weight:bold;background-color:white">
 									Mobile Number:
-									<input type="text" size="3" maxlength="3" value="+91" disabled="">
-									<input type="text" name="mobile_number">
 								</td>
-								<td colspan="2" style="font-weight:bold;background-color:white">
-									Re-Enter Mobile Number:
-									<input type="text" size="3" maxlength="3" value="+91" disabled="">
-									<input type="text" name="mobile_number2">
+								<td>
+									<input type="text" size="3" maxlength="3" value="+91" disabled>
+									<input type="text" name="mobile_number" size="21">
+								</td>
+								<td style="font-weight:bold;background-color:white">
+									Confirm Mobile Number:
+								</td>
+								<td>
+									<input type="text" size="3" maxlength="3" value="+91" disabled>
+									<input type="text" name="mobile_number2" size="21">
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2" style="font-weight:bold;">Email: <input type="text" name="email" size="40"></td>
-								<td colspan="2" style="font-weight:bold;">Re-Enter Email: <input type="text" name="email2" size="40"></td>
+								<td style="font-weight:bold;">Email:</td> 
+								<td><input type="text" name="email" size="29"></td>
+								<td style="font-weight:bold;">Confirm Email: </td>
+								<td><input type="text" name="email2" size="29"></td>
 							</tr>
 							<tr>
-								<td colspan="4" style="font-weight:bold;font-size:20px;background-color:#ccecff">Permanent Address</td>
+								<td colspan="4" style="font-weight:bold;background-color:#a9d0f5">Permanent Address</td>
 							</tr>
 							<tr>
 								<td colspan="4" style="font-weight:bold;">
@@ -301,17 +194,17 @@
 								</td>
 							</tr>
 							<tr>
-								<td><input type="text" name="permanent_door_no" placeholder="Door/Flat No;Building/Society" size="35" style="text-transform:uppercase"></td>
-								<td><input type="text" name="permanent_street" placeholder="Street/Road Name" size="35" style="text-transform:uppercase"></td>
-								<td><input type="text" name="permanent_locality" placeholder="Locality/Village" size="35" style="text-transform:uppercase"></td>
-								<td style="font-weight:bold;"><input name="permanent_landmark" placeholder="Landmark" type="text" style="text-transform:uppercase"></td>
+								<td><input type="text" name="door_no" placeholder="Door/Flat No;Building/Society" size="25" style="text-transform:uppercase"></td>
+								<td><input type="text" name="street" placeholder="Street/Road Name"  size="29" style="text-transform:uppercase"></td>
+								<td><input type="text" name="locality" placeholder="Locality/Village" size="30" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;"><input name="landmark" placeholder="Landmark" type="text" size="29" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
-								<td style="font-weight:bold;">City: <input type="text" name="permanent_city" style="text-transform:uppercase"></td>
-								<td style="font-weight:bold;">District: <input type="text" name="permanent_district" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">City: <input type="text" name="city" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">District: <input type="text" name="district" size="20" style="text-transform:uppercase"></td>
 								<td style="font-weight:bold;">
 									State:
-									<select name="permanent_state">
+									<select name="state">
 									<option value="Select">Select</option>
 									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 									<option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -351,23 +244,29 @@
 									<option value="West Bengal">West Bengal</option>
 									</select>
 								</td>
-								<td style="font-weight:bold;">Pin: <input type="text" name="permanent_pincode" style="text-transform:uppercase"></td>
+								<td style="font-weight:bold;">Pin: <input type="text" name="pincode" size="24" style="text-transform:uppercase"></td>
 							</tr>
 							<tr>
-								<td colspan="2" style="font-weight:bold;background-color:white">
+								<td style="font-weight:bold;background-color:white">
 									Mobile Number:
-									<input type="text" size="3" maxlength="3" value="+91" disabled="">
-									<input type="text" name="permanent_mobile_number">
 								</td>
-								<td colspan="2" style="font-weight:bold;background-color:white">
-									Re-Enter Mobile Number:
-									<input type="text" size="3" maxlength="3" value="+91" disabled="">
-									<input type="text" name="permanent_mobile_number2">
+								<td>
+									<input type="text" size="3" maxlength="3" value="+91" disabled>
+									<input type="text" name="mobile_number" size="21">
+								</td>
+								<td style="font-weight:bold;background-color:white">
+									Confirm Mobile Number:
+								</td>
+								<td>
+									<input type="text" size="3" maxlength="3" value="+91" disabled>
+									<input type="text" name="mobile_number2" size="21">
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2" style="font-weight:bold;">Email: <input type="text" name="permanent_email" size="40"></td>
-								<td colspan="2" style="font-weight:bold;">Re-Enter Email: <input type="text" name="permanent_email2" size="40"></td>
+								<td style="font-weight:bold;">Email:</td> 
+								<td><input type="text" name="email" size="29"></td>
+								<td style="font-weight:bold;">Confirm Email: </td>
+								<td><input type="text" name="email2" size="29"></td>
 							</tr>
 							<tr>
 								<td align="center" colspan="4"><input type="checkbox" value="agreed" name="tos">I agree to the JNTU Bank <a href="http://miniproject-jntuhceh.rhcloud.com/open_account.html#Terms of Service">Terms of Service</a> and <a href="http://miniproject-jntuhceh.rhcloud.com/open_account.html#Privacy Policy">Privacy Policy</a></td>
