@@ -40,11 +40,11 @@
 		{
 			session.setAttribute("passed_make_payment_otp", "yes");
 			
-			temp = (String)session.getAttribute("current_from_account_number");
+			temp = (String)application.getAttribute("current_from_account_number");
 			if(temp != null)
 				currentFromAccountNumber = Integer.parseInt(temp);
 			
-			temp = (String)session.getAttribute("current_to_account_number");
+			temp = (String)application.getAttribute("current_to_account_number");
 			if(temp != null)
 				currentToAccountNumber = Integer.parseInt(temp);
 			
@@ -63,7 +63,7 @@
 				{
 					do
 					{
-						String busy = (String)session.getAttribute("busy");
+						String busy = (String)application.getAttribute("busy");
 						if(busy == null)
 							break;
 						Thread.sleep(1000);
@@ -75,13 +75,13 @@
 				}
 			}
 				
-			session.setAttribute("busy", "yes");
+			application.setAttribute("busy", "yes");
 			
 			currentFromAccountNumber = fromAccountNumber;
 			currentToAccountNumber = toAccountNumber;
 			
-			session.setAttribute("current_from_account_number", currentFromAccountNumber.toString());
-			session.setAttribute("current_to_account_number", currentToAccountNumber.toString());
+			application.setAttribute("current_from_account_number", currentFromAccountNumber.toString());
+			application.setAttribute("current_to_account_number", currentToAccountNumber.toString());
 			
 			sql ="SELECT AccountBalance FROM Customers WHERE AccountNumber=?";
 			pst = conn.prepareStatement(sql);
@@ -131,9 +131,9 @@
 			pst.setString(5, currentDateTimeStringInsert);
 			pst.executeUpdate();
 			
-			request.getSession().removeAttribute("busy");
-			request.getSession().removeAttribute("current_from_account_number");
-			request.getSession().removeAttribute("current_to_account_number");
+			application.removeAttribute("busy");
+			application.removeAttribute("current_from_account_number");
+			application.removeAttribute("current_to_account_number");
 			
 			sql = "SELECT TransactionID FROM Transactions WHERE FromAccountNumber=? AND ToAccountNumber=? AND TransactionAmount=? AND TransactionRemarks=? AND TransactionTimeStamp=?";
 			pst = conn.prepareStatement(sql);
