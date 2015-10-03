@@ -25,54 +25,8 @@
 <html>
 	<head>
 		<title>Account</title>
-		<style>
-			ul 
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-			}
-
-			li 
-			{
-				float: left;
-			}
-
-			a.linkh:link, a.linkh:visited 
-			{
-				display: block;
-				width: 160px;
-				font-weight: bold;
-				color: white;
-				padding: 4px;
-				background-color: #0072c6;
-				text-align: center;
-
-				text-decoration: none;
-				text-transform: uppercase;
-			}
-			a.linkh:hover, a.linkh:active 
-			{
-				background-color: #005798;
-			}
-			td, tr
-			{
-				border-color:#E0E0E0;
-			}
-			.content 
-			{
-				
-				border-top:5px solid #0072c6;
-				border-bottom:5px solid #0072c6;
-				border-right:1px solid #0072c6;
-				border-left:1px solid #0072c6;
-			}
-			th
-			{
-				background-color:#a9d0f5;
-			}
-		</style>
+		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
@@ -134,8 +88,8 @@
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
-				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					JNTUHCEH Internet Banking Mini Project
+				<td align="center" bgcolor="#e7e6e6" colspan="2" height="20px">
+					&#169; JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>
