@@ -2,6 +2,7 @@
 <%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ include file="../../include/check-password.jsp" %>
 
 <%!
 		String loginName = "";
@@ -19,18 +20,6 @@
 <%
 	try
 	{	
-		String customer_id = (String)session.getAttribute("customer_id");
-		if(customer_id == null)
-		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-		}
-
-		String otp_correct = (String)session.getAttribute("otp_correct");
-		if(otp_correct == null)
-		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-		}
-		
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		loginName = (String)session.getAttribute("login_name");
@@ -50,42 +39,8 @@
 <html>
 	<head>
 		<title>Add Benificiary</title>
-		<style>
-			ul 
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-			}
-
-			li 
-			{
-				float: left;
-			}
-
-			a.linkh:link, a.linkh:visited 
-			{
-				display: block;
-				width: 160px;
-				font-weight: bold;
-				color: white;
-				padding: 4px;
-				background-color: #0072c6;
-				text-align: center;
-
-				text-decoration: none;
-				text-transform: uppercase;
-			}
-			a.linkh:hover, a.linkh:active 
-			{
-				background-color: #005798;
-			}
-			td, tr
-			{
-				border-color:#E0E0E0;
-			}
-		</style>
+		<link rel="icon" type="image/x-icon" href="images/jntu-logo.ico">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
@@ -101,7 +56,7 @@
 			<!-- ============ NAVIGATION BAR SECTION ============== -->
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
-					<ul>
+					<ul class="ulh">
 						<li><a class="linkh" href="../../account">Accounts</a></li>
 						<li><a class="linkh" href="../">Fund Transfer</a></li>
 						<li><a class="linkh" href="../../profile">Profile</a></li>
@@ -147,8 +102,8 @@
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
-				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					JNTUHCEH Internet Banking Mini Project
+				<td align="center" bgcolor="#e7e6e6" colspan="2" height="20px">
+					&#169; JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>
