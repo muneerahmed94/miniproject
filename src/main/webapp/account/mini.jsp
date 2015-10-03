@@ -3,6 +3,7 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.text.*" %>
+
 <%@ page import="java.util.Random" %>
 <%@ include file="../include/check-password.jsp" %>
 <%@ include file="../include/connect-to-db.jsp" %>
@@ -13,7 +14,8 @@
 	String loginName;
 	String accountName;
 	
-	String dateTime;
+	String transactionTimeStamp;
+	String dateTimeString;
 	String remarks;
 	Integer toAccountNumber;
 	Integer debit;
@@ -96,11 +98,12 @@
 								while(rs.next())
 								{
 									
-									dateTime = rs.getString("TransactionTimeStamp");
-									Date dateTimeObject = new Date(dateTime);
+									transactionTimeStamp = rs.getString("TransactionTimeStamp");
+									SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+									Date dateTimeObject = formatter.parse(transactionTimeStamp);
 									DateFormat displayFormat = new SimpleDateFormat("EEE, MMM d, yyyy hh:mm aaa");
-									displayFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
-									String currentDateTimeStringDisplay = displayFormat.format(dateTimeObject).toString();
+									dateTimeString = displayFormat.format(dateTimeObject).toString();
+											
 									remarks = rs.getString("TransactionRemarks");
 									toAccountNumber = rs.getInt("ToAccountNumber");
 									if(toAccountNumber == accountNumber)
@@ -115,7 +118,7 @@
 									}
 							%>
 									<tr>
-										<td style="text-align:center"><%= currentDateTimeStringDisplay %></td>
+										<td style="text-align:center"><%= dateTimeString %></td>
 										<td style="text-align:center"><%= remarks %></td>
 							<%
 									if(debit == 0)
