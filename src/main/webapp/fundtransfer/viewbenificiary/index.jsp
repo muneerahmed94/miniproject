@@ -12,28 +12,7 @@
 		<link rel="icon" type="image/x-icon" href="images/jntu-logo.ico">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script>
-			function validateDelete()
-			{
-				if(myForm.benificiary_account_number == null)
-				{
-					return false;
-				}
-				var benificiary_account_number = myForm.benificiary_account_number.value;
-				if(benificiary_account_number == "")
-				{
-					alert("Select a benificiary to delete");
-					return false;
-				}
-				var response = confirm("Are you sure you want to delete the selected benificiary? This action cannot be undone");
-				if (response == true) 
-				{
-					return true;
-				} 
-				else 
-				{
-					return false;
-				}
-			}
+			
 		</script>
 	</head>
 	<body style="margin:0px;padding:0px;">
@@ -41,7 +20,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="http://miniproject-jntuhceh.rhcloud.com/images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="../../"><img src="../../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -51,10 +30,10 @@
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul>
-						<li><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/">Fund Transfer</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
+						<li><a class="linkh" href="../../account">Account</a></li>
+						<li><a class="linkh" href="../">Fund Transfer</a></li>
+						<li><a class="linkh" href="../../profile">Profile</a></li>
+						<li style="float:right;"><a class="linkh" href="../../account/logout.jsp">Logout</a></li>
 						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + (String)session.getAttribute("login_name")); %></li>
 					</ul>
 				</td>
@@ -66,7 +45,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form name="myForm" action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/viewbenificiary/delete-benificiary.jsp" method="POST" onsubmit="return validateDelete()">
+					<form name="myForm" action="delete-benificiary.jsp" method="POST" onsubmit="return validateDelete()">
 						<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 						<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
@@ -137,8 +116,8 @@
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
-				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					JNTUHCEH Internet Banking Mini Project
+				<td align="center" bgcolor="#e7e6e6" colspan="2" height="20px">
+					&#169; JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>

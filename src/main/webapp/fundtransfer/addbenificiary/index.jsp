@@ -72,7 +72,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td valign="top">
-					<form action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/add-benificiary.jsp" method="POST">
+					<form action="add-benificiary.jsp" method="POST">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
 								<th colspan="2" style="text-align:center;font-weight:bold;">Add Benificiary</th>

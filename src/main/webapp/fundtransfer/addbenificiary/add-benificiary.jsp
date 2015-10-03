@@ -2,7 +2,6 @@
 <%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
-
 <%@ include file="../../include/check-password.jsp" %>
 
 <%
@@ -64,7 +63,7 @@
 		}
 		else
 		{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/no-such-benificiary.jsp");
+			response.sendRedirect("no-such-benificiary.jsp");
 		}
 			
 	}
