@@ -40,7 +40,7 @@
 	<head>
 		<title>Add Benificiary</title>
 		<link rel="icon" type="image/x-icon" href="images/jntu-logo.ico">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="../../css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
