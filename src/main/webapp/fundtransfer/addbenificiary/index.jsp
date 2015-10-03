@@ -57,11 +57,11 @@
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul class="ulh">
-						<li><a class="linkh" href="../../account">Accounts</a></li>
-						<li><a class="linkh" href="../">Fund Transfer</a></li>
-						<li><a class="linkh" href="../../profile">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="../../account/logout.jsp">Logout</a></li>
-						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
+						<li class="lih"><a class="linkh" href="../../account">Accounts</a></li>
+						<li class="lih"><a class="linkh" href="../">Fund Transfer</a></li>
+						<li class="lih"><a class="linkh" href="../../profile">Profile</a></li>
+						<li class="lih" style="float:right;"><a class="linkh" href="../../account/logout.jsp">Logout</a></li>
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
 			</tr>
