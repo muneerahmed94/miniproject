@@ -80,50 +80,61 @@
 							<th style="text-align:center">Credit</th>
 						</tr>
 						<%
-							sql = "SELECT * FROM Transactions WHERE FromAccountNumber = ? OR ToAccountNumber = ?";
-
-							pst = conn.prepareStatement(sql);
-							pst.setInt(1,accountNumber);
-							pst.setInt(2,accountNumber);
-							
-							rs = pst.executeQuery();
-							while(rs.next())
+							try
 							{
-								dateTime = rs.getString("TransactionTimeStamp");
-								remarks = rs.getString("TransactionRemarks");
-								toAccountNumber = rs.getInt("ToAccountNumber");
-								if(toAccountNumber == accountNumber)
+								sql = "SELECT * FROM Transactions WHERE FromAccountNumber = ? OR ToAccountNumber = ?";
+
+								pst = conn.prepareStatement(sql);
+								pst.setInt(1,accountNumber);
+								pst.setInt(2,accountNumber);
+								
+								rs = pst.executeQuery();
+								while(rs.next())
 								{
-									credit = rs.getInt("TransactionAmount");
-									debit = 0;
+									dateTime = rs.getString("TransactionTimeStamp");
+									remarks = rs.getString("TransactionRemarks");
+									toAccountNumber = rs.getInt("ToAccountNumber");
+									if(toAccountNumber == accountNumber)
+									{
+										credit = rs.getInt("TransactionAmount");
+										debit = 0;
+									}
+									else
+									{
+										debit = rs.getInt("TransactionAmount");
+										credit = 0;
+									}
+							%>
+									<tr>
+										<td style="text-align:center"><%= dateTime %></td>
+										<td style="text-align:center"><%= remarks %></td>
+							<%
+									if(debit == 0)
+									{
+							%>
+										<td style="text-align:center"><%= credit %></td>
+										<td style="text-align:center"></td>
+							<%			
+									}
+									else
+									{
+							%>
+										<td style="text-align:center"></td>
+										<td style="text-align:center"><%= debit %></td>
+							<%
+									}
+							%>
+									</tr>
+							<%
 								}
-								else
-								{
-									debit = rs.getInt("TransactionAmount");
-									credit = 0;
-								}
-						%>
-								<tr>
-									<td style="text-align:center"><%= dateTime %></td>
-									<td style="text-align:center"><%= remarks %></td>
-						<%
-								if(debit == 0)
-								{
-						%>
-									<td style="text-align:center"><%= credit %></td>
-									<td style="text-align:center"></td>
-						<%			
-								}
-								else
-								{
-						%>
-									<td style="text-align:center"></td>
-									<td style="text-align:center"><%= debit %></td>
-						<%
-								}
-						%>
-								</tr>
-						<%
+							}
+							catch(Exception e)
+							{
+								ByteArrayOutputStream ostr = new ByteArrayOutputStream();
+								e.printStackTrace( new PrintWriter(ostr,true) );
+								String foo = ostr.toString();
+								out.println(foo);
+								out.print(e);
 							}
 						%>
 					</table>
