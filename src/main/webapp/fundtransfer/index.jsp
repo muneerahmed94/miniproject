@@ -124,7 +124,7 @@
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul>
 						<li><a class="linkh" href="../account">Accounts</a></li>
-						<li><a class="linkh" href="../index.jsp">Fund Transfer</a></li>
+						<li><a class="linkh" href="index.jsp">Fund Transfer</a></li>
 						<li><a class="linkh" href="../profile">Profile</a></li>
 						<li style="float:right;"><a class="linkh" href="../account/logout.jsp">Logout</a></li>
 						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
