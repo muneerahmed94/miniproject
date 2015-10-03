@@ -75,7 +75,7 @@
 					<form action="http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/add-benificiary.jsp" method="POST">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
-								<th colspan="2" style="text-align:center;font-weight:bold;">Register Benificiary</th>
+								<th colspan="2" style="text-align:center;font-weight:bold;">Add Benificiary</th>
 							</tr>
 							<tr>
 								<td style="font-weight:bold;">Benificiary Account Number: </td>
