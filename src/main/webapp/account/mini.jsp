@@ -121,7 +121,7 @@
 									}
 							%>
 									<tr>
-										<td style="text-align:center"><%= count %></td>
+										<td style="text-align:center;font-weight:bold;"><%= count %></td>
 										<td style="text-align:center"><%= dateTimeString %></td>
 										<td style="text-align:center"><%= remarks %></td>
 							<%
