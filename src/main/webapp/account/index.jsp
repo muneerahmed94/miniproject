@@ -33,7 +33,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="../"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -71,7 +71,7 @@
 							<td style="text-align:center;"><% out.print(accountName); %></td>
 							<td style="text-align:center;">&#8377;<% out.print(accountBalance); %></td>
 							<td>
-								<a href="http://miniproject-jntuhceh.rhcloud.com/account/mini.jsp">Mini</a> | <a href="http://miniproject-jntuhceh.rhcloud.com/account/detail.jsp">Detail</a>
+								<a href="mini.jsp">Mini</a> | <a href="detail.jsp">Detail</a>
 							</td>
 						</tr>
 					</table>
