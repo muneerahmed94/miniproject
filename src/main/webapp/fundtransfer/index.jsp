@@ -50,7 +50,7 @@
 <html>
 	<head>
 		<title>Welcome</title>
-		
+		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
 		<style>
 			.link 
 			{
@@ -134,10 +134,10 @@
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
 					<ul>
-						<li><a class="linkh" href="#Accounts">Accounts</a></li>
-						<li><a class="linkh" href="#Fund Transfer">Fund Transfer</a></li>
-						<li><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_edit_profile.jsp">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="http://miniproject-jntuhceh.rhcloud.com/customer_logout.jsp">Logout</a></li>
+						<li><a class="linkh" href="../account">Accounts</a></li>
+						<li><a class="linkh" href="../index.jsp">Fund Transfer</a></li>
+						<li><a class="linkh" href="../profile">Profile</a></li>
+						<li style="float:right;"><a class="linkh" href="../account/logout.jsp">Logout</a></li>
 						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
@@ -200,8 +200,8 @@
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
-				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
-					JNTUHCEH Internet Banking Mini Project
+				<td align="center" bgcolor="#e7e6e6" colspan="2" height="20px">
+					&#169; JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>
