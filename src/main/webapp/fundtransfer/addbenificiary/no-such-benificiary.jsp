@@ -40,14 +40,14 @@
 	<head>
 		<title>Add Benificiary</title>
 		<link rel="icon" type="image/x-icon" href="images/jntu-logo.ico">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="../../css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="http://miniproject-jntuhceh.rhcloud.com/images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="../../"><img src="../../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -90,7 +90,7 @@
 								<td><input type="text" size="25" name="benificiary_name"> </td>
 							</tr>
 							<tr>
-								<td colspan="2" style="color:red">Benificiary Account Number you entered does not exist</td>
+								<td colspan="2" style="text-align:center;color:red">Benificiary Account Number you entered does not exist</td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
