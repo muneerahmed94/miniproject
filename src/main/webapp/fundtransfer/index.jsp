@@ -2,6 +2,7 @@
 <%@ page import="java.util.Random" %>
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ include file="../include/check-password.jsp" %>
 
 <%!
 		String loginName = "";
@@ -19,18 +20,6 @@
 <%
 	try
 	{	
-		String customer_id = (String)session.getAttribute("customer_id");
-		if(customer_id == null)
-		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-		}
-
-		String otp_correct = (String)session.getAttribute("otp_correct");
-		if(otp_correct == null)
-		{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/customer_login.html");
-		}
-		
 		accountNumber = Integer.parseInt((String)session.getAttribute("account_number"));
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		loginName = (String)session.getAttribute("login_name");
