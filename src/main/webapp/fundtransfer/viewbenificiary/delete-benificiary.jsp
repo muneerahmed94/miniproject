@@ -13,7 +13,7 @@
 		int x = pst.executeUpdate();
 		if(x == 1)
 		{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/viewbenificiary");
+			response.sendRedirect("index.jsp");
 		}
 	}
 	catch(Exception e)
