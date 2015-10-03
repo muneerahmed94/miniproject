@@ -10,7 +10,7 @@
 	<head>
 		<title>View Benificiary</title>
 		<link rel="icon" type="image/x-icon" href="images/jntu-logo.ico">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="../../css/main.css">
 		<script>
 			
 		</script>
