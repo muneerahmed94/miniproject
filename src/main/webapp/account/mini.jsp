@@ -1,5 +1,9 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.text.*" %>
+<%@ page import="java.util.Random" %>
 <%@ include file="../include/check-password.jsp" %>
 <%@ include file="../include/connect-to-db.jsp" %>
 
@@ -91,7 +95,12 @@
 								rs = pst.executeQuery();
 								while(rs.next())
 								{
+									
 									dateTime = rs.getString("TransactionTimeStamp");
+									Date dateTimeObject = new Date(dateTime);
+									DateFormat displayFormat = new SimpleDateFormat("EEE, MMM d, yyyy hh:mm aaa");
+									displayFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
+									String currentDateTimeStringDisplay = displayFormat.format(dateTimeObject).toString();
 									remarks = rs.getString("TransactionRemarks");
 									toAccountNumber = rs.getInt("ToAccountNumber");
 									if(toAccountNumber == accountNumber)
@@ -106,7 +115,7 @@
 									}
 							%>
 									<tr>
-										<td style="text-align:center"><%= dateTime %></td>
+										<td style="text-align:center"><%= currentDateTimeStringDisplay %></td>
 										<td style="text-align:center"><%= remarks %></td>
 							<%
 									if(debit == 0)
