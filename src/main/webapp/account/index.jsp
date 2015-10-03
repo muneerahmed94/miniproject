@@ -42,12 +42,12 @@
 			<!-- ============ NAVIGATION BAR SECTION ============== -->
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
-					<ul>
-						<li><a class="linkh" href="index.jsp">Account</a></li>
-						<li><a class="linkh" href="../fundtransfer/">Fund Transfer</a></li>
-						<li><a class="linkh" href="../profile">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="logout.jsp">Logout</a></li>
-						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
+					<ul class="ulh">
+						<li class="lih"><a class="linkh" href="index.jsp">Account</a></li>
+						<li class="lih"><a class="linkh" href="../fundtransfer/">Fund Transfer</a></li>
+						<li class="lih"><a class="linkh" href="../profile">Profile</a></li>
+						<li class="lih" style="float:right;"><a class="linkh" href="logout.jsp">Logout</a></li>
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + loginName); %></li>
 					</ul>
 				</td>
 			</tr>
