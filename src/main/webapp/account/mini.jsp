@@ -108,11 +108,13 @@
 									toAccountNumber = rs.getInt("ToAccountNumber");
 									if(toAccountNumber == accountNumber)
 									{
+										out.print("in if...");
 										credit = rs.getInt("TransactionAmount");
 										debit = 0;
 									}
 									else
 									{
+										out.print("in else...");
 										debit = rs.getInt("TransactionAmount");
 										credit = 0;
 									}
@@ -123,13 +125,16 @@
 							<%
 									if(debit == 0)
 									{
+										out.print("debit==0");
 							%>
+										
 										<td style="text-align:center"><%= "-" %></td>
 										<td style="text-align:center"><%= credit %></td>
 							<%			
 									}
 									else
 									{
+										out.print("credit==0");
 							%>
 										<td style="text-align:center"><%= debit %></td>
 										<td style="text-align:center"><%= "-" %></td>
