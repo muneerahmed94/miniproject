@@ -3,6 +3,18 @@
 <%@ include file="../include/check-password.jsp" %>
 <%@ include file="../include/connect-to-db.jsp" %>
 
+<%!
+	Integer accountNumber;
+	Integer accountBalance;
+	String loginName;
+	String accountName;
+	
+	String dateTime;
+	String remarks;
+	Integer toAccountNumber;
+	Integer debit;
+	Integer credit;
+%>
 
 <%
 	try
@@ -75,13 +87,13 @@
 							pst.setInt(2,accountNumber);
 							
 							rs = pst.executeQuery();
-							while(rs.next)
+							while(rs.next())
 							{
-								String dateTime = rs.getString("TransactionTimeStamp");
-								String remarks = rs.getString("TransactionRemarks");
-								Integer toAccountNumber = rs.getInt("ToAccountNumber");
-								Integer credit;
-								Integer debit;
+								dateTime = rs.getString("TransactionTimeStamp");
+								remarks = rs.getString("TransactionRemarks");
+								toAccountNumber = rs.getInt("ToAccountNumber");
+								credit;
+								debit;
 								if(toAccountNumber == accountNumber)
 								{
 									credit = rs.getInt("TransactionAmount");
