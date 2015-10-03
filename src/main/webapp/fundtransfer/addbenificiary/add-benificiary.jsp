@@ -45,7 +45,7 @@
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
-			response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/benificiary-already-added.jsp");
+			response.sendRedirect("../viewbenificiary");
 		}
 		
 		sql = "SELECT * FROM Customers WHERE AccountNumber=?"; 
@@ -59,7 +59,7 @@
 			int x = pst.executeUpdate(sql);
 			if(x == 1)
 			{
-				response.sendRedirect("http://miniproject-jntuhceh.rhcloud.com/fundtransfer/addbenificiary/benificiary-added.jsp");
+				response.sendRedirect("../viewbenificiary");
 			}
 		}
 		else

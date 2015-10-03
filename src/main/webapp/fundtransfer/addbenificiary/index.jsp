@@ -91,7 +91,7 @@
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
-									<input type="submit" value="Login">
+									<input type="submit" value="Add">
 									&nbsp &nbsp &nbsp &nbsp &nbsp 
 									<input type="reset" value="Reset">
 								</td>
