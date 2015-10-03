@@ -29,12 +29,12 @@
 			<!-- ============ NAVIGATION BAR SECTION ============== -->
 			<tr height="28px">
 				<td	colspan=2 bgcolor="#0072c6">		
-					<ul>
-						<li><a class="linkh" href="../../account">Account</a></li>
-						<li><a class="linkh" href="../">Fund Transfer</a></li>
-						<li><a class="linkh" href="../../profile">Profile</a></li>
-						<li style="float:right;"><a class="linkh" href="../../account/logout.jsp">Logout</a></li>
-						<li style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + (String)session.getAttribute("login_name")); %></li>
+					<ul class="ulh">
+						<li class="lih"><a class="linkh" href="../../account">Account</a></li>
+						<li class="lih"><a class="linkh" href="../">Fund Transfer</a></li>
+						<li class="lih"><a class="linkh" href="../../profile">Profile</a></li>
+						<li class="lih" style="float:right;"><a class="linkh" href="../../account/logout.jsp">Logout</a></li>
+						<li class="lih" style="float:right;color:white;vertical-align:center">Welcome:<% out.print(" " + (String)session.getAttribute("login_name")); %></li>
 					</ul>
 				</td>
 			</tr>
@@ -105,7 +105,7 @@
 										if(i != 0)
 										{
 							%>
-											<td colspan="3"><input type="submit" value="Delete"></td>
+											<td style="align:center;text-align:center" colspan="3"><input type="submit" value="Delete"></td>
 							<%
 										}
 							%>
