@@ -107,7 +107,7 @@
 									remarks = rs.getString("TransactionRemarks");
 									toAccountNumber = rs.getInt("ToAccountNumber");
 									out.print(toAccountNumber + " " + accountNumber);
-									if(toAccountNumber == accountNumber)
+									if(toAccountNumber.equals(accountNumber))
 									{
 										out.print("in if...");
 										credit = rs.getInt("TransactionAmount");
