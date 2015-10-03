@@ -124,15 +124,15 @@
 									if(debit == 0)
 									{
 							%>
-										<td style="text-align:center"><%= credit %></td>
 										<td style="text-align:center"></td>
+										<td style="text-align:center"><%= credit %></td>
 							<%			
 									}
 									else
 									{
 							%>
-										<td style="text-align:center"></td>
 										<td style="text-align:center"><%= debit %></td>
+										<td style="text-align:center"></td>
 							<%
 									}
 							%>
