@@ -92,8 +92,6 @@
 								dateTime = rs.getString("TransactionTimeStamp");
 								remarks = rs.getString("TransactionRemarks");
 								toAccountNumber = rs.getInt("ToAccountNumber");
-								credit;
-								debit;
 								if(toAccountNumber == accountNumber)
 								{
 									credit = rs.getInt("TransactionAmount");
