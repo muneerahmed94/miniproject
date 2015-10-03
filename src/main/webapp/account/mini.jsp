@@ -88,7 +88,7 @@
 						<%
 							try
 							{
-								sql = "SELECT * FROM Transactions WHERE FromAccountNumber = ? OR ToAccountNumber = ?";
+								sql = "SELECT * FROM Transactions WHERE FromAccountNumber = ? OR ToAccountNumber = ? ORDER BY TransactionTimeStamp DESC";
 
 								pst = conn.prepareStatement(sql);
 								pst.setInt(1,accountNumber);
