@@ -80,6 +80,7 @@
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
+							<th style="text-align:center">#</th>
 							<th style="text-align:center">Date</th>
 							<th style="text-align:center">Transaction Remarks</th>
 							<th style="text-align:center">Debit</th>
@@ -95,9 +96,10 @@
 								pst.setInt(2,accountNumber);
 								
 								rs = pst.executeQuery();
+								int count = 0;
 								while(rs.next())
 								{
-									
+									count++;
 									transactionTimeStamp = rs.getString("TransactionTimeStamp");
 									SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 									Date dateTimeObject = formatter.parse(transactionTimeStamp);
@@ -119,6 +121,7 @@
 									}
 							%>
 									<tr>
+										<td style="text-align:center"><%= count %></td>
 										<td style="text-align:center"><%= dateTimeString %></td>
 										<td style="text-align:center"><%= remarks %></td>
 							<%
