@@ -93,7 +93,7 @@
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
-							<td colspan="4" style="text-align:center"><b>Benificiary Name:</b> <%= benificiaryName %></td>
+							<td colspan="4" style="text-align:center"><b>Benificiary Name:</b> &nbsp &nbsp &nbsp &nbsp &nbsp <%= benificiaryName %></td>
 						</tr>
 						<tr>
 							<th style="text-align:center">#</th>
