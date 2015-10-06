@@ -91,7 +91,8 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
-					<center><b>Benificiary Name:</b> &nbsp &nbsp &nbsp &nbsp &nbsp <%= benificiaryName %></center>
+					<center><b>Benificiary Name:</b> &nbsp &nbsp &nbsp &nbsp &nbsp <%= benificiaryName %></center> </br>
+					<center><b>Benificiary Account Number:</b> &nbsp &nbsp &nbsp &nbsp &nbsp <%= benificiaryAccountNumber %></center> </br>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
 							<th style="text-align:center">#</th>
