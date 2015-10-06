@@ -5,8 +5,8 @@
 <%@ page import="java.text.*" %>
 
 <%@ page import="java.util.Random" %>
-<%@ include file="../include/check-password.jsp" %>
-<%@ include file="../include/connect-to-db.jsp" %>
+<%@ include file="../../include/check-password.jsp" %>
+<%@ include file="../../include/connect-to-db.jsp" %>
 
 <%!
 	Integer accountNumber;
