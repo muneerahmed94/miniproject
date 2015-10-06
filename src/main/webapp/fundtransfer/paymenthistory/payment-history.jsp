@@ -34,6 +34,14 @@
 		accountName = (String)session.getAttribute("account_name");
 		
 		benificiaryAccountNumber = Integer.parseInt(request.getParameter("benificiary_account_number"));
+		sql = "SELECT * FROM Benificiaries WHERE Benificiary=?";
+		pst = conn.prepareStatement(sql);
+		pst.setInt(1,benificiaryAccountNumber);
+		rs = pst.executeQuery();
+		if(rs.next())
+		{
+			benificiaryName = rs.getString("BenificiaryName");
+		}
 	}
 	catch(Exception e)
 	{
@@ -57,7 +65,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="../"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="../../"><img src="../../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -84,6 +92,10 @@
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
+						<tr>
+							<td colspan="2">Benificiary Name: </td>
+							<td colspan="2"><%= benificiaryName %></td>
+						</tr>
 						<tr>
 							<th style="text-align:center">#</th>
 							<th style="text-align:center">Date</th>
