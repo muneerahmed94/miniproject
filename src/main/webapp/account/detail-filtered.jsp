@@ -33,8 +33,8 @@
 		loginName = (String)session.getAttribute("login_name");
 		accountName = (String)session.getAttribute("account_name");
 	
-		fromDate = (String)tequest.getParameter("from");
-		toDate = (String)tequest.getParameter("to");
+		fromDate = (String)request.getParameter("from");
+		toDate = (String)request.getParameter("to");
 	}
 	catch(Exception e)
 	{
@@ -115,8 +115,8 @@
 								pst = conn.prepareStatement(sql);
 								pst.setInt(1,accountNumber);
 								pst.setInt(2,accountNumber);
-								pst.setInt(3,fromDate);
-								pst.setInt(4,toDate);
+								pst.setString(3,fromDate);
+								pst.setString(4,toDate);
 								
 								rs = pst.executeQuery();
 								int count = 0;
