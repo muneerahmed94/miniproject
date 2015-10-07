@@ -94,11 +94,11 @@
 					
 					<table align="center" border="0">
 						<tr>
-							<td><b>Benificiary Name:</b></td>
+							<td style="text-align:center"><b>Benificiary Name:</b></td>
 							<td><%= benificiaryName %></td>
 						</tr>
 						<tr>
-							<td><b>Benificiary Account Number:</b></td>
+							<td style="text-align:center"><b>Benificiary Account Number:</b></td>
 							<td><%= benificiaryAccountNumber %></td>
 						</tr>
 					</table>

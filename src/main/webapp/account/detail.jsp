@@ -78,19 +78,21 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
-					<table align="center" border="0">
-						<tr>
-							<td>From: <input type="date" name="from"></td>
-							<td>To: <input type="date" name="to"></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="submit" value="Login">
-								&nbsp &nbsp &nbsp &nbsp &nbsp 
-								<input type="reset" value="Reset">
-							</td>
-						</tr>
-					</table>
+					<form action="detail-filtered.jsp" method="POST">
+						<table align="center" border="0">
+							<tr>
+								<td style="text-align:center"><b>From:</b> <input type="date" name="from"></td>
+								<td style="text-align:center"><b>To:</b> <input type="date" name="to"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align:center">
+									<input type="submit" value="Search">
+									&nbsp &nbsp &nbsp &nbsp &nbsp 
+									<input type="reset" value="Reset">
+								</td>
+							</tr>
+						</table>
+					</form>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
 							<th style="text-align:center">#</th>
