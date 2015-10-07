@@ -5,13 +5,13 @@
 <%
 	try
 	{	
-		String username = request.getParameter("uname");
-		out.print(username);
+		String uname = request.getParameter("uname");
+		Integer username = Integer.parseInt(uname);
 		
 		sql = "SELECT * FROM Users WHERE (UserID=? OR AlternateUserID=?)";
 		pst = conn.prepareStatement(sql);
-		pst.setString(1, username);
-		pst.setString(2, username);
+		pst.setInt(1, username);
+		pst.setString(2, uname);
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
