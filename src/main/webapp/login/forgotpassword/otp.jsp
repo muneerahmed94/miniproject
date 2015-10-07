@@ -29,7 +29,7 @@
 		}
 		else
 		{
-			response.sendRedirect("no-such-userid.html");
+			response.sendRedirect("no-such-customerrid.html");
 		}
 		
 	}
