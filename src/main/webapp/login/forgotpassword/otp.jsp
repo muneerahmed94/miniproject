@@ -10,15 +10,15 @@
 <html>
 	<head>
 		<title>Forgot Password</title>
-		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
-		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="icon" type="image/x-icon" href="../../images/jntu-logo.ico">
+		<link rel="stylesheet" type="text/css" href="../../css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="../"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="../../"><img src="../../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
