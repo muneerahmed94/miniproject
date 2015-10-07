@@ -1,49 +1,11 @@
 <%@ page import="java.io.ByteArrayOutputStream" %>
 <%@ page import="java.io.PrintWriter" %>
 
-<%@ include file="../../include/connect-to-db.jsp" %>
 <%
-	try
-	{	
-		String uname = request.getParameter("uname");
-		Integer username = Integer.parseInt(uname);
-		
-		out.print(uname);
-		out.print(username);
-		
-		sql = "SELECT * FROM Users WHERE UserID=?";
-		pst = conn.prepareStatement(sql);
-		pst.setInt(1, username);
-		rs = pst.executeQuery();
-		if(rs.next())
-		{
-			Integer UserID = rs.getInt("UserID");
-			String Email = rs.getString("Email");
-			String Mobile = rs.getString("Mobile");
-			
-			session.setAttribute("customer_id",UserID.toString());
-			session.setAttribute("email", Email);
-			session.setAttribute("mobile", Mobile);	
-			session.setAttribute("otp_type", "Password Recovery OTP");
+	if((String)session.getAttribute(customer_id) == null)
+		response.sendRedirect("index.html");
 %>
-			<%@ include file="../../include/send-otp.jsp" %>
-<%
-		}
-		else
-		{
-			response.sendRedirect("no-such-customerrid.html");
-		}
-		
-	}
-	catch(Exception e)
-	{
-		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
-		e.printStackTrace( new PrintWriter(ostr,true));
-		String foo = ostr.toString();
-		out.println(foo + "<br/>");
-		out.print(e);
-	}
-%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
@@ -79,7 +41,7 @@
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
-					<form action="process-forgot-password-otp.jsp" method="POST">
+					<form action="process-otp.jsp" method="POST">
 						<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 							<tr>
 								<td colspan="2" style="text-align:center;background-color:#a9d0f5;font-weight:bold;">Forgot Password</td>
