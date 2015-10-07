@@ -1,3 +1,4 @@
+<%@ include file="../../include/connect-to-db.jsp" %>
 <%
 	try
 	{	
