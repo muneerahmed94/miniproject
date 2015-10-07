@@ -20,6 +20,9 @@
 	Integer toAccountNumber;
 	Integer debit;
 	Integer credit;
+	
+	String fromDate;
+	String toDate;
 %>
 
 <%
@@ -29,6 +32,9 @@
 		accountBalance = Integer.parseInt((String)session.getAttribute("account_balance"));
 		loginName = (String)session.getAttribute("login_name");
 		accountName = (String)session.getAttribute("account_name");
+	
+		fromDate = (String)tequest.getParameter("from");
+		toDate = (String)tequest.getParameter("to");
 	}
 	catch(Exception e)
 	{
@@ -104,11 +110,13 @@
 						<%
 							try
 							{
-								sql = "SELECT * FROM Transactions WHERE FromAccountNumber = ? OR ToAccountNumber = ? ORDER BY TransactionTimeStamp DESC";
+								sql = "SELECT * FROM Transactions WHERE (FromAccountNumber = ? OR ToAccountNumber = ?) AND (TransactionTimeStamp BETWEEN ? AND ?) ORDER BY TransactionTimeStamp DESC";
 
 								pst = conn.prepareStatement(sql);
 								pst.setInt(1,accountNumber);
 								pst.setInt(2,accountNumber);
+								pst.setInt(3,fromDate);
+								pst.setInt(4,toDate);
 								
 								rs = pst.executeQuery();
 								int count = 0;
