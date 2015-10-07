@@ -1,10 +1,30 @@
+<%@ page import="java.io.ByteArrayOutputStream" %>
+<%@ page import="java.io.PrintWriter" %>
+
 <%@ include file="../../include/check-password.jsp" %>
 <%@ include file="../../include/connect-to-db.jsp" %>
 <%!
 	String benificiaryName;
 	Integer benificiary;
+	String loginName;
 	int i;
 %>
+
+<%
+	try
+	{	
+		loginName = (String)session.getAttribute("login_name");
+	}
+	catch(Exception e)
+	{
+		ByteArrayOutputStream ostr = new ByteArrayOutputStream();
+		e.printStackTrace( new PrintWriter(ostr,true) );
+		String foo = ostr.toString();
+		out.println(foo);
+		out.print(e);
+	}
+%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
