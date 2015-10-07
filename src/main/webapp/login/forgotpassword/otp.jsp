@@ -28,7 +28,6 @@
 %>
 			<%@ include file="../../include/send-otp.jsp" %>
 <%
-				response.sendRedirect("otp.jsp");
 		}
 		else
 		{
