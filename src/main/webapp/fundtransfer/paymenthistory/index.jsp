@@ -123,7 +123,7 @@
 								if(i != 0)
 								{
 							%>
-									<td colspan="3" style="align:center"><input type="submit" value="Payment History"></td>
+									<td colspan="3" style="text-align:center"><input type="submit" value="Payment History"></td>
 							<%
 								}
 							%>

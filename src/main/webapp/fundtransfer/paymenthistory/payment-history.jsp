@@ -93,6 +93,18 @@
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
 					<center><b>Benificiary Name:</b> &nbsp &nbsp &nbsp &nbsp &nbsp <%= benificiaryName %></center>
 					<center><b>Benificiary Account Number:</b> &nbsp &nbsp &nbsp &nbsp &nbsp <%= benificiaryAccountNumber %></center> </br>
+					
+					<table align="center" border="0">
+						<tr>
+							<td>Benificiary Name:</td>
+							<td><%= benificiaryName %></td>
+						</tr>
+						<tr>
+							<td>Benificiary Account Number:</td>
+							<td><%= benificiaryAccountNumber %></td>
+						</tr>
+					</table>
+					
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
 							<th style="text-align:center">#</th>
