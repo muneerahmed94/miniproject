@@ -2,7 +2,7 @@
 <%@ page import="java.io.PrintWriter" %>
 
 <%
-	if((String)session.getAttribute(customer_id) == null)
+	if((String)session.getAttribute("customer_id") == null)
 		response.sendRedirect("index.html");
 %>
 
