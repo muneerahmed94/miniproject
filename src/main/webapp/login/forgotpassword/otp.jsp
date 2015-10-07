@@ -8,6 +8,9 @@
 		String uname = request.getParameter("uname");
 		Integer username = Integer.parseInt(uname);
 		
+		out.print(uname);
+		out.print(username);
+		
 		sql = "SELECT * FROM Users WHERE UserID=?";
 		pst = conn.prepareStatement(sql);
 		pst.setInt(1, username);
