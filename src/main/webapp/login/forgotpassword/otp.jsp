@@ -8,10 +8,9 @@
 		String uname = request.getParameter("uname");
 		Integer username = Integer.parseInt(uname);
 		
-		sql = "SELECT * FROM Users WHERE (UserID=? OR AlternateUserID=?)";
+		sql = "SELECT * FROM Users WHERE UserID=?";
 		pst = conn.prepareStatement(sql);
 		pst.setInt(1, username);
-		pst.setString(2, uname);
 		rs = pst.executeQuery();
 		if(rs.next())
 		{
