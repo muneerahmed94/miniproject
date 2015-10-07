@@ -5,7 +5,7 @@
 <%
 	try
 	{	
-		String username = request.getParameter("customer_id");
+		String username = request.getParameter("uname");
 		
 		sql = "SELECT * FROM Users WHERE (UserID=? OR AlternateUserID=?)";
 		pst = conn.prepareStatement(sql);
