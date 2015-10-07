@@ -29,7 +29,7 @@
 		}
 		else
 		{
-			response.sendRedirect("incorrect-userid.html");
+			response.sendRedirect("no-such-userid.html");
 		}
 		
 	}
