@@ -41,8 +41,8 @@ public class SendSmsBean implements java.io.Serializable
 		
 		int sent = 0;
 		
-		String authId = "MAZDEXN2VHYTBMMJVJNW";
-        String authToken = "OWQyMmI3ZWI2ZDYwYjRiZWI3NDc2NTQ4YTdlY2Q5";
+		String authId = "MANWM5NZI3NGIYYWU1MT";
+        String authToken = "MmEzYmVjMDNmMDA4ZDQ3MGU0YjI2YjU0NGI0MWFh";
 		
 		RestAPI api = new RestAPI(authId, authToken, "v1");
 
