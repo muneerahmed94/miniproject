@@ -21,6 +21,8 @@
 		pst.setString(1, request.getParameter("name"));
 		pst.setString(2, insertFormat.format(currentDateTime).toString());
 		pst.executeUpdate();
+		
+		System.out.println(request.getParameter("date"));
 	}
 	catch(Exception e)
 	{
