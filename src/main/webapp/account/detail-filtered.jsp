@@ -110,7 +110,7 @@
 						<%
 							try
 							{
-								sql = "SELECT * FROM Transactions WHERE (FromAccountNumber = ? OR ToAccountNumber = ?) AND (TransactionTimeStamp BETWEEN ? AND ?) ORDER BY TransactionTimeStamp DESC";
+								sql = "SELECT * FROM Transactions WHERE (FromAccountNumber = ? OR ToAccountNumber = ?) AND (TransactionTimeStamp >= ? AND TransactionTimeStamp <= ?) ORDER BY TransactionTimeStamp DESC";
 
 								pst = conn.prepareStatement(sql);
 								pst.setInt(1,accountNumber);
