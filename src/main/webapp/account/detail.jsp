@@ -93,6 +93,11 @@
 							</tr>
 						</table>
 					</form>
+					<table align="center" border="0">
+						<tr>
+							<td>Showing All Transactions</td>
+						</tr>
+					</table>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
 							<th style="text-align:center">#</th>

@@ -118,7 +118,7 @@
 					
 					<table align="center" border="0">
 						<tr>
-							<td>Showing Transactions from <%= fromDate %> to <%= toDate2 %> </td>
+							<td>Showing Transactions from <b><%= fromDate %></b> to <b><%= toDate2 %></b> </td>
 						</tr>
 					</table>
 					
