@@ -35,6 +35,18 @@
 	
 		fromDate = (String)request.getParameter("from");
 		toDate = (String)request.getParameter("to");
+		
+		DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		df.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
+	
+		Date toDt = df.parse(toDate);
+		
+		Calendar c = Calendar.getInstance(); 
+		c.setTime(toDt); 
+		c.add(Calendar.DATE, 1);
+		toDt = c.getTime();
+		toDate = insertFormat.format(toDt);
 	}
 	catch(Exception e)
 	{
