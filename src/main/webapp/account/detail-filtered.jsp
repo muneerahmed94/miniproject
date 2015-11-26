@@ -23,6 +23,7 @@
 	
 	String fromDate;
 	String toDate;
+	String toDate2;
 %>
 
 <%
@@ -35,6 +36,7 @@
 	
 		fromDate = (String)request.getParameter("from");
 		toDate = (String)request.getParameter("to");
+		toDate2 = toDate;
 		
 		DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
@@ -113,6 +115,13 @@
 							</tr>
 						</table>
 					</form>
+					
+					<table align="center" border="0">
+						<tr>
+							<td>Showing Transactions from <%= fromDate %> to <%= toDate2 %> </td>
+						</tr>
+					</table>
+					
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
 							<th style="text-align:center">#</th>
