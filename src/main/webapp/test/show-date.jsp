@@ -21,14 +21,14 @@
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		df.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
 		Date d = df.parse(request.getParameter("date"));
-		out.println(d);
+		out.println(insertFormat.format(d));
 		
 		Calendar c = Calendar.getInstance(); 
 		c.setTime(d); 
 		c.add(Calendar.DATE, 1);
 		d = c.getTime();
 		
-		out.println(d);
+		out.println(insertFormat.format(d));
 	}
 	catch(Exception e)
 	{
