@@ -37,6 +37,8 @@
 		toDate = (String)request.getParameter("to");
 		
 		DateFormat insertFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		insertFormat.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
+		
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		df.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
 	
