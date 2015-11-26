@@ -49,7 +49,6 @@
 		c.add(Calendar.DATE, 1);
 		toDt = c.getTime();
 		toDate = insertFormat.format(toDt);
-		out.println(toDate);
 	}
 	catch(Exception e)
 	{
