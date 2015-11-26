@@ -19,7 +19,15 @@
 		out.println(request.getParameter("date"));
 		
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		df.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
 		Date d = df.parse(request.getParameter("date"));
+		out.println(d);
+		
+		Calendar c = Calendar.getInstance(); 
+		c.setTime(d); 
+		c.add(Calendar.DATE, 1);
+		d = c.getTime();
+		
 		out.println(d);
 	}
 	catch(Exception e)
