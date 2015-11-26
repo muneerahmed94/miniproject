@@ -78,6 +78,11 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td style="background-color:white;vertical-align:top;">
 					<marquee  onmouseover="this.stop()" onmouseout="this.start()"><font color="blue">Welcome to JNTU Bank Internet Banking</font></marquee>
+					<table align="center" border="0">
+						<tr>
+							<td>Showing last 10 Transactions</td>
+						</tr>
+					</table>
 					<table class="content" border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 						<tr>
 							<th style="text-align:center">#</th>
