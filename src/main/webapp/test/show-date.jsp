@@ -16,7 +16,7 @@
 		out.println(insertFormat.format(currentDateTime) + "<br/>");
 		out.println(displayFormat.format(currentDateTime) + "<br/>");
 		
-		System.out.println(request.getParameter("date"));
+		out.println(request.getParameter("date"));
 	}
 	catch(Exception e)
 	{
