@@ -17,6 +17,10 @@
 		out.println(displayFormat.format(currentDateTime) + "<br/>");
 		
 		out.println(request.getParameter("date"));
+		
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		Date d = df.format(request.getParameter("date"));
+		out.println(d);
 	}
 	catch(Exception e)
 	{
