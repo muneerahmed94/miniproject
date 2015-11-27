@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Button Group Dropup</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		
+		<style>
+			.grey-box
+			{
+				background-color: grey;
+				heaight: 200px;
+				margin-bottom: 10px;
+				font-size:2em;
+				text-align: center;
+				padding: 80px;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<div class="container">
+			<h1>Hello World!</h1>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="grey-box">Box 1</div></div>
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="grey-box">Box 2</div></div>
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="grey-box">Box 3</div></div>
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="grey-box">Box 4</div></div>
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="grey-box">Box 5</div></div>
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="grey-box">Box 6</div></div>
+			</div>
+
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					Action <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another Action</a></li>
+					<li><a href="#">Something Else</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated Link</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
