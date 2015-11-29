@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Home</title>
+		<title>Sign up</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -9,6 +9,18 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		
+		<style>
+			.box
+			{
+				border-style: solid;
+				border-width: 2px;
+				border-color: #d3d3d3;
+				border-radius: 10px;
+				padding: 20px;
+			}
+		</style>
+		
 	</head>
 	<body>
 		<div class="container">
@@ -27,7 +39,7 @@
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+						<li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Start a Quiz <span class="caret"></span></a>
 						  <ul class="dropdown-menu">
@@ -47,15 +59,43 @@
 					</ul>
 				  
 					<ul class="nav navbar-nav navbar-right">
-						<a href="signup" style="margin-right:15px"><button type="button" class="btn btn-default navbar-btn">Sign up</button></a>
-						<a href="signin" style="margin-right:15px"><button type="button" class="btn btn-info navbar-btn">Sign in</button></a>
+						<a href="https://www.google.co.in/"><button type="button" class="btn btn-default navbar-btn">Sign up</button></a>
+						<a href="https://www.google.co.in/" style="margin-right:15px"><button type="button" class="btn btn-info navbar-btn">Sign in</button></a>
 					</ul>
 				</div><!-- /.navbar-collapse -->
-				
-				
-				
 			  </div><!-- /.container-fluid -->
 			</nav>
+			
+			<div class="row">
+				<div class="box col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-1 col-lg-4 col-md-4 col-sm-4 col-xs-10">
+					<form>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">Full Name</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Full Name">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Username</label>
+						<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Username">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Confirm Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+					  </div>
+					  
+					  
+					  <button type="submit" class="btn btn-info btn-block">Submit</button>
+						<br/><center><a href="#">Forgot Password?</a></center>
+					</form>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
