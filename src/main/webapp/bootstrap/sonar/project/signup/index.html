@@ -5,10 +5,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link href="../css/bootstrapValidator.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	
-		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+		<script src="../js/bootstrapValidator.min.js" type="text/javascript"></script>
+		<script src="../js/registrationFormValidator.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -59,26 +61,26 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">Sign up</div>
 						<div class="panel-body">
-							<form>
+							<form id="registration-form" method="POST" action="https://www.google.co.in/">
 							  <div class="form-group">
-								<label for="exampleInputEmail1">Full Name</label>
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Full Name">
+								<label class="control-label" for="fullname">Full Name</label>
+								<input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name">
 							  </div>
 							  <div class="form-group">
-								<label for="exampleInputEmail1">Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+								<label class="control-label" for="email">Email address</label>
+								<input type="email" class="form-control" id="email" name="email" placeholder="Email">
 							  </div>
 							  <div class="form-group">
-								<label for="exampleInputPassword1">Username</label>
-								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Username">
+								<label class="control-label" for="username">Username</label>
+								<input type="text" class="form-control" id="username" name="username" placeholder="Username">
 							  </div>
 							  <div class="form-group">
-								<label for="exampleInputPassword1">Password</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								<label class="control-label" for="password">Password</label>
+								<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 							  </div>
 							  <div class="form-group">
-								<label for="exampleInputPassword1">Confirm Password</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+								<label class="control-label" for="confirmpassword">Confirm Password</label>
+								<input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password">
 							  </div>
 							  
 							  
