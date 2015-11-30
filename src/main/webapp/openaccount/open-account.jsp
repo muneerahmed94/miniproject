@@ -84,7 +84,7 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="index.html">Open an Account</a></li>
+						<li class="lielv"><a class="linkv" href="">Open an Account</a></li>
 						<li class="lielv"><a class="linkv" href="../register">Internet Banking-Register</a></li>
 						<li class="lielv"><a class="linkv" href="../login">Internet Banking-Login</a></li>
 					</ul>
@@ -92,9 +92,9 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td bgcolor="white" valign="top">					
 					<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
-						<th>
-							<td colspan="2" style="text-align:center;color:green;font-weight:bold;">Account Opened Successfully</td>
-						</th>
+						<tr>
+							<th colspan="2" style="text-align:center;color:green;font-weight:bold;">Account Opened Successfully</th>
+						</tr>
 						<tr>
 							<td style="font-weight:bold;text-align:center">Account Number: </td>
 							<td style="text-align:center"><% out.print(accountNumber); %></td>
