@@ -59,7 +59,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Account Opened</title>
+		<title>Open Account</title>
 		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
