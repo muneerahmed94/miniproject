@@ -7,9 +7,9 @@
 	String middleName = request.getParameter("middle_name");
 	String lastName = request.getParameter("last_name");
 	String fghType = request.getParameter("fghtype");
-	String fatherFirstName = request.getParameter("father_first_name");
-	String fatherMiddleName = request.getParameter("father_middle_name");
-	String fatherlastName = request.getParameter("father_last_name");
+	String fatherFirstName = request.getParameter("fghfname");
+	String fatherMiddleName = request.getParameter("fghmname");
+	String fatherlastName = request.getParameter("fghlname");
 	String dateOfBirth = request.getParameter("date_of_birth");
 	String gender = request.getParameter("gender");
 	String marritalStatus = request.getParameter("marrital_status");
