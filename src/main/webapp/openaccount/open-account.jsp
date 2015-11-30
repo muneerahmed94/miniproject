@@ -84,7 +84,7 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="">Open an Account</a></li>
+						<li class="lielv"><a class="linkv" href="index.html">Open an Account</a></li>
 						<li class="lielv"><a class="linkv" href="../register">Internet Banking-Register</a></li>
 						<li class="lielv"><a class="linkv" href="../login">Internet Banking-Login</a></li>
 					</ul>
@@ -109,8 +109,8 @@
 			</tr>	
 			<!-- ============ FOOTER SECTION ============== -->
 			<tr>
-				<td align="center" bgcolor="#e7e6e6" colspan="2" height="20px">
-					© JNTUHCEH Internet Banking Mini Project
+				<td colspan="2" style="height:20px;padding:5px;text-align:center;background-color:#e7e6e6">
+					&#169; JNTUHCEH Internet Banking Mini Project
 				</td>
 			</tr>
 		</table>
