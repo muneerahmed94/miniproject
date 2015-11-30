@@ -44,6 +44,7 @@
 			pst.setString(1, firstName);
 			pst.setString(2, fatherFirstName);
 			pst.setString(3, motherName);
+			out.print(firstName+fatherFirstName+motherName);
 			rs = pst.executeQuery();
 			if(rs.next())
 			{
