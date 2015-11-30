@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Register</title>
+		<title>Customer Registration</title>
 		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
@@ -82,7 +82,7 @@
 						%>
 									<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 										<tr>
-											<th colspan="2" style="text-align:center;background-color:#ccecff;color:green;font-weight:bold;">Registration Successful</th>
+											<th colspan="2" style="text-align:center;color:green;font-weight:bold;">Registration Successful</th>
 										</tr>
 										<tr>
 											<td style="font-weight:bold;">Customer ID: </td>
