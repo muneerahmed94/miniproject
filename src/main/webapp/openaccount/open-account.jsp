@@ -38,17 +38,14 @@
 		int x = st.executeUpdate(sql);
 		if(x == 1)
 		{
-			out.print("inside 1st if...");
 			sql = "SELECT * FROM Customers WHERE FirstName=? AND GuardianFirstName=? AND MotherName=?";
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, firstName);
 			pst.setString(2, fatherFirstName);
 			pst.setString(3, motherName);
-			out.print(firstName+fatherFirstName+motherName);
 			rs = pst.executeQuery();
 			if(rs.next())
 			{
-				out.print("inside 2nd if...");
 				accountNumber = rs.getInt("AccountNumber");
 			}
 		}
@@ -62,34 +59,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Account Opening</title>
-		<style>
-			
-			ul.unliv 
-			{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			a.linkv:link, a.linkv:visited 
-			{
-				display: block;
-				width: 196px;
-				color: black;
-				font-size: 15px;
-				background-color: #f3f3f3;
-				text-align: left;
-				padding: 4px;
-				padding-left:20px;
-				text-decoration: none;
-			}
-			a.linkv:hover, a.lielv:active 
-			{
-				background-color: #cccccc;
-				font-size: 17px;
-				font-weight: bold;
-			}
-		</style>
+		<title>Account Opened</title>
+		<link rel="icon" type="image/x-icon" href="../images/jntu-logo.ico">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
 	<body style="margin:0px;padding:0px;">
 		<table width="100%" height="100%" cellspacing="2">
@@ -112,11 +84,9 @@
 				<!-- ============ LEFT COLUMN (MENU) ============== -->
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/open_account.html">Open an Account</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_registration.html">Internet Banking-Register</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/customer_login.html">Internet Banking-Login</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/employee_login.html">Employee Login</a></li>
-						<li class="lielv"><a class="linkv" href="http://miniproject-jntuhceh.rhcloud.com/admin_login.html">Administrator Login</a></li>
+						<li class="lielv"><a class="linkv" href="index.html">Open an Account</a></li>
+						<li class="lielv"><a class="linkv" href="../register">Internet Banking-Register</a></li>
+						<li class="lielv"><a class="linkv" href="../login">Internet Banking-Login</a></li>
 					</ul>
 				</td>
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
