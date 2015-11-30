@@ -108,6 +108,7 @@
 								if(rs.next())
 								{
 									accountNumber = rs.getInt("AccountNumber");
+									out.print(accountNumber);
 									
 						%>
 									<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
