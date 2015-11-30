@@ -27,7 +27,7 @@
 				<td width="220pxpx" valign="top" bgcolor="#f3f3f3">
 					<ul class="unliv">
 						<li class="lielv"><a class="linkv" href="../openaccount">Open an Account</a></li>
-						<li class="lielv"><a class="linkv" href="../index.html">Internet Banking-Register</a></li>
+						<li class="lielv"><a class="linkv" href="index.html">Internet Banking-Register</a></li>
 						<li class="lielv"><a class="linkv" href="../login">Internet Banking-Login</a></li>
 					</ul>
 				</td>
@@ -82,7 +82,7 @@
 						%>
 									<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
 										<tr>
-											<td colspan="2" style="text-align:center;background-color:#ccecff;color:green;font-weight:bold;">Registration Successful</td>
+											<th colspan="2" style="text-align:center;background-color:#ccecff;color:green;font-weight:bold;">Registration Successful</th>
 										</tr>
 										<tr>
 											<td style="font-weight:bold;">Customer ID: </td>
