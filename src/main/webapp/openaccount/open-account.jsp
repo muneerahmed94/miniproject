@@ -74,7 +74,7 @@
 						String marritalStatus = request.getParameter("marrital_status");
 						String motherName = request.getParameter("mother_name");
 						
-						String accountNumber = "";
+						Integer accountNumber = "";
 						
 						try
 						{
@@ -107,7 +107,7 @@
 								rs = pst.executeQuery();
 								if(rs.next())
 								{
-									accountNumber = rs.getString("AccountNumber");
+									accountNumber = rs.getInteger("AccountNumber");
 									
 						%>
 									<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
