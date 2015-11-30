@@ -68,7 +68,7 @@
 			<!-- ============ HEADER SECTION ============== -->
 			<tr style="height:80px">
 				<td width="220px">
-					<a href="http://miniproject-jntuhceh.rhcloud.com/"><img src="jntu-logo2.png" alt="JNTU Logo" height="80px" width="220px"></a>
+					<a href="../"><img src="../images/jntu-logo.png" alt="JNTU Logo" height="80px" width="220px"></a>
 				</td>
 				<td style="background-color:#cb0076;color:white;text-align:center;font-size:45px">
 					JNTU Bank Internet Banking
@@ -92,9 +92,9 @@
 				<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
 				<td bgcolor="white" valign="top">					
 					<table border="1" style="border-collapse:collapse;" align="center" cellpadding="10px">
-						<tr>
-							<td colspan="2" style="text-align:center;background-color:#ccecff;color:green;font-weight:bold;">Account Opened Successfully</td>
-						</tr>
+						<th>
+							<td colspan="2" style="text-align:center;color:green;font-weight:bold;">Account Opened Successfully</td>
+						</th>
 						<tr>
 							<td style="font-weight:bold;text-align:center">Account Number: </td>
 							<td style="text-align:center"><% out.print(accountNumber); %></td>
